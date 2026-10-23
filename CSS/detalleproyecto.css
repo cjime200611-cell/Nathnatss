@@ -1,0 +1,126 @@
+.hero_banner img {
+    width: 100%;
+}
+
+/* Project Information */
+
+.project_info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px 15px 15px;
+}
+
+.project_info_description {
+    width: 80%;
+}
+
+.project_info_description p {
+    width: 60%;
+}
+
+.project_info_service {
+    width: 15%;
+    margin-top: 20px;
+
+}
+
+.project_info_service h4 {
+    margin: 0;
+}
+
+.project_info_service p, ul {
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+/* References  */
+.project_content_references p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.project_content_references h2 {
+    margin-left: 20px;
+}
+
+.project_content_references_img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project_content_references_img img {
+    width: 18%;
+    border-radius: 20px;
+}
+
+/* Sketches */
+
+.project_content_sketches p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.project_content_sketches h2 {
+    margin-left: 20px;
+}
+
+.project_content_sketches_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_content_sketches_img img {
+    width: 90%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Process */
+
+.project_content_process p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.project_content_process h2 {
+    margin-left: 20px;
+}
+
+.project_content_process_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_content_process_img img {
+    width: 90%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Final Result */
+
+.project_content_result p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+
+.project_content_result h2 {
+    margin-left: 20px;
+}
+
+.project_content_result_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_content_result_img img {
+    width: 90%;
+    border-radius: 20px;
+}
