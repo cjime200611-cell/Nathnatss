@@ -35,6 +35,7 @@ body {
 
     font-family: var(--font-body);
     color: var(--color-negro);
+    background: transparent;
 }
 
 /* Contenedor principal */
@@ -72,3 +73,18 @@ body {
 
     cursor: pointer;
 }
+
+.close-button:hover {
+    color: var(--color-negro);
+}
+
+/* Distrubución de las dos columnas */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    min-height: 360%;
+}
+
+/*Panel izquierdo */
