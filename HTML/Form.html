@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nathnatss</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="/JS/main.js" defer></script>
+</head>
+<body>
+    <main class="contact-modal">
+
+        <!-- Boton para cerrar -->
+        <button type="button" class="close-button" aria-label="Close form">
+            &times;
+        </button>
+
+        <div class="contact-content">
+
+            <!-- Información de contacto -->
+            <section class="contact-content">
+
+                <span class="etiqueta">LET´S TALK</span>
+                <h1> Got a project<br>in mind?</h1>
+
+                <p class="descripcion">
+                    I would love to hear about it. Whether it´s a new
+                    idea, a collaboration or just a question,
+                    feel free to reach out.
+                </p>
+
+                <div class="social-section">
+
+                    <h2>FIND ME HERE</h2>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nathnatss/"target="_blank" rel="noopener noreferrer">
+                            <img src="/Img/Icon Insta.png" alt="Instagram">
+                            <span>@nathnatss</span>
+
+                            <a href="linkedin.com/in/nathalie-delgado-a-003488225/"target="_blank" rel="noopener noreferrer">
+                            <img src="/Img/Icon Link.png" alt="LinkedIn">
+                            <span>@nathnatss</span>
+                            </a>
+                            
+
+
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Formulario de contacto -->
+            <section class="contact-form-container">
+
+                <form id="formulario" novalidate>
+
+                    <!--Nombre y Correo misma fila-->
+                    <div class="form-row">
+
+                        <div class="grupo-nombre">
+                            <label for="nombre">Name or Company</label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Your name company">
+                            <span id="error-nombre" class="error"></span>
+                        </div>
+
+                        <div class="grupo-email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your@email.com">
+                            <span id="error-email" class="error"></span> 
+                        </div>
+                    </div>
+
+                    <!--Servicos-->
+                    <div class="grupo-servicios">
+
+                        <label for="servicio">What service do you need?</label>
+
+                        <select id="servicio" name="servicio">
+                            <option value="" selected disabled>Select a option</option>
+                            <option value="commercial-visualization">Commercial visualization</option>
+                            <option value="3d-illustration">3D illustration</option>
+                            <option value="custom-illustrations">Custom illustrations</option>
+                            <option value="other-something-different">Other / Something different</option>
+
+                            <span id="error-servicio" class="error"></span>
+
+                    <!--Mensaje-->
+                    <div class="grupo-mensaje">
+
+                        <label for="mensaje">Tell me about your project</label>
+
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Briefly describe your idea..."></textarea>
+
+                        <span id="error-mensaje" class="error"></span>
+
+                    <!--Boton de enviar-->
+                    <button type="submit" class="boton">Send message ↗</button>
+
+                    </form>
+                    </div>
+
+                        </select>
+                    </div>
+                </form>
+
+                <!--Confirmation de enviado-->
+                <div id="mensaje-exito" hidden>
+
+                    <div class="icono-exito">✓</div>
+                    <h2>Message sent successfully!</h2>
+                    <p>Thank you for contacting me.<br>I will get back to you as soon as possible</p>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+</body>
+</html>
