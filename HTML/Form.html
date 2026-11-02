@@ -40,7 +40,48 @@
                 </div>
             </section>
 
-            
+            <!-- Formulario de contacto -->
+            <section class="contact-form-container">
+
+                <form id="formulario" novalidate>
+
+                    <!--Nombre y Correo misma fila-->
+                    <div class="form-row">
+
+                        <div class="grupo-nombre">
+                            <label for="nombre">Name or Company</label>
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Your name company">
+                            <span id="error-nombre" class="error"></span>
+                        </div>
+
+                        <div class="grupo-email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your@email.com">
+                            <span id="error-email" class="error"></span>
+                        </div>
+                    </div>
+
+                    <!--Servicos-->
+                    <div class="grupo-servicios">
+
+                        <label for="servicio">What service do you need?</label>
+
+                        <select id="servicio" name="servicio">
+                            <option value="" selected disabled>Select a option</option>
+                            <option value="commercial-visualization">Commercial visualization</option>
+                            <option value="3d-illustration">3D illustration</option>
+                            <option value="custom-illustrations">Custom illustrations</option>
+                            <option value="other-something-different">Other / Something different</option>
+
+                            <span id="error-servicio" class="error"></span>
+                            
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+
         </div>
     </main>
 </body>
