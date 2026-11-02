@@ -37,3 +37,18 @@ body {
     font-family: var(--font-body);
     color: var(--color-negro);
 }
+
+/* Contenedor principal */
+
+.contact-modal {
+    width: 100%;
+    max-width: 1100px;
+
+    position: relative;
+
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-negro);
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 0 var(--color-negro);
+}
