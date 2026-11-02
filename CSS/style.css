@@ -22,3 +22,18 @@
 }
 
 /* CSS de la pagina */
+
+/* Fondo de la página */
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-fondo);
+    font-family: var(--font-body);
+    color: var(--color-negro);
+}
