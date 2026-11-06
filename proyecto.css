@@ -1,6 +1,6 @@
 /* Fondo general de la página */
 body {
-    background-color: #FFFDD0;
+    background-color: white;
     margin: 0;
     padding: 20px;
 }
@@ -13,30 +13,54 @@ h3 {
 }
 
 
-/* texto secundario */
-.text,
-p,
-a,
-label {
+/* texto introductorio */
+.text{
+    text-align: left;
     color:black;
+    max-width: 320px;
+    margin-left: auto;
+    line-height:1.5;
 }
 
 
-/* botones */
-button {
-    background-color: violet;
+/* Barra de filtros */
+.botton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/*Barra Filtros */
+.botton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+/* Botones filtros */
+.botton button {
     color: black;
-    border: white;
-    padding: 10px 15px;
-    margin: 5px;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Efecto mouse */
-button:hover {
-    background-color: gray;
+/* Order By */
+.order-by {
+    margin-left: auto;
+    white-space: nowrap;
 }
+
+/* Botón se selecciona */
+.botton button:hover{
+    background-color: #FFE78D;
+}
+
 
 /* Tarjetas */
 .Carpeta {
@@ -79,22 +103,41 @@ button:hover {
     text-align: right;
 }
 
-/* Boton More*/
-.more-container {
-    text-align: center;
-    margin: 30px 0;
+/* More Container */
+.more-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30 px 0;
 }
 
+/* Boton More*/
+.btn-more {
+    text-align: center;
+    margin: 30px 0;
+    background-color: #B982F2;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+.btn-more:hover {
+    background-color: #B982F2;
+}
 /*Footer*/
 .contact-banner {
-    background-color: black;
+    background-color:#FFFFBF;
     color: white;
     text-align: center;
     padding: 30px 20px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 /*Texto footer*/
 .contact-banner p {
-    color: white;
+    color: black;
+}
+
+.btn-contact {
+    background-color: #FF475D;
 }
