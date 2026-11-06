@@ -77,3 +77,32 @@
         font-size: clamp(2.7rem, 12vw, 4.1rem);
     }
 }
+
+@media (min-width: 1441px) {
+    .contact {
+        min-height: clamp(440px, 32vw, 760px);
+        padding: clamp(5rem, 8vw, 10rem) 2rem;
+    }
+
+    .contact h2 {
+        font-size: clamp(3.75rem, 5.2vw, 7.5rem);
+    }
+
+    .contact .section-label {
+        margin-bottom: clamp(1.25rem, 1.8vw, 2.5rem);
+        padding: 0.6rem 1rem;
+        font-size: clamp(0.62rem, 0.7vw, 0.9rem);
+    }
+
+    .contact > p:not(.section-label) {
+        max-width: 900px;
+        margin: clamp(1.25rem, 2vw, 3rem) 0;
+        font-size: clamp(1rem, 1.1vw, 1.4rem);
+    }
+
+    .contact-action {
+        min-width: clamp(190px, 15vw, 300px);
+        min-height: clamp(48px, 4vw, 72px);
+        font-size: clamp(0.85rem, 0.9vw, 1.15rem);
+    }
+}

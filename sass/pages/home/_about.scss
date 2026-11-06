@@ -112,3 +112,29 @@
         margin-top: 2rem;
     }
 }
+
+@media (min-width: 1441px) {
+    .about {
+        min-height: clamp(310px, 22vw, 560px);
+        margin-inline: clamp(5vw, 6vw, 8rem);
+    }
+
+    .about-text,
+    .about-signature {
+        padding: clamp(3.25rem, 4vw, 6rem);
+    }
+
+    .about-text h2 {
+        max-width: 1000px;
+        font-size: clamp(2.5rem, 3vw, 4.5rem);
+    }
+
+    .about-signature .section-label {
+        padding: 0.6rem 0.9rem;
+        font-size: clamp(0.62rem, 0.7vw, 0.9rem);
+    }
+
+    .artist-signature span {
+        font-size: clamp(3.2rem, 4vw, 6rem);
+    }
+}

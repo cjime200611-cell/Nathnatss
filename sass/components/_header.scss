@@ -115,3 +115,29 @@
         height: 30px;
     }
 }
+
+@media (min-width: 1441px) {
+    .site-header {
+        min-height: clamp(78px, 5vw, 112px);
+        padding-inline: clamp(5vw, 6vw, 8rem);
+    }
+
+    .brand-name {
+        gap: 0.65rem;
+        font-size: clamp(1.18rem, 1.2vw, 1.6rem);
+    }
+
+    .brand-mark {
+        width: clamp(42px, 3vw, 60px);
+        height: clamp(42px, 3vw, 60px);
+    }
+
+    .site-nav {
+        gap: clamp(0.65rem, 0.8vw, 1.2rem);
+    }
+
+    .site-nav a {
+        padding: 0.7rem clamp(1.15rem, 1.4vw, 2rem);
+        font-size: clamp(0.88rem, 0.8vw, 1.1rem);
+    }
+}

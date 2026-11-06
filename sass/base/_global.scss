@@ -45,3 +45,9 @@ a {
         scroll-behavior: auto !important;
     }
 }
+
+@media (min-width: 1441px) {
+    :root {
+        font-size: clamp(16px, 0.82vw, 20px);
+    }
+}

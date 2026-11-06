@@ -1,6 +1,8 @@
 @use "../../base/variables" as tokens;
 
 .services {
+    min-height: 40vh;
+    min-height: 40svh;
     padding: clamp(4rem, 9vw, 8rem) 5vw;
 }
 
@@ -240,5 +242,154 @@
         padding: 0.85rem 0 0;
         border-top: 1px solid rgba(22, 22, 22, 0.25);
         border-left: 0;
+    }
+}
+
+@media (min-width: 1441px) {
+    .services {
+        max-width: 3200px;
+        margin-inline: auto;
+        padding: clamp(8rem, 10vw, 14rem) clamp(5vw, 6vw, 8rem);
+    }
+
+    .services-heading {
+        gap: clamp(0.85rem, 1.2vw, 1.75rem);
+        margin-bottom: clamp(1.5rem, 2.5vw, 4rem);
+    }
+
+    .services-heading .section-label {
+        padding: 0.5rem 0.85rem;
+        font-size: clamp(0.64rem, 0.7vw, 0.9rem);
+    }
+
+    .services-heading h2 {
+        max-width: 22ch;
+        font-size: clamp(3.8rem, 5vw, 7.5rem);
+    }
+
+    .service-grid {
+        gap: clamp(1.25rem, 2vw, 3rem);
+        padding: clamp(1.25rem, 2vw, 3rem);
+        border-radius: clamp(16px, 1.5vw, 28px);
+        box-shadow: clamp(6px, 0.6vw, 12px) clamp(6px, 0.6vw, 12px) 0 tokens.$color-negro;
+    }
+
+    .service-content {
+        min-height: clamp(420px, 24vw, 640px);
+        padding: clamp(1.5rem, 2.2vw, 3rem);
+        border-radius: clamp(18px, 1.8vw, 32px);
+        box-shadow: clamp(4px, 0.45vw, 9px) clamp(4px, 0.45vw, 9px) 0 tokens.$color-negro;
+    }
+
+    .service-card--illustration .service-content {
+        min-height: clamp(520px, 29vw, 760px);
+        padding: clamp(1rem, 1.5vw, 2.5rem);
+    }
+
+    .service-icon {
+        top: clamp(1.4rem, 2vw, 3rem);
+        right: clamp(1.4rem, 2vw, 3rem);
+        width: clamp(38px, 3vw, 58px);
+        height: clamp(38px, 3vw, 58px);
+        font-size: clamp(1.2rem, 1.5vw, 2rem);
+    }
+
+    .service-number {
+        top: clamp(1.4rem, 2vw, 3rem);
+        left: clamp(1.4rem, 2vw, 3rem);
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
+    }
+
+    .service-content h3 {
+        margin-bottom: clamp(0.75rem, 1vw, 1.5rem);
+        font-size: clamp(1.45rem, 1.8vw, 2.2rem);
+    }
+
+    .service-content p {
+        font-size: clamp(0.85rem, 1vw, 1.15rem);
+    }
+
+    .service-image {
+        margin: clamp(2.2rem, 3vw, 4.5rem) 0 clamp(1rem, 1.5vw, 2.25rem);
+        border-radius: clamp(10px, 1vw, 18px);
+    }
+
+    .service-notes {
+        grid-template-columns: minmax(220px, 0.25fr) 1fr;
+        gap: clamp(2rem, 3vw, 4rem);
+        margin-top: clamp(1.25rem, 2vw, 3rem);
+        padding: clamp(1rem, 1.5vw, 2rem) clamp(1.5rem, 2vw, 3rem);
+    }
+
+    .service-notes-title {
+        gap: 0.75rem;
+        font-size: clamp(0.82rem, 0.9vw, 1.15rem);
+    }
+
+    .service-notes-title span {
+        width: clamp(34px, 2.7vw, 52px);
+        height: clamp(34px, 2.7vw, 52px);
+        flex-basis: clamp(34px, 2.7vw, 52px);
+        font-size: clamp(0.95rem, 1vw, 1.2rem);
+    }
+
+    .service-notes > p {
+        font-size: clamp(0.82rem, 0.95vw, 1.1rem);
+    }
+}
+
+@media (min-width: 1441px) and (max-height: 1200px) {
+    .services {
+        padding-block: clamp(2rem, 4vh, 3rem);
+    }
+
+    .services-heading {
+        gap: 0.65rem;
+        margin-bottom: clamp(1rem, 2vh, 1.5rem);
+    }
+
+    .services-heading h2 {
+        font-size: clamp(3rem, 4vw, 4.5rem);
+    }
+
+    .service-grid {
+        gap: clamp(0.85rem, 1.2vw, 1.5rem);
+        padding: clamp(0.85rem, 1.2vw, 1.5rem);
+    }
+
+    .service-content {
+        min-height: clamp(320px, 38vh, 410px);
+        padding: clamp(1rem, 1.5vw, 1.75rem);
+    }
+
+    .service-card--illustration .service-content {
+        min-height: clamp(400px, 41vh, 450px);
+        padding: clamp(0.85rem, 1vw, 1.25rem);
+    }
+
+    .service-image {
+        aspect-ratio: 2.1;
+        margin: clamp(1rem, 1.5vh, 1.4rem) 0 0.5rem;
+    }
+
+    .service-content h3 {
+        margin-bottom: 0.65rem;
+        font-size: clamp(1.25rem, 1.45vw, 1.7rem);
+    }
+
+    .service-content p {
+        font-size: clamp(0.78rem, 0.8vw, 0.95rem);
+        line-height: 1.4;
+    }
+
+    .service-notes {
+        gap: clamp(1rem, 2vw, 2rem);
+        margin-top: 1rem;
+        padding-block: 0.75rem;
+    }
+
+    .service-notes-title,
+    .service-notes > p {
+        font-size: clamp(0.75rem, 0.8vw, 0.95rem);
     }
 }
