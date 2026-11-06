@@ -1,0 +1,143 @@
+@use "../../base/variables" as tokens;
+
+.hero {
+    position: relative;
+    min-height: min(540px);
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    min-height: min(540px);
+    overflow: hidden;
+    align-items: flex-end;
+    isolation: isolate;
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background-color: tokens.$color-negro;
+    color: tokens.$color-crema-claro;
+}
+
+.hero-visual::after {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+}
+
+.hero-image {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+}
+
+.hero-visual::after {
+    background:
+        linear-gradient(90deg, rgba(22, 22, 22, 0.78) 0%, rgba(22, 22, 22, 0.38) 52%, rgba(22, 22, 22, 0.08) 100%),
+        linear-gradient(0deg, rgba(22, 22, 22, 0.62), transparent 58%);
+}
+
+.hero-text,
+.hero-caption {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 780px;
+}
+
+.section-label {
+    margin: 0 0 1rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.hero .section-label {
+    display: inline-flex;
+    margin-bottom: 1.25rem;
+    padding: 0.42rem 0.72rem;
+    border: 1.5px solid tokens.$color-negro;
+    background-color: tokens.$color-amarillo;
+    color: tokens.$color-negro;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+}
+
+.hero h1,
+.services-heading h2,
+.contact h2 {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+}
+
+.hero h1 {
+    font-size: clamp(3.75rem, 6.8vw, 6.5rem);
+    line-height: 0.88;
+}
+
+.hero-link {
+    display: inline-flex;
+    min-height: 48px;
+    gap: 1.25rem;
+    align-items: center;
+    margin-top: 1.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 999px;
+    background-color: tokens.$color-azul-claro;
+    box-shadow: 3px 3px 0 tokens.$color-negro;
+    color: tokens.$color-negro;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-link:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 tokens.$color-negro;
+}
+
+.hero-link:focus-visible {
+    outline: 2px solid tokens.$color-crema-claro;
+    outline-offset: 4px;
+}
+
+.hero-caption {
+    position: absolute;
+    right: clamp(1.25rem, 4vw, 3.5rem);
+    bottom: clamp(1.25rem, 3vw, 2.25rem);
+    padding: 0.65rem 0.85rem;
+    background-color: rgba(22, 22, 22, 0.72);
+    font-size: 0.72rem;
+}
+
+@media (max-width: 700px) {
+    .hero,
+    .hero-visual {
+        min-height: min(620px, 72vh);
+    }
+
+    .hero-visual {
+        padding: 2rem 6vw 5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 13vw, 5.5rem);
+    }
+
+    .hero-caption {
+        right: 6vw;
+        bottom: 1.25rem;
+    }
+}

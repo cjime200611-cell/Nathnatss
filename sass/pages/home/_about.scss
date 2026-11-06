@@ -1,0 +1,114 @@
+@use "../../base/variables" as tokens;
+
+.about {
+    display: grid;
+    grid-template-columns: 1.28fr 0.72fr;
+    min-height: 310px;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 5vw;
+    overflow: hidden;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 28px;
+    background-color: tokens.$color-amarillo;
+    box-shadow: 8px 8px 0 tokens.$color-negro;
+}
+
+.about-text,
+.about-signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.about-text .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+}
+
+.about-text .section-label::before {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background-color: tokens.$color-negro;
+    content: "";
+}
+
+.about-text h2 {
+    max-width: 730px;
+    margin: 1rem 0 0;
+    font-family: tokens.$font-title;
+    font-size: clamp(1.45rem, 2.8vw, 2.5rem);
+    line-height: 1.12;
+    text-transform: uppercase;
+}
+
+.about-signature {
+    align-items: flex-end;
+    border-left: 1px solid currentColor;
+}
+
+.about-signature .section-label {
+    margin: 0;
+    padding: 0.45rem 0.7rem;
+    background-color: tokens.$color-negro;
+    color: tokens.$color-amarillo;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+}
+
+.signature-note {
+    margin: auto 0 0;
+    color: rgba(22, 22, 22, 0.65);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.artist-signature {
+    margin: 0.35rem 0 0;
+    font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+}
+
+.artist-signature span {
+    display: inline-block;
+    margin-left: 0.35rem;
+    font-family: tokens.$font-title;
+    font-size: clamp(1.65rem, 4vw, 3.2rem);
+    letter-spacing: -0.025em;
+    text-decoration: underline;
+    text-decoration-color: tokens.$color-azul;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.12em;
+}
+
+@media (max-width: 700px) {
+    .about {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        margin-inline: 5vw;
+    }
+
+    .about-text,
+    .about-signature {
+        min-height: 190px;
+        padding: 1.5rem;
+    }
+
+    .about-signature {
+        border-top: 1px solid currentColor;
+        border-left: 0;
+    }
+
+    .about-text h2 {
+        font-size: clamp(1.35rem, 6vw, 2rem);
+    }
+
+    .signature-note {
+        margin-top: 2rem;
+    }
+}

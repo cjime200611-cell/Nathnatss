@@ -1,0 +1,117 @@
+@use "../base/variables" as tokens;
+
+.site-header {
+    display: flex;
+    min-height: 78px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 5vw;
+    border-bottom: 1px solid tokens.$color-negro;
+    background-color: tokens.$color-fondo;
+}
+
+.brand-name,
+.site-nav a {
+    text-decoration: none;
+}
+
+.brand-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: tokens.$font-title;
+    font-size: 1.18rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.brand-mark {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.site-nav a {
+    padding: 0.58rem 1.15rem;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 999px;
+    background-color: tokens.$color-crema-claro;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background-color: tokens.$color-morado-claro;
+}
+
+.site-nav a:hover {
+    transform: translateY(-2px);
+}
+
+.site-nav a:focus-visible {
+    outline: 2px solid tokens.$color-azul;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        min-height: 68px;
+    }
+
+    .site-nav {
+        gap: 0.35rem;
+    }
+
+    .site-nav a {
+        padding: 0.48rem 0.72rem;
+        font-size: 0.76rem;
+    }
+
+    .brand-name {
+        gap: 0.35rem;
+        font-size: 0.9rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 420px) {
+    .site-header {
+        gap: 0.5rem;
+        padding-inline: 3vw;
+    }
+
+    .site-nav {
+        gap: 0.2rem;
+    }
+
+    .site-nav a {
+        padding: 0.4rem 0.42rem;
+        font-size: 0.68rem;
+    }
+
+    .brand-name {
+        gap: 0.25rem;
+        font-size: 0.82rem;
+    }
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+    }
+}

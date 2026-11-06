@@ -1,0 +1,1558 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+:root {
+  --blue: #294BF5;
+  --yellow: #FFD85A;
+  --red: #FF475D;
+  --purple: #AC6FF0;
+  --paper: #FFF9EE;
+  --ink: #161616;
+  --blue-light: #A8B6FB;
+  --yellow-light: #FFE68C;
+  --red-light: #FF9CAA;
+  --purple-light: #EDE2FB;
+  --paper-light: #FFFDF7;
+  --line: rgba(22, 22, 22, 0.2);
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background-color: #FFF9EE;
+  background-image: radial-gradient(rgba(22, 22, 22, 0.055) 1px, transparent 1px);
+  background-size: 15px 15px;
+  color: #161616;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+.site-header {
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 5vw;
+  border-bottom: 1px solid #161616;
+  background-color: #FFF9EE;
+}
+
+.brand-name,
+.site-nav a {
+  text-decoration: none;
+}
+
+.brand-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Paytone One", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.site-nav a {
+  padding: 0.58rem 1.15rem;
+  border: 1.5px solid #161616;
+  border-radius: 999px;
+  background-color: #FFFDF7;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.site-nav a[aria-current=page],
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background-color: #EDE2FB;
+}
+
+.site-nav a:hover {
+  transform: translateY(-2px);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 68px;
+  }
+  .site-nav {
+    gap: 0.35rem;
+  }
+  .site-nav a {
+    padding: 0.48rem 0.72rem;
+    font-size: 0.76rem;
+  }
+  .brand-name {
+    gap: 0.35rem;
+    font-size: 0.9rem;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+}
+@media (max-width: 420px) {
+  .site-header {
+    gap: 0.5rem;
+    padding-inline: 3vw;
+  }
+  .site-nav {
+    gap: 0.2rem;
+  }
+  .site-nav a {
+    padding: 0.4rem 0.42rem;
+    font-size: 0.68rem;
+  }
+  .brand-name {
+    gap: 0.25rem;
+    font-size: 0.82rem;
+  }
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+}
+.hero {
+  position: relative;
+  min-height: 540px;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  min-height: 540px;
+  overflow: hidden;
+  align-items: flex-end;
+  isolation: isolate;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  background-color: #161616;
+  color: #FFFDF7;
+}
+
+.hero-visual::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.hero-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.hero-visual::after {
+  background: linear-gradient(90deg, rgba(22, 22, 22, 0.78) 0%, rgba(22, 22, 22, 0.38) 52%, rgba(22, 22, 22, 0.08) 100%), linear-gradient(0deg, rgba(22, 22, 22, 0.62), transparent 58%);
+}
+
+.hero-text,
+.hero-caption {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  max-width: 780px;
+}
+
+.section-label {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero .section-label {
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+  padding: 0.42rem 0.72rem;
+  border: 1.5px solid #161616;
+  background-color: #FFD85A;
+  color: #161616;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.hero h1,
+.services-heading h2,
+.contact h2 {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.hero h1 {
+  font-size: clamp(3.75rem, 6.8vw, 6.5rem);
+  line-height: 0.88;
+}
+
+.hero-link {
+  display: inline-flex;
+  min-height: 48px;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 1.75rem;
+  padding: 0.75rem 1.25rem;
+  border: 1.5px solid #161616;
+  border-radius: 999px;
+  background-color: #A8B6FB;
+  box-shadow: 3px 3px 0 #161616;
+  color: #161616;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #161616;
+}
+
+.hero-link:focus-visible {
+  outline: 2px solid #FFFDF7;
+  outline-offset: 4px;
+}
+
+.hero-caption {
+  position: absolute;
+  right: clamp(1.25rem, 4vw, 3.5rem);
+  bottom: clamp(1.25rem, 3vw, 2.25rem);
+  padding: 0.65rem 0.85rem;
+  background-color: rgba(22, 22, 22, 0.72);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .hero-visual {
+    min-height: min(620px, 72vh);
+  }
+  .hero-visual {
+    padding: 2rem 6vw 5rem;
+  }
+  .hero h1 {
+    font-size: clamp(3.5rem, 13vw, 5.5rem);
+  }
+  .hero-caption {
+    right: 6vw;
+    bottom: 1.25rem;
+  }
+}
+.featured-projects {
+  padding: 0 5vw;
+}
+
+/* Aquí organizo visualmente el título, el contador y los botones de navegación. */
+.projects-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.projects-heading-text {
+  display: grid;
+  gap: 8px;
+}
+
+.projects-label {
+  width: fit-content;
+  padding: 4px 9px;
+  border: 1.5px solid #171717;
+  background: #AC6FF0;
+  color: #fff;
+  box-shadow: 3px 3px 0 #171717;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.projects-heading h2 {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.projects-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-count {
+  margin-right: 12px;
+  padding: 8px 12px;
+  border: 1.5px solid #171717;
+  background: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 3px 3px 0 #171717;
+}
+
+.projects-controls button {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1.5px solid #171717;
+  border-radius: 50%;
+  background: #fff;
+  color: #171717;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 3px 3px 0 #171717;
+}
+
+.projects-controls .project-next {
+  background: #294BF5;
+  color: #fff;
+}
+
+.projects-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 5px 0 #171717;
+}
+
+.projects-controls button:focus-visible,
+.project-preview:focus-visible,
+.project-link:focus-visible {
+  outline: 2px solid #3156f5;
+  outline-offset: 3px;
+}
+
+/* Aquí doy estilo al contenedor principal donde JavaScript muestra cada proyecto. */
+.project-stage {
+  overflow: hidden;
+  border: 1.5px solid #171717;
+  border-radius: 6px;
+  background: #171717;
+  transition: border-color 1s ease;
+  box-shadow: 5px 5px 0 #171717, 0 0 28px 8px rgba(255, 255, 255, 0.48), 0 0 58px 18px rgba(255, 255, 255, 0.24);
+}
+
+.project-stage.is-transitioning {
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.project-artwork {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  background-color: #292e29;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Aquí ubico la categoría que JavaScript carga desde los datos del proyecto. */
+.project-category {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+  max-width: min(45%, 280px);
+  padding: 8px 11px;
+  border: 1px solid #171717;
+  border-radius: 3px;
+  background: #FFD85A;
+  color: #171717;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-artwork::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.48) 43%, rgba(10, 10, 10, 0.12) 76%), linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+  content: "";
+}
+
+/* Aquí ubico sobre la imagen los textos del proyecto que JavaScript coloca en el HTML. */
+.project-details {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: clamp(26px, 7vw, 78px);
+  display: flex;
+  width: min(390px, 44%);
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fffdf7;
+  transform: translateY(-50%);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 18px;
+  color: rgba(255, 253, 247, 0.78);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-details .project-title {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.project-details .project-description {
+  max-width: 39ch;
+  margin-top: 18px;
+  color: rgba(255, 253, 247, 0.84);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.project-details .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+  padding: 12px 16px;
+  border: 1px solid #171717;
+  border-radius: 999px;
+  background: #FF475D;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 3px 3px 0 #171717;
+}
+
+.project-details .project-link[aria-disabled=true] {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.project-details .project-link:hover {
+  background: #ff6073;
+  box-shadow: 4px 5px 0 #171717;
+}
+
+.project-details.is-entering .project-meta {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-details.is-entering .project-title {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.project-details.is-entering .project-description {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* Aquí doy estilo al cliente que JavaScript muestra debajo de la descripción. */
+.project-client {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 253, 247, 0.38);
+  color: rgba(255, 253, 247, 0.78);
+  font-size: 11px;
+}
+
+.project-details.is-entering .project-client {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.project-details.is-entering .project-link {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+/* Aquí preparo la vista previa donde JavaScript coloca la imagen y el nombre del siguiente proyecto. */
+.project-preview {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: clamp(20px, 4vw, 48px);
+  width: clamp(145px, 20%, 210px);
+  height: clamp(190px, 58%, 270px);
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(255, 255, 255, 0.58), 0 0 42px 12px rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  scale: 1;
+  transform: translateY(-50%);
+  transition: scale 0.2s ease;
+}
+
+.project-preview::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: #292e29;
+  background-image: inherit;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  filter: blur(2px) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.project-preview.is-entering {
+  animation: previewReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-preview:hover,
+.project-preview:focus-visible {
+  scale: 0.96;
+}
+
+.project-preview:hover::before,
+.project-preview:focus-visible::before {
+  filter: blur(0) brightness(1.08);
+}
+
+.project-preview:active {
+  scale: 0.92;
+}
+
+.project-preview-name {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 32px 12px 12px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8666666667));
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Aquí preparo la capa que JavaScript anima para pasar al siguiente proyecto. */
+.project-transition {
+  position: absolute;
+  z-index: 3;
+  top: var(--transition-top, 50%);
+  right: var(--transition-right, clamp(20px, 4vw, 48px));
+  bottom: var(--transition-bottom, auto);
+  left: var(--transition-left, auto);
+  width: var(--transition-width, clamp(145px, 20%, 210px));
+  height: var(--transition-height, clamp(190px, 58%, 270px));
+  transform: var(--transition-transform, translateY(-50%));
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 5px;
+  background-color: #292e29;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(255, 255, 255, 0.58), 0 0 42px 12px rgba(255, 255, 255, 0.28);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Aquí mantengo el brillo alrededor de la imagen mientras se expande la transición. */
+.project-transition::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 24px 6px rgba(255, 255, 255, 0.62), inset 0 0 52px 14px rgba(255, 255, 255, 0.3);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease, box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-transition::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.48) 43%, rgba(10, 10, 10, 0.12) 76%), linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+  content: "";
+  opacity: 0;
+}
+
+.project-stage.is-transitioning .project-transition {
+  visibility: visible;
+}
+
+.project-transition.is-expanding {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 0;
+  transition: inset 1.1s cubic-bezier(0.22, 1, 0.36, 1), width 1.1s cubic-bezier(0.22, 1, 0.36, 1), height 1.1s cubic-bezier(0.22, 1, 0.36, 1), transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), border-radius 1.1s cubic-bezier(0.22, 1, 0.36, 1), border-color 1s ease, box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(0, 0, 0, 0.58), 0 0 42px 12px rgba(0, 0, 0, 0.28);
+}
+
+.project-transition.is-expanding::before {
+  opacity: 1;
+  box-shadow: inset 0 0 24px 6px rgba(0, 0, 0, 0.62), inset 0 0 52px 14px rgba(0, 0, 0, 0.3);
+}
+
+.project-transition.is-expanding::after {
+  opacity: 1;
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-stage.is-transitioning .project-preview {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Aquí defino las animaciones de entrada para el texto y la vista previa del proyecto siguiente. */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(56px);
+    filter: blur(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes previewReveal {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Aquí adapto el contenido y la vista previa a pantallas estrechas. */
+@media (max-width: 680px) {
+  .featured-projects {
+    padding-inline: 5vw;
+  }
+  .projects-heading {
+    align-items: flex-end;
+  }
+  .projects-heading h2 {
+    max-width: 8ch;
+  }
+  .project-count {
+    display: none;
+  }
+  .project-artwork {
+    min-height: 620px;
+  }
+  .project-artwork::before {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.28) 35%, rgba(10, 10, 10, 0.78)), linear-gradient(90deg, rgba(10, 10, 10, 0.28), transparent);
+  }
+  .project-details {
+    top: 40px;
+    left: 24px;
+    width: calc(100% - 48px);
+    transform: none;
+  }
+  .project-details .project-title {
+    max-width: 12ch;
+    font-size: clamp(34px, 10vw, 48px);
+  }
+  .project-details .project-description {
+    max-width: 34ch;
+  }
+  .project-client {
+    margin-top: 18px;
+  }
+  .project-preview {
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    width: 142px;
+    height: 185px;
+    transform: none;
+  }
+  .project-transition {
+    top: var(--transition-top, auto);
+    right: var(--transition-right, 20px);
+    bottom: var(--transition-bottom, 20px);
+    left: var(--transition-left, auto);
+    width: var(--transition-width, 142px);
+    height: var(--transition-height, 185px);
+    transform: var(--transition-transform, none);
+  }
+  .project-transition.is-expanding {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Si el navegador indica que se prefiere menos movimiento, reduzco la duración de las animaciones. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.about {
+  display: grid;
+  grid-template-columns: 1.28fr 0.72fr;
+  min-height: 310px;
+  margin: clamp(2.5rem, 5vw, 4.5rem) 5vw;
+  overflow: hidden;
+  border: 1.5px solid #161616;
+  border-radius: 28px;
+  background-color: #FFD85A;
+  box-shadow: 8px 8px 0 #161616;
+}
+
+.about-text,
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.about-text .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+.about-text .section-label::before {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: #161616;
+  content: "";
+}
+
+.about-text h2 {
+  max-width: 730px;
+  margin: 1rem 0 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(1.45rem, 2.8vw, 2.5rem);
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.about-signature {
+  align-items: flex-end;
+  border-left: 1px solid currentColor;
+}
+
+.about-signature .section-label {
+  margin: 0;
+  padding: 0.45rem 0.7rem;
+  background-color: #161616;
+  color: #FFD85A;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+
+.signature-note {
+  margin: auto 0 0;
+  color: rgba(22, 22, 22, 0.65);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.artist-signature {
+  margin: 0.35rem 0 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+}
+
+.artist-signature span {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(1.65rem, 4vw, 3.2rem);
+  letter-spacing: -0.025em;
+  text-decoration: underline;
+  text-decoration-color: #294BF5;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.12em;
+}
+
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-inline: 5vw;
+  }
+  .about-text,
+  .about-signature {
+    min-height: 190px;
+    padding: 1.5rem;
+  }
+  .about-signature {
+    border-top: 1px solid currentColor;
+    border-left: 0;
+  }
+  .about-text h2 {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+  }
+  .signature-note {
+    margin-top: 2rem;
+  }
+}
+.services {
+  padding: clamp(4rem, 9vw, 8rem) 5vw;
+}
+
+.services-heading {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-heading .section-label {
+  width: fit-content;
+  margin: 0;
+  padding: 0.38rem 0.68rem;
+  border: 1px solid #161616;
+  background-color: #FF9CAA;
+  box-shadow: 3px 3px 0 #161616;
+  color: #161616;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.services-heading h2 {
+  max-width: 20ch;
+  font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.services-heading h2 span {
+  font-size: 1.13em;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.5vw, 1.25rem);
+  align-items: center;
+  padding: clamp(0.85rem, 1.5vw, 1.25rem);
+  border: 1.5px solid #161616;
+  border-radius: 16px;
+  background-color: #A8B6FB;
+  box-shadow: 6px 6px 0 #161616;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.service-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: clamp(300px, 25vw, 365px);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: clamp(1rem, 1.8vw, 1.5rem);
+  border: 1px solid #161616;
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 #161616;
+}
+
+.service-card--commercial .service-content {
+  background-color: #EDE2FB;
+}
+
+.service-card--illustration .service-content {
+  background-color: #FFE68C;
+}
+
+.service-card--personalized .service-content {
+  background-color: #FFE2E6;
+}
+
+.service-card--illustration .service-content {
+  min-height: clamp(390px, 34vw, 475px);
+  padding: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.service-icon {
+  position: absolute;
+  top: clamp(1rem, 1.7vw, 1.4rem);
+  right: clamp(1rem, 1.7vw, 1.4rem);
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #161616;
+  border-radius: 50%;
+  background-color: #AC6FF0;
+  box-shadow: 2px 2px 0 #161616;
+  color: #FFFDF7;
+  font-size: 1.2rem;
+}
+
+.service-card--illustration .service-icon {
+  background-color: #FFD85A;
+  color: #161616;
+}
+
+.service-card--personalized .service-icon {
+  background-color: #FF475D;
+}
+
+.service-number,
+.service-content h3,
+.service-content p {
+  position: relative;
+  z-index: 1;
+}
+
+.service-number {
+  position: absolute;
+  top: clamp(1rem, 1.7vw, 1.4rem);
+  left: clamp(1rem, 1.7vw, 1.4rem);
+  color: rgba(22, 22, 22, 0.45);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.service-card--illustration .service-number {
+  color: #161616;
+}
+
+.service-content h3 {
+  margin: 0 0 0.75rem;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.service-content p {
+  margin: 0;
+  font-size: clamp(0.68rem, 0.8vw, 0.78rem);
+  line-height: 1.5;
+}
+
+.service-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.85;
+  margin: 2.2rem 0 1rem;
+  border: 1px solid #161616;
+  border-radius: 10px;
+  background-color: #294BF5;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.service-card--illustration .service-content h3 {
+  margin-bottom: 0.65rem;
+}
+
+.service-notes {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.25fr) 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: center;
+  margin-top: 1.25rem;
+  padding: 1rem clamp(1rem, 1.7vw, 1.5rem);
+  border: 1px solid #161616;
+  border-radius: 12px;
+  background-color: #FFFDF7;
+  box-shadow: 4px 4px 0 #161616;
+}
+
+.service-notes-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.service-notes-title span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border: 1px solid #161616;
+  border-radius: 50%;
+  background-color: #FFD85A;
+  box-shadow: 2px 2px 0 #161616;
+  font-size: 0.95rem;
+}
+
+.service-notes > p {
+  padding-left: 1rem;
+  border-left: 1px solid rgba(22, 22, 22, 0.25);
+  margin: 0;
+  font-size: clamp(0.7rem, 0.85vw, 0.82rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .services-heading {
+    margin-bottom: 2rem;
+  }
+  .services-heading h2 {
+    max-width: 17ch;
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .service-content {
+    min-height: 310px;
+    padding: 1.4rem;
+  }
+  .service-card--illustration .service-content {
+    min-height: 390px;
+    padding: 1rem;
+  }
+  .service-notes {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .service-notes > p {
+    padding: 0.85rem 0 0;
+    border-top: 1px solid rgba(22, 22, 22, 0.25);
+    border-left: 0;
+  }
+}
+.contact {
+  display: flex;
+  min-height: 440px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3.5rem, 6vw, 5rem) 1.5rem;
+  background-color: #FFD85A;
+  text-align: center;
+}
+
+.contact h2 {
+  max-width: none;
+  font-size: clamp(2.8rem, 4.2vw, 3.75rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.contact .section-label {
+  margin: 0 0 1.25rem;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background-color: #161616;
+  color: #FFD85A;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.contact > p:not(.section-label) {
+  max-width: 650px;
+  margin: 1.25rem 0 1.75rem;
+  font-size: clamp(0.88rem, 1.15vw, 1rem);
+  line-height: 1.55;
+}
+
+.contact-action {
+  display: inline-flex;
+  width: fit-content;
+  min-width: 190px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.85rem 1.4rem;
+  border: 1.5px solid #161616;
+  border-radius: 999px;
+  background-color: #FF475D;
+  box-shadow: 4px 4px 0 #161616;
+  color: #FFFDF7;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-action:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #161616;
+}
+
+.contact-action:focus-visible {
+  outline: 2px solid #161616;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    min-height: 400px;
+    padding-inline: 7vw;
+  }
+  .contact h2 {
+    font-size: clamp(2.7rem, 12vw, 4.1rem);
+  }
+}
+.site-footer {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 5vw;
+  border-top: 1.5px solid #161616;
+  background-color: #FFF9EE;
+  color: #161616;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.social-name {
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding-inline: 5vw;
+  }
+  .social-links {
+    gap: 0.75rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Aquí defino los datos de la página y cargo los estilos y fuentes que uso. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Projects — Version 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-v2.css">
+</head>
+
+<body>
+    <!-- En esta sección organizo el título, los controles y el proyecto que voy a mostrar. -->
+    <main class="container">
+        <!-- Aquí muestro el título y los controles para cambiar de proyecto. -->
+        <header class="sectionHeader">
+            <div class="sectionTitle">
+                <!-- Aquí puedo cambiar los textos del encabezado. -->
+                <span class="sectionTag">SELECTED WORK</span>
+                <h1>Featured<br>projects</h1>
+            </div>
+            <div class="sectionControls">
+                <!-- Aquí muestro con JavaScript la posición del proyecto actual y el total. -->
+                <span class="projectCount" aria-live="polite"></span>
+                <button class="prev" type="button" aria-label="Previous project">←</button>
+                <button class="next" type="button" aria-label="Next project">→</button>
+            </div>
+        </header>
+
+        <!-- Aquí coloco con JavaScript los datos que tomo de projects.json. -->
+        <section class="projectStage" aria-live="polite">
+            <div class="visual">
+                <!-- Aquí muestro con JavaScript la categoría y la imagen del proyecto seleccionado. -->
+                <span class="portfolioCategory"></span>
+                <div class="content">
+                    <span class="projectEyebrow"><span class="projectYear"></span></span>
+                    <h2 class="name"></h2>
+                    <p class="des"></p>
+                    <span class="clientLine">Client: <span class="projectClient"></span></span>
+                    <a class="seeMore" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+                </div>
+                <!-- Aquí muestro una vista previa del siguiente proyecto; al hacer clic, avanzo a él. -->
+                <button class="preview" type="button" aria-label="Preview next project">
+                    <span class="previewName"></span>
+                </button>
+                <!-- Aquí animo con JavaScript la imagen mientras cambio de un proyecto a otro. -->
+                <div class="transitionImage" aria-hidden="true"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- El sitio usa módulos y carga projects.json; ábrelo desde un servidor local. -->
+    <script type="module" src="main-v2.js"></script>
+</body>
+
+</html>

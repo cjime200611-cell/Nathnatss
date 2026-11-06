@@ -1,0 +1,522 @@
+@use "../base/variables" as tokens;
+
+.featured-projects {
+    padding: 0 5vw;
+}
+
+/* Aquí organizo visualmente el título, el contador y los botones de navegación. */
+.projects-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 22px;
+}
+
+.projects-heading-text {
+    display: grid;
+    gap: 8px;
+}
+
+.projects-label {
+    width: fit-content;
+    padding: 4px 9px;
+    border: 1.5px solid #171717;
+    background: tokens.$color-morado;
+    color: #fff;
+    box-shadow: 3px 3px 0 #171717;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.projects-heading h2 {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.projects-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-count {
+    margin-right: 12px;
+    padding: 8px 12px;
+    border: 1.5px solid #171717;
+    background: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 3px 3px 0 #171717;
+}
+
+.projects-controls button {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1.5px solid #171717;
+    border-radius: 50%;
+    background: #fff;
+    color: #171717;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+    box-shadow: 3px 3px 0 #171717;
+}
+
+.projects-controls .project-next {
+    background: tokens.$color-azul;
+    color: #fff;
+}
+
+.projects-controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 5px 0 #171717;
+}
+
+.projects-controls button:focus-visible,
+.project-preview:focus-visible,
+.project-link:focus-visible {
+    outline: 2px solid #3156f5;
+    outline-offset: 3px;
+}
+
+/* Aquí doy estilo al contenedor principal donde JavaScript muestra cada proyecto. */
+.project-stage {
+    overflow: hidden;
+    border: 1.5px solid #171717;
+    border-radius: 6px;
+    background: #171717;
+    transition: border-color 1s ease;
+    box-shadow:
+        5px 5px 0 #171717,
+        0 0 28px 8px rgba(255, 255, 255, 0.48),
+        0 0 58px 18px rgba(255, 255, 255, 0.24);
+}
+
+.project-stage.is-transitioning {
+    border-color: rgba(255, 255, 255, 0.72);
+}
+
+.project-artwork {
+    position: relative;
+    min-height: 540px;
+    overflow: hidden;
+    background-color: #292e29;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Aquí ubico la categoría que JavaScript carga desde los datos del proyecto. */
+.project-category {
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    left: 18px;
+    max-width: min(45%, 280px);
+    padding: 8px 11px;
+    border: 1px solid #171717;
+    border-radius: 3px;
+    background: tokens.$color-amarillo;
+    color: #171717;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.project-artwork::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.48) 43%, rgba(10, 10, 10, 0.12) 76%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+    content: "";
+}
+
+/* Aquí ubico sobre la imagen los textos del proyecto que JavaScript coloca en el HTML. */
+.project-details {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: clamp(26px, 7vw, 78px);
+    display: flex;
+    width: min(390px, 44%);
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fffdf7;
+    transform: translateY(-50%);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 18px;
+    color: rgba(255, 253, 247, 0.78);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.project-details .project-title {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.project-details .project-description {
+    max-width: 39ch;
+    margin-top: 18px;
+    color: rgba(255, 253, 247, 0.84);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.project-details .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 22px;
+    padding: 12px 16px;
+    border: 1px solid #171717;
+    border-radius: 999px;
+    background: tokens.$color-rojo;
+    color: #171717;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: color 0.35s ease, background-color 0.35s ease,
+        box-shadow 0.35s ease;
+    box-shadow: 3px 3px 0 #171717;
+}
+
+.project-details .project-link[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.project-details .project-link:hover {
+    background: #ff6073;
+    box-shadow: 4px 5px 0 #171717;
+}
+
+.project-details.is-entering .project-meta {
+    animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-details.is-entering .project-title {
+    animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.project-details.is-entering .project-description {
+    animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* Aquí doy estilo al cliente que JavaScript muestra debajo de la descripción. */
+.project-client {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 253, 247, 0.38);
+    color: rgba(255, 253, 247, 0.78);
+    font-size: 11px;
+}
+
+.project-details.is-entering .project-client {
+    animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.project-details.is-entering .project-link {
+    animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+/* Aquí preparo la vista previa donde JavaScript coloca la imagen y el nombre del siguiente proyecto. */
+.project-preview {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: clamp(20px, 4vw, 48px);
+    width: clamp(145px, 20%, 210px);
+    height: clamp(190px, 58%, 270px);
+    overflow: hidden;
+    border: 1.5px solid rgba(255, 255, 255, 0.82);
+    border-radius: 5px;
+    background: transparent;
+    box-shadow:
+        5px 5px 0 rgba(0, 0, 0, 0.65),
+        0 0 22px 6px rgba(255, 255, 255, 0.58),
+        0 0 42px 12px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+    scale: 1;
+    transform: translateY(-50%);
+    transition: scale 0.2s ease;
+}
+
+.project-preview::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background-color: #292e29;
+    background-image: inherit;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    filter: blur(2px) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.project-preview.is-entering {
+    animation: previewReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-preview:hover,
+.project-preview:focus-visible {
+    scale: 0.96;
+}
+
+.project-preview:hover::before,
+.project-preview:focus-visible::before {
+    filter: blur(0) brightness(1.08);
+}
+
+.project-preview:active {
+    scale: 0.92;
+}
+
+.project-preview-name {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 32px 12px 12px;
+    background: linear-gradient(transparent, #000d);
+    color: #fff;
+    font-family: tokens.$font-title;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Aquí preparo la capa que JavaScript anima para pasar al siguiente proyecto. */
+.project-transition {
+    position: absolute;
+    z-index: 3;
+    top: var(--transition-top, 50%);
+    right: var(--transition-right, clamp(20px, 4vw, 48px));
+    bottom: var(--transition-bottom, auto);
+    left: var(--transition-left, auto);
+    width: var(--transition-width, clamp(145px, 20%, 210px));
+    height: var(--transition-height, clamp(190px, 58%, 270px));
+    transform: var(--transition-transform, translateY(-50%));
+    border: 1.5px solid rgba(255, 255, 255, 0.82);
+    border-radius: 5px;
+    background-color: #292e29;
+    background-position: center;
+    background-size: cover;
+    box-shadow:
+        5px 5px 0 rgba(0, 0, 0, 0.65),
+        0 0 22px 6px rgba(255, 255, 255, 0.58),
+        0 0 42px 12px rgba(255, 255, 255, 0.28);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Aquí mantengo el brillo alrededor de la imagen mientras se expande la transición. */
+.project-transition::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow:
+        inset 0 0 24px 6px rgba(255, 255, 255, 0.62),
+        inset 0 0 52px 14px rgba(255, 255, 255, 0.3);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.55s ease, box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-transition::after {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.48) 43%, rgba(10, 10, 10, 0.12) 76%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+    content: "";
+    opacity: 0;
+}
+
+.project-stage.is-transitioning .project-transition {
+    visibility: visible;
+}
+
+.project-transition.is-expanding {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.82);
+    border-radius: 0;
+    transition: inset 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        width 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        height 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        border-radius 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 1s ease,
+        box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow:
+        5px 5px 0 rgba(0, 0, 0, 0.65),
+        0 0 22px 6px rgba(0, 0, 0, 0.58),
+        0 0 42px 12px rgba(0, 0, 0, 0.28);
+}
+
+.project-transition.is-expanding::before {
+    opacity: 1;
+    box-shadow:
+        inset 0 0 24px 6px rgba(0, 0, 0, 0.62),
+        inset 0 0 52px 14px rgba(0, 0, 0, 0.3);
+}
+
+.project-transition.is-expanding::after {
+    opacity: 1;
+    transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-stage.is-transitioning .project-preview {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Aquí defino las animaciones de entrada para el texto y la vista previa del proyecto siguiente. */
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(56px);
+        filter: blur(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes previewReveal {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aquí adapto el contenido y la vista previa a pantallas estrechas. */
+@media (max-width: 680px) {
+    .featured-projects {
+        padding-inline: 5vw;
+    }
+
+    .projects-heading {
+        align-items: flex-end;
+    }
+
+    .projects-heading h2 {
+        max-width: 8ch;
+    }
+
+    .project-count {
+        display: none;
+    }
+
+    .project-artwork {
+        min-height: 620px;
+    }
+
+    .project-artwork::before {
+        background:
+            linear-gradient(180deg, rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.28) 35%, rgba(10, 10, 10, 0.78)),
+            linear-gradient(90deg, rgba(10, 10, 10, 0.28), transparent);
+    }
+
+    .project-details {
+        top: 40px;
+        left: 24px;
+        width: calc(100% - 48px);
+        transform: none;
+    }
+
+    .project-details .project-title {
+        max-width: 12ch;
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .project-details .project-description {
+        max-width: 34ch;
+    }
+
+    .project-client {
+        margin-top: 18px;
+    }
+
+    .project-preview {
+        top: auto;
+        right: 20px;
+        bottom: 20px;
+        width: 142px;
+        height: 185px;
+        transform: none;
+    }
+
+    .project-transition {
+        top: var(--transition-top, auto);
+        right: var(--transition-right, 20px);
+        bottom: var(--transition-bottom, 20px);
+        left: var(--transition-left, auto);
+        width: var(--transition-width, 142px);
+        height: var(--transition-height, 185px);
+        transform: var(--transition-transform, none);
+    }
+
+    .project-transition.is-expanding {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Si el navegador indica que se prefiere menos movimiento, reduzco la duración de las animaciones. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
