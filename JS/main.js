@@ -1,71 +1,85 @@
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded",function(){
 
+    //Obtener el formulario
     const form = document.getElementById("formulario");
 
-    // Enviar formulario
-    form.addEventListener("submit", function (event){
+    //Obtener el boton cerrar
+    const botonCerrar = document.getElementById("cerrar-modal");
+
+    //Detectar cuando se envia el formulario
+    form.addEventListener("submit",function(event){
         event.preventDefault();
 
-        // Obtener los valores de los campos del formulario
+        event.preventDefault();
+
+        //Obtener los valores de los campos
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
         const servicio = document.getElementById("servicio").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Obtener los espacios de los errores
+        //Obtener los espacios para mostrar errores
         const errorNombre = document.getElementById("error-nombre");
         const errorEmail = document.getElementById("error-email");
+        const errorTelefono = document.getElementById("error-telefono");
         const errorServicio = document.getElementById("error-servicio");
         const errorMensaje = document.getElementById("error-mensaje");
 
-        // Limpiar los espacios de los errores
-        errorNombre.textContent = "";
-        errorEmail.textContent = "";
-        errorServicio.textContent = "";
-        errorMensaje.textContent = "";
+        //Limpiar los espacios de errores
+        errorNombre.innerHTML = "";
+        errorEmail.innerHTML = "";
+        errorTelefono.innerHTML = "";
+        errorServicio.innerHTML = "";
+        errorMensaje.innerHTML = "";
 
-        let error = false;
+        //Variable para comprobar si el formulario es valido
+        let esValido = true;
 
-        // Validar nombre
+        //Validar nombre
         if (nombre === "") {
-            errorNombre.textContent = "Please enter your name or company name.";
+            errorNombre.textContent = "Please enter your name";
             esValido = false;
         }
 
-        // Validar email
-        const rogexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (email === "") {
-            errorEmail.textContent = "Please enter your email.";
+        //Validar correo
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regexEmail.test(email)) {
+            errorEmail.textContent = "Please enter a valid email";
             esValido = false;
         }
 
-        // Validar servicio
+        //Validar telefono
+        const regexTelefono = /^[0-9+\-\s()]{8,20}$/;
+        if (telefono === "" || !regexTelefono.test(telefono)) {
+            errorTelefono.textContent = "Please enter a valid phone number";
+            esValido = false;
+        }
+
+        //Validar servicio
         if (servicio === "") {
-            errorServicio.textContent = "Please select a service.";
+            errorServicio.textContent = "Please select a service";
             esValido = false;
         }
 
-        //Validar descripción del proyecto
+        //Validar mensaje
         if (mensaje === "") {
-            errorMensaje.textContent = "Please describe your project.";
+            errorMensaje.textContent = "Please describe your project";
             esValido = false;
         }
 
-        // Si hay errores, detener el proceso
+        //Si hay errores detener el proceso
         if (!esValido) {
             return;
         }
 
-        // Mostrar confirmación de envio
-        form.hidden = true;
-        document.getElementById("mensaje-exito").hidden = false;
+        //Mostrar confirmación
+        form.hidden = true
+        document.getElementById("confirmacion").hidden = false;
     });
 
-    // Boton para cerrar el formulario
-    const botonCerrar = document.querySelector(".close-button");
-
-    botonCerrar.addEventListener("click", function () {
-        window.location.href = "index.html";
+    //Boton para cerrar el modal
+    botonCerrar.addEventListener("click",function(){
+        window.location = "index.html";
     });
-})
+});
