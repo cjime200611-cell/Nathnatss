@@ -2,89 +2,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-fondo: #FFF9EE;
-
-    --color-negro: #161616;
-    --color-azul: #294BF5;
-    --color-amarillo: #FFD85A;
-    --color-rojo: #FF475D;
-    --color-morado: #AC6FF0;
-
-    --font-title: 'Paytone One', sans-serif;
-    --font-body: 'Inter', sans-serif;
-}
-
-/* CSS de la pagina */
-
-/* Fondo de la página */
-
 body {
     min-height: 100vh;
-    padding: 40px 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-family: var(--font-body);
-    color: var(--color-negro);
-    background: transparent;
 }
 
-/* Contenedor principal */
+/*Sombra del modal*/
+body ::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(22, 22, 22, 0.92);
+    z-index: 999;
+}
 
-.contact-modal {
-    width: 100%;
-    max-width: 1100px;
+/*Contenedor principal del modal*/
+.contact-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(1080px, calc(100% - 48px));
+    z-index: 1000;
+}
 
-    position: relative;
+/*Contenido de las dos columnas*/
+.contact-content{
+    display: grid;
+    grid-template-columns: 42% 58%;
+    min-height: 566px;
 
     background-color: var(--color-fondo);
     border: 2px solid var(--color-negro);
-    border-radius: 20px;
+    border-radius: 22px;
+    overflow: hidden;
 
-    box-shadow: 10px 10px 0 var(--color-negro);
+    position: relative;
 }
 
-/* Boton para cerrar el formulario */
-
-.close-button {
+/*Boton para cerrar*/
+.close-button{
     position: absolute;
     top: 10px;
-    right: 14px;
+    right: 15px;
     z-index: 2;
 
-    padding: 0;
-    
-    background: transparent;
+    background: none;
     border: none;
 
     color: var(--color-rojo);
     font-family: var(--font-body);
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1;
 
     cursor: pointer;
 }
 
-.close-button:hover {
+/*Columna izquierda - Informacion de contacto*/
+.contact-info{
+    background-color: var(--color-amarillo);
+
+    padding: 72px 35px 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 2px solid var(--color-negro);
+}
+
+/*Etiqueta LET´S TALK*/
+.contact-label{
+    display: inline-block;
+    align-self: flex-start;
+
+    background-color: var(--color-morado);
     color: var(--color-negro);
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+
+    padding: 6px 18px;
+
+    border: 1px solid var(--color-negro);
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 0 var(--color-negro);
 }
 
-/* Distrubución de las dos columnas */
+/*Titulo principal*/
+.contact-info h1{
+    font-family: var(--font-title);
+    font-size: clamp(38px, 4.2vw, 56px);
+    line-height: 1.08;
 
-.contact-content {
+    color: var(--color-negro);
+
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+
+/*Descripcion*/
+.contact-description{
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--color-negro);
+
+    max-width: 310px;
+}
+
+/*Redes Sociales*/
+.social-section{
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.social-section h2{
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--color-negro);
+
+    margin-bottom: 17px;
+}
+
+/*Contenedor de los links*/
+.social-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Cada link*/
+.social-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-negro);
+    text-decoration: none;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/*Iconos img*/
+.social-link img{
+    width: 29px;
+    height: 29px;
+
+    object-fit: contain;
+}
+
+/*Columna derecha - Formulario*/
+.contact-form-container{
+    background-color: var(--color-fondo);
+
+    padding: 32px 30px 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Organizacion de campos*/
+#formulario{
+    width: 100%;
+
     display: grid;
-    grid-template-columns: 42% 58%;
+    grid-template-columns: repeat(2, 1fr);
 
-    min-height: 360%;
+    column-gap: 22px;
+    row-gap: 17px;
 }
 
-/*Panel izquierdo */
