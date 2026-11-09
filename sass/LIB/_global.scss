@@ -1,0 +1,53 @@
+@use "variables" as tokens;
+
+:root {
+    --blue: #{tokens.$color-azul};
+    --yellow: #{tokens.$color-amarillo};
+    --red: #{tokens.$color-rojo};
+    --purple: #{tokens.$color-morado};
+    --paper: #{tokens.$color-fondo};
+    --ink: #{tokens.$color-negro};
+    --blue-light: #{tokens.$color-azul-claro};
+    --yellow-light: #{tokens.$color-amarillo-claro};
+    --red-light: #{tokens.$color-rojo-claro};
+    --purple-light: #{tokens.$color-morado-claro};
+    --paper-light: #{tokens.$color-crema-claro};
+    --line: rgba(22, 22, 22, 0.2);
+    font-family: tokens.$font-body;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+    background-color: tokens.$color-fondo;
+    background-image: radial-gradient(rgba(22, 22, 22, 0.055) 1px, transparent 1px);
+    background-size: 15px 15px;
+    color: tokens.$color-negro;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (min-width: 1441px) {
+    :root {
+        font-size: clamp(16px, 0.82vw, 20px);
+    }
+}
