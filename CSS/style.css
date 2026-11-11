@@ -9,12 +9,7 @@ body {
 
 /*Sombra del modal*/
 body ::before{
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-color: rgba(22, 22, 22, 0.92);
-    z-index: 999;
-}
+
 
 /*Contenedor principal del modal*/
 .contact-modal{
