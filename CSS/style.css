@@ -12,7 +12,7 @@ body ::before{
     content: "";
     position: fixed;
     inset: 0;
-    background-color: rgba(22, 22, 22, 0.92);
+    background-color: floralwhite;
     z-index: 999;
 }
 
