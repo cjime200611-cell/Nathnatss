@@ -7,4 +7,13 @@
 .project-process-reference-img {
     display: flex;
     gap: 108px;
+    justify-content: center;
+
+    img {
+        width: 20%;
+        height: 413px;
+        border-radius: 13px;
+        border: 2px solid $color-negro;
+        box-shadow: 2px 2px $color-negro;
+    }
 }

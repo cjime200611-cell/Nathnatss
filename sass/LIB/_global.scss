@@ -74,6 +74,17 @@ h5 {
     margin: 0;
 }
 
+h6 {
+    font-family: $font-title;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0;
+
+    span {
+        color: $color-azul-oscuro;
+    }
+}
+
 .detalle-proyecto {
     display: flex;
     flex-direction: column;
@@ -111,13 +122,28 @@ h5 {
 .project-process-description {
     padding: 0px 95px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 24px;
 }
 
 .project-process-title {
     display: flex;
     gap: 16px;
+}
+
+.project-process-img {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: 588px;
+        border-radius: 13px;
+        border: 2px solid $color-negro;
+        box-shadow: 2px 2px $color-negro;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
