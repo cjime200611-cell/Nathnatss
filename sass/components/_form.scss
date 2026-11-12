@@ -1,0 +1,115 @@
+@use "../base/variables" as v;
+
+// CONTENEDOR DEL FORMULARIO
+.contact-form-container{
+    padding: 32px 30px 34px;
+    background-color: v.$color-fondo;
+}
+
+// DISTRIBUCION DE LOS CAMPOS
+#formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 17px;
+}
+
+// CAMPOS QUE OCUPAN TODA UNA FILA
+.grupo-nombre,
+.grupo-servicio,
+.grupo-mensaje{
+    grid-column: span 2;
+}
+
+// ETIQUETAS 
+#formulario label{
+    display: block;
+    margin-bottom: 8px;
+    color: v.$color-negro;
+    font-family: v.$font-body;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+// CAMPOS DE TEXTO Y SELECT
+#formulario input,
+#formulario select,
+#formulario textarea{
+    width: 100%;
+    padding: 13px 15px;
+    background-color: v.$color-input;
+    border: 1.5px solid v.$color-negro;
+    border-radius: 14px;
+    color: v.$color-negro;
+    font-family: v.$font-body;
+    font-size: 14px;
+    outline: none;
+}
+
+// PLACEHOLDER
+#formulario input::placeholder,
+#formulario select::placeholder{
+    color: #777777;
+    font-family: v.$font-body;
+}
+
+//SELECT 
+#formulario select{
+    cursor: pointer;
+}
+
+// TEXTAREA
+#formulario textarea{
+    resize: vertical;
+    min-height: 110px;
+}
+
+// ESTADO ENFOCADO
+#formulario input:focus,
+#formulario select:focus,
+#formulario textarea:focus{
+    border-color: v.$color-azul;
+    border-width: 2px;
+}
+
+// MENSAJE DE ERROR
+.error{
+    display: block;
+    margin-top: 6px;
+    color: v.$color-rojo;
+    font-family: v.$font-body;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.select-container{
+    position: relative;
+}
+
+.select-container::after{
+    content: "";
+    position: absolute;
+    top: 36%;
+    right: 20px;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid v.$color-negro;
+    border-bottom: 2px solid v.$color-negro;
+    transform: translate(-70%) rotate(45deg);
+    pointer-events: none;
+}
+
+#formulario select{
+    appearance: none;
+    padding-right: 45px;
+    cursor: pointer;
+}
+
+// OCUALTAR FORMULARIO DESPUES DE ENVIAR
+#formulario[hidden]{
+    display: none !important;
+}
+
+// OCULTAR FORMULARIO DESPUES DE ENVIAR
+.contact-info[hidden]{
+    display: none !important;
+}

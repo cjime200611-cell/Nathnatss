@@ -1,0 +1,94 @@
+@use "../base/variables" as v;
+
+// CONTENEDOR DEL MENSAJE DE CONFIRMACION
+.mensaje-exito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // TAMAÑO DE LA TARJETA
+    width: 430px;
+    max-width: 100%;
+    min-height: 330px;
+    margin: 0;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    background-color: v.$color-input;
+    border: 2px solid v.$color-negro;
+    border-radius: 22px;
+    box-shadow: 5px 5px 0 v.$color-negro;
+    text-align: center;
+
+    // ESTADO INICIAL DE LA ANIMACIÓN
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+// ANIMACIÓN AL MOSTRAR LA CONFIRMACION
+.mensaje-exito.mostrar{
+    animation: apaparecer 0.5s ease forwards;
+}
+
+// CIRCULO VERDE CON EL CHECK
+.icono-exito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 22px;
+
+    background-color: v.$color-exito;
+    border: 3px solid v.$color-texto-exito;
+    border-radius: 50%;
+
+    color: v.$color-texto-exito;
+    font-family: v.$font-body;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+//TITULO DE CONFIRMACION
+.mensaje-exito h2{
+    margin-bottom: 15px;
+    color: v.$color-negro;
+    font-family: v.$font-title;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+// DESCRIPCION
+.mensaje-exito p{
+    color: v.$color-negro;
+    font-family: v.$font-body;
+    font-size: 15px;
+    line-height: 1.6;
+}
+// ANIMACION DE ENTRADA
+@keyframes apaparecer {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// OCULTAR MENSAJE MIENTRAS NO SE UTILIZA
+.mensaje-exito[hidden]{
+    display: none !important;
+}
+
+//CENTRAR LA CONFIRMACION EN EL PANEL DERECHO
+.contact-form-container:has(#formulario[hidden]){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
