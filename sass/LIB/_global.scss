@@ -43,13 +43,15 @@ a {
 h1 {
     font-family: $font-title;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 4.375rem;
+    margin: 0;
 }
 
 h2 {
     font-family: $font-title;
     text-transform: uppercase;
     font-size: 48px;
+    margin: 0;
 }
 
 h3 {
@@ -70,6 +72,52 @@ h5 {
     text-transform: uppercase;
     font-size: 20px;
     margin: 0;
+}
+
+.detalle-proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.project-process {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.icon-design {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-azul-claro;
+    box-shadow: 4px 4px $color-negro;
+    width: 58px;
+    height: 58px;
+    border: 2px solid $color-negro;
+    border-radius: 50%;
+
+    img {
+        display: block;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.project-process {
+    padding: 0px 48px;
+}
+
+.project-process-description {
+    padding: 0px 95px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.project-process-title {
+    display: flex;
+    gap: 16px;
 }
 
 @media (prefers-reduced-motion: reduce) {
