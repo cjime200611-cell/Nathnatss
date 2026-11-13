@@ -35,7 +35,7 @@
         "portfolioCategory": "3D ILLUSTRATION",
         "year": "2026",
         "description": "Chulin chulin racata racata, si se me pone voy a darle",
-        "image": "public/assets/proyect4.jpg",
+        "image": "./public/assets/proyect4.jpg",
         "client": "Los Pits",
         "link": ""
     }

@@ -17,6 +17,8 @@ const requiredProjectFields = [
     "client"
 ];
 
+const projectsUrl = new URL("../../projects.json", import.meta.url);
+
 function validateProject(project, index, projectIds) {
     if (typeof project !== "object" || project === null || Array.isArray(project)) {
         throw new Error(`Project ${index + 1} must be an object.`);
@@ -51,7 +53,7 @@ function validateUrl(value, label, allowRelative) {
     let url;
 
     try {
-        url = new URL(value, document.baseURI);
+        url = new URL(value, projectsUrl);
     } catch {
         throw new Error(`${label} has an invalid URL.`);
     }
@@ -64,7 +66,7 @@ function validateUrl(value, label, allowRelative) {
 
 export async function loadProjects() {
     // La URL se calcula desde este módulo para que no dependa de la página actual.
-    const response = await fetch(new URL("../../projects.json", import.meta.url));
+    const response = await fetch(projectsUrl);
     if (!response.ok) {
         throw new Error(`Could not load projects.json: ${response.status} ${response.statusText}`);
     }
@@ -83,6 +85,6 @@ export async function loadProjects() {
 }
 
 export function resolveImageUrl(image) {
-    // Convierte las rutas relativas de imagen en una URL lista para el navegador.
-    return new URL(image, document.baseURI).href;
+    // Resuelve imágenes relativas desde la ubicación de projects.json.
+    return new URL(image, projectsUrl).href;
 }
