@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass:public/css",
-    "sass-build": "sass --watch sass:public-build/css --style compressed"
+    "sass": "sass --watch sass/styles.scss:public/css/styles.css",
+    "sass-build": "sass sass/styles.scss public/css/styles.css --style compressed"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sass": "^1.107.1"
   }
 }

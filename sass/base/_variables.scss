@@ -1,16 +1,87 @@
-// COLORES DEL PROYECTO
-$color-fondo: #FFF9EE;
-$color-negro: #161616;
-$color-azul: #294BF5;
-$color-amarrillo: #FFD85A;
-$color-rojo: #FF475D;
-$color-morado: #AC6FF0;
+// // COLORES DEL PROYECTO
+// $color-fondo: #FFF9EE;
+// $color-negro: #161616;
+// $color-azul: #294BF5;
+// $color-amarrillo: #FFD85A;
+// $color-rojo: #FF475D;
+// $color-morado: #AC6FF0;
 
-// TIPOGRAFIA DEL PROYECTO
+// // TIPOGRAFIA DEL PROYECTO
+// $font-title: "Paytone One", sans-serif;
+// $font-body: "Inter", sans-serif;
+
+// // COLORES COMPLEMENTARIOS DEL FORMULARIO
+// $color-input: #EAF0FF;
+// $color-exito: #9CF5C8;
+// $color-texto-exito: #218957;
+
+
+/* Paletas de marca, ordenadas del tono más claro (90) al más oscuro (10). */
+/* Blue */
+$color-blue-90: #EAEFFF;
+$color-blue-80: #D4DBFD;
+$color-blue-70: #A9B7FB;
+$color-blue-60: #7F92F9;
+$color-blue-50: #546EF7;
+$color-blue-40-base: #294BF5;
+$color-blue-30: #1F38B8;
+$color-blue-20: #15267B;
+$color-blue-10: #0A133D;
+
+/* Purple */
+$color-purple-90: #F7F1FE;
+$color-purple-80: #EEE2FC;
+$color-purple-70: #D6B9F8;
+$color-purple-60: #C394F4;
+$color-purple-50: #B982F2;
+$color-purple-40-base: #AC6FF0;
+$color-purple-30: #8153B4;
+$color-purple-20: #563878;
+$color-purple-10: #2B1C3C;
+
+/* Yellow */
+$color-yellow-90: #FFFBEF;
+$color-yellow-80: #FFF7DE;
+$color-yellow-70: #FFEFB5;
+$color-yellow-60: #FFE78D;
+$color-yellow-50: #FFDF73;
+$color-yellow-40-base: #FFD85A;
+$color-yellow-30: #BFA243;
+$color-yellow-20: #806C2D;
+$color-yellow-10: #403616;
+
+/* Pink */
+$color-pink-90: #FFF1F3;
+$color-pink-80: #FFE3E7;
+$color-pink-70: #FFB5BE;
+$color-pink-60: #FF8998;
+$color-pink-50: #FF687B;
+$color-pink-40-base: #FF475D;
+$color-pink-30: #BF3546;
+$color-pink-20: #80242F;
+$color-pink-10: #401217;
+
+/* Neutros */
+$color-crema: #FFF9EE;
+$color-negro: #000000;
+
+/* Escala de espaciados en píxeles */
+$space-2: 2px;
+$space-4: 4px;
+$space-8: 8px;
+$space-10: 10px;
+$space-16: 16px;
+$space-24: 24px;
+$space-32: 32px;
+$space-40: 40px;
+$space-48: 48px;
+$space-52: 52px;
+$space-60: 60px;
+$space-74: 74px;
+$space-85: 85px;
+$space-98: 98px;
+
+/* Tipografías para títulos y cuerpo */
 $font-title: "Paytone One", sans-serif;
 $font-body: "Inter", sans-serif;
 
-// COLORES COMPLEMENTARIOS DEL FORMULARIO
-$color-input: #EAF0FF;
-$color-exito: #9CF5C8;
-$color-texto-exito: #218957;

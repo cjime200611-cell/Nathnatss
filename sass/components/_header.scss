@@ -1,0 +1,162 @@
+/* Marca, navegación de escritorio y menú responsive para móvil. */
+@use "../base" as tokens;
+
+/* Estructura del encabezado y marca */
+.site-header {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    min-height: 78px;
+    align-items: center;
+    justify-content: space-between;
+    gap: tokens.$space-24;
+    padding: tokens.$space-8 5%;
+    border-bottom: 1px solid tokens.$color-negro;
+    background-color: tokens.$color-crema;
+}
+
+.brand-name,
+.site-nav a {
+    text-decoration: none;
+}
+
+.brand-name {
+    display: inline-flex;
+    align-items: center;
+    gap: tokens.$space-8;
+    font-family: tokens.$font-title;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.brand-mark {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Navegación, controles y foco de teclado */
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: tokens.$space-8;
+}
+
+.site-nav a {
+    padding: 9px 18px;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 999px;
+    background-color: tokens.$color-crema;
+    font-size: 14px;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background-color: tokens.$color-purple-30;
+    font-weight: bold;
+    color: tokens.$color-crema;
+}
+
+.site-nav a:hover {
+    transform: translateY(-2px);
+}
+
+.site-nav a:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 2px solid tokens.$color-blue-40-base;
+    outline-offset: 3px;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: tokens.$color-negro;
+    transition: transform 180ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+@include tokens.mobile {
+    .site-header {
+        min-height: 64px;
+        padding-inline: 5%;
+    }
+
+    .brand-name {
+        gap: tokens.$space-4;
+        font-size: 16px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: tokens.$space-8;
+        padding: tokens.$space-16 5%;
+        border-bottom: 1px solid tokens.$color-negro;
+        background-color: tokens.$color-crema;
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        text-align: center;
+    }
+}
+
+@include tokens.from-2k {
+    .site-header {
+        min-height: 100px;
+        padding-inline: max(5%, calc((100% - 2200px) / 2));
+    }
+
+    .brand-name {
+        font-size: 22px;
+    }
+
+    .brand-mark {
+        width: 52px;
+        height: 52px;
+    }
+}
