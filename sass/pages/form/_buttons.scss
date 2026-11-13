@@ -1,0 +1,48 @@
+@use "../../base/variables" as v;
+
+// BOTON PRINCIPAL
+.boton{
+    display: block;
+    width: 235px;
+    max-width: 100%;
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 15px 22px;
+    background-color: v.$color-azul;
+    color: v.$color-fondo;
+    border: 2px solid v.$color-negro;
+    border-radius: 30px;
+    box-shadow: 4px 4px 0 v.$color-negro;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;  
+}
+
+// ESTADO HOVER
+.boton:hover{
+    background-color: #15267B;
+    color: v.$color-fondo;
+}
+
+//ESTADO PRESIONADO
+.boton:active{
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 v.$color-negro;
+}
+
+//ESTADO ENFOCADO
+.boton:focus-visible{
+    outline: 3px solid #294BF5;
+    outline-offset: 4px;
+}
+
+// BOTON DESABILITADO
+.boton:disabled{
+    background-color: #D1D1D1;
+    color: #777777;
+    border-color: #777777;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}

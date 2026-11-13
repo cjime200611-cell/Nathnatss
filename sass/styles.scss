@@ -1,5 +1,12 @@
-$colorMain: #3498db;
+// BASE
+@use "./base/variables";
+@use "./base/reset";
 
-body {
-  background-color: $colorMain;
-}
+// COMPONENTES
+@use "./pages/form/modal";
+@use "./pages/form/form";
+@use "./pages/form/buttons";
+@use "./pages/form/confirmation";
+
+// RESPONSIVE
+@use "./layout/responsive";

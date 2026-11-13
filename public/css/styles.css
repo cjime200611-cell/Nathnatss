@@ -1,5 +1,359 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #3498db;
+  font-family: "Inter", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF9EE;
+  z-index: 999;
+}
+
+.contact-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1080px, 100% - 48px);
+  z-index: 1000;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 1001;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #FF475D;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 566px;
+  background-color: #FFF9EE;
+  border: 2px solid #161616;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 #161616;
+}
+
+.contact-info {
+  min-height: 566px;
+  padding: 72px 35px 60PX;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFD85A;
+}
+
+.contact-label {
+  display: inline-block;
+  width: fit-content;
+  padding: 9px 18px;
+  background-color: #AC6FF0;
+  color: #161616;
+  border: 2px solid #161616;
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contact-info h1 {
+  margin-top: 30px;
+  color: #161616;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(36px, 3.2vw, 46px);
+  line-height: 1.1;
+}
+
+.contact-description {
+  margin-top: 20px;
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.social-section {
+  margin-top: auto;
+  margin-bottom: 35px;
+}
+
+.social-section h2 {
+  margin-bottom: 18px;
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-link img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.contact-form-container {
+  padding: 32px 30px 34px;
+  background-color: #FFF9EE;
+}
+
+#formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 17px;
+}
+
+.grupo-nombre,
+.grupo-servicio,
+.grupo-mensaje {
+  grid-column: span 2;
+}
+
+#formulario label {
+  display: block;
+  margin-bottom: 8px;
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#formulario input,
+#formulario select,
+#formulario textarea {
+  width: 100%;
+  padding: 13px 15px;
+  background-color: #EAF0FF;
+  border: 1.5px solid #161616;
+  border-radius: 14px;
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+#formulario input::placeholder,
+#formulario select::placeholder {
+  color: #777777;
+  font-family: "Inter", sans-serif;
+}
+
+#formulario select {
+  cursor: pointer;
+}
+
+#formulario textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+#formulario input:focus,
+#formulario select:focus,
+#formulario textarea:focus {
+  border-color: #294BF5;
+  border-width: 2px;
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  color: #FF475D;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container::after {
+  content: "";
+  position: absolute;
+  top: 36%;
+  right: 20px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #161616;
+  border-bottom: 2px solid #161616;
+  transform: translate(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+#formulario select {
+  appearance: none;
+  padding-right: 45px;
+  cursor: pointer;
+}
+
+#formulario[hidden] {
+  display: none !important;
+}
+
+.contact-info[hidden] {
+  display: none !important;
+}
+
+.boton {
+  display: block;
+  width: 235px;
+  max-width: 100%;
+  grid-column: 1/-1;
+  justify-self: center;
+  padding: 15px 22px;
+  background-color: #294BF5;
+  color: #FFF9EE;
+  border: 2px solid #161616;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0 #161616;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #15267B;
+  color: #FFF9EE;
+}
+
+.boton:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #161616;
+}
+
+.boton:focus-visible {
+  outline: 3px solid #294BF5;
+  outline-offset: 4px;
+}
+
+.boton:disabled {
+  background-color: #D1D1D1;
+  color: #777777;
+  border-color: #777777;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mensaje-exito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 430px;
+  max-width: 100%;
+  min-height: 330px;
+  margin: 0;
+  padding: 35px 30px;
+  box-sizing: border-box;
+  background-color: #EAF0FF;
+  border: 2px solid #161616;
+  border-radius: 22px;
+  box-shadow: 5px 5px 0 #161616;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.mensaje-exito.mostrar {
+  animation: apaparecer 0.5s ease forwards;
+}
+
+.icono-exito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 22px;
+  background-color: #9CF5C8;
+  border: 3px solid #218957;
+  border-radius: 50%;
+  color: #218957;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.mensaje-exito h2 {
+  margin-bottom: 15px;
+  color: #161616;
+  font-family: "Paytone One", sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.mensaje-exito p {
+  color: #161616;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@keyframes apaparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mensaje-exito[hidden] {
+  display: none !important;
+}
+
+.contact-form-container:has(#formulario[hidden]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
