@@ -83,6 +83,22 @@ h3 {
     background-color: #FFE78D;
 }
 
+/* Botones de categorias */
+.botton.filter-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Color del botón seleccionado */
+.botton .filter-btn.active {
+    background-color: #FFE78D;
+    color:black;
+}
+
 /* Category */
 .category-section {
     background-color: #EEE2FC;
@@ -106,6 +122,13 @@ h3 {
     margin: 0 auto;
     max-width: 700px;
 }
+
+/* Color del botón seleccionado */
+.category-btn.active {
+    background-color: #FFE78D;
+    color: white;
+}
+
 
 /* Tarjetas de Proyectos */
 .Columna {

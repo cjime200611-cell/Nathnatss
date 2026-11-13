@@ -109,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         button.addEventListener("click", function() {
 
+            
+
             const buttonText = this.textContent.trim().toLowerCase();
 
             if (buttonText === "3d illustration"){
@@ -133,6 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         visibleProjects = projectsPerPage;
+
+        //Cambio color del botón seleccionado
+filterButtons.forEach(btn => {
+    btn.classList.remove("active");
+});
+
+this.classList.add("active");
 
         updatePortfolioTitle();
         displayProjects();
