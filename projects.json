@@ -1,0 +1,42 @@
+[
+    {
+        "id": "neo-kinetic-bot",
+        "name": "Neo Kinetic Bot",
+        "portfolioCategory": "3D ILLUSTRATION",
+        "year": "2026",
+        "description": "A playful character concept brought to life through sculptural forms, bold materials and expressive motion.",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+        "client": "Kinetic Labs",
+        "link": ""
+    },
+    {
+        "id": "arcade-reimagined",
+        "name": "Arcade Reimagined",
+        "portfolioCategory": "COMMERCIAL VISUALIZATION",
+        "year": "2025",
+        "description": "A colorful interactive identity that brings the energy of classic arcades into a modern digital experience.",
+        "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop",
+        "client": "Playground Studio",
+        "link": ""
+    },
+    {
+        "id": "studio-north",
+        "name": "Studio North",
+        "portfolioCategory": "PERSONALIZED ILLUSTRATIONS",
+        "year": "2025",
+        "description": "A flexible visual system and digital home for an independent creative studio.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+        "client": "Studio North",
+        "link": ""
+    },
+    {
+        "id": "Project2",
+        "name": "TEST",
+        "portfolioCategory": "3D ILLUSTRATION",
+        "year": "2026",
+        "description": "Chulin chulin racata racata, si se me pone voy a darle",
+        "image": "./public/assets/proyect4.jpg",
+        "client": "Los Pits",
+        "link": ""
+    }
+]

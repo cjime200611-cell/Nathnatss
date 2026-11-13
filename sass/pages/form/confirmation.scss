@@ -1,0 +1,94 @@
+@use "../../base" as tokens;
+
+// CONTENEDOR DEL MENSAJE DE CONFIRMACION
+.contact-modal .mensaje-exito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // TAMAÑO DE LA TARJETA
+    width: 430px;
+    max-width: 100%;
+    min-height: 330px;
+    margin: 0;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    background-color: tokens.$color-blue-90;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 22px;
+    box-shadow: 5px 5px 0 tokens.$color-negro;
+    text-align: center;
+
+    // ESTADO INICIAL DE LA ANIMACIÓN
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+// ANIMACIÓN AL MOSTRAR LA CONFIRMACION
+.contact-modal .mensaje-exito.mostrar{
+    animation: contact-form-appear 360ms ease-out both;
+}
+
+// CIRCULO DE CONFIRMACION CON EL CHECK
+.contact-modal .icono-exito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 22px;
+
+    background-color: tokens.$color-purple-90;
+    border: 3px solid tokens.$color-purple-30;
+    border-radius: 50%;
+
+    color: tokens.$color-purple-30;
+    font-family: tokens.$font-body;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+//TITULO DE CONFIRMACION
+.contact-modal .mensaje-exito h2{
+    margin-bottom: 15px;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-title;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+// DESCRIPCION
+.contact-modal .mensaje-exito p{
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
+    font-size: 15px;
+    line-height: 1.6;
+}
+// ANIMACION DE ENTRADA
+@keyframes contact-form-appear {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// OCULTAR MENSAJE MIENTRAS NO SE UTILIZA
+.contact-modal .mensaje-exito[hidden]{
+    display: none !important;
+}
+
+//CENTRAR LA CONFIRMACION EN EL PANEL DERECHO
+.contact-modal .contact-form-container:has(#formulario[hidden]){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

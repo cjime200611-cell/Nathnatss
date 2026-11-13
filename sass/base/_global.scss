@@ -13,6 +13,19 @@
     --purple-light: #{tokens.$color-morado-claro};
     --paper-light: #{tokens.$color-crema-claro};
     --line: rgba(22, 22, 22, 0.2);
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+@use "index" as tokens;
+
+/* Tokens de color y tipografía expuestos al CSS compilado. */
+:root {
+    --blue: #{tokens.$color-blue-40-base};
+    --yellow: #{tokens.$color-yellow-40-base};
+    --pink: #{tokens.$color-pink-40-base};
+    --purple: #{tokens.$color-purple-40-base};
+    --paper: #{tokens.$color-crema};
+    --ink: #{tokens.$color-negro};
+    --line: rgba(0, 0, 0, 0.2);
     font-family: tokens.$font-body;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -25,6 +38,10 @@ body {
     background-size: 15px 15px;
     color: tokens.$color-negro;
 }
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
 
 *,
 *::before,
@@ -34,6 +51,33 @@ body {
 
 html {
     scroll-behavior: smooth;
+body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    background-color: tokens.$color-crema;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.20) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: tokens.$color-negro;
+}
+
+/* El contenido llena páginas cortas; el footer fijo no necesita espacio extra. */
+body > main {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+/* Aplica la tipografía de títulos de forma consistente. */
+h1,
+h2,
+h3 {
+    font-family: tokens.$font-title;
+    text-transform: uppercase;
+}
+
+/* Mantiene imágenes flexibles y enlaces compatibles con cada sección. */
+img {
+    max-width: 100%;
 }
 
 a {
@@ -146,6 +190,7 @@ h6 {
     }
 }
 
+/* Respeta la preferencia del sistema para reducir el movimiento. */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto !important;
@@ -155,5 +200,14 @@ h6 {
 @media (min-width: 1441px) {
     :root {
         font-size: clamp(16px, 0.82vw, 20px);
+    }
+}
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

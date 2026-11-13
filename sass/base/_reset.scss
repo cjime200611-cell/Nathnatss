@@ -1,3 +1,16 @@
+// /* RESET GENERAL */
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// html{
+//     scroll-behavior: smooth;
+// }
+
+// body{
+//     font-family: 'Inter', sans-serif;
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -40,7 +53,7 @@ main {
  */
 
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
     margin: 0.67em 0;
 }
 
@@ -69,7 +82,7 @@ hr {
 pre {
     font-family: monospace, monospace;
     /* 1 */
-    font-size: 1rem;
+    font-size: 1em;
     /* 2 */
 }
 
@@ -117,7 +130,7 @@ kbd,
 samp {
     font-family: monospace, monospace;
     /* 1 */
-    font-size: 1rem;
+    font-size: 1em;
     /* 2 */
 }
 
@@ -143,11 +156,11 @@ sup {
 }
 
 sub {
-    bottom: -0.25rem;
+    bottom: -0.25em;
 }
 
 sup {
-    top: -0.5rem;
+    top: -0.5em;
 }
 
 /* Embedded content
@@ -245,7 +258,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-    padding: 0.35em 0.75em 0.625rem;
+    padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -356,7 +369,7 @@ details {
  */
 
 summary {
-    display: list-itrem;
+    display: list-item;
 }
 
 /* Misc

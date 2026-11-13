@@ -1,0 +1,44 @@
+/* Puntos de quiebre reutilizables para los parciales SASS. */
+@mixin from-tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+/* Escritorio amplio y pantallas 2K */
+@mixin from-desktop {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin from-2k {
+    @media (min-width: 2560px) {
+        @content;
+    }
+}
+
+/* Límites inclusivos para tablet y pantallas pequeñas */
+@mixin tablet-and-below {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin narrow-mobile {
+    @media (max-width: 320px) {
+        @content;
+    }
+}

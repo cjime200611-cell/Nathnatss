@@ -1,0 +1,2157 @@
+@charset "UTF-8";
+/* Carga estilos base, componentes y secciones en orden de dependencia. */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* API SASS pública: comparte tokens de diseño y mixins responsive. */
+/* Paletas de marca, ordenadas del tono más claro (90) al más oscuro (10). */
+/* Blue */
+/* Purple */
+/* Yellow */
+/* Pink */
+/* Neutros */
+/* Escala de espaciados en píxeles */
+/* Tipografías para títulos y cuerpo */
+/* Puntos de quiebre reutilizables para los parciales SASS. */
+/* Escritorio amplio y pantallas 2K */
+/* Límites inclusivos para tablet y pantallas pequeñas */
+/* Tokens de color y tipografía expuestos al CSS compilado. */
+:root {
+  --blue: #294BF5;
+  --yellow: #FFD85A;
+  --pink: #FF475D;
+  --purple: #AC6FF0;
+  --paper: #FFF9EE;
+  --ink: #000000;
+  --line: rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  background-color: #FFF9EE;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #000000;
+}
+
+/* El contenido llena páginas cortas; el footer fijo no necesita espacio extra. */
+body > main {
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+/* Aplica la tipografía de títulos de forma consistente. */
+h1,
+h2,
+h3 {
+  font-family: "Paytone One", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Mantiene imágenes flexibles y enlaces compatibles con cada sección. */
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* Respeta la preferencia del sistema para reducir el movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Marca, navegación de escritorio y menú responsive para móvil. */
+/* Estructura del encabezado y marca */
+.site-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 8px 5%;
+  border-bottom: 1px solid #000000;
+  background-color: #FFF9EE;
+}
+
+.brand-name,
+.site-nav a {
+  text-decoration: none;
+}
+
+.brand-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Paytone One", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Navegación, controles y foco de teclado */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav a {
+  padding: 9px 18px;
+  border: 1.5px solid #000000;
+  border-radius: 999px;
+  background-color: #FFF9EE;
+  font-size: 14px;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.site-nav a[aria-current=page],
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background-color: #8153B4;
+  font-weight: bold;
+  color: #FFF9EE;
+}
+
+.site-nav a:hover {
+  transform: translateY(-2px);
+}
+
+.site-nav a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #000000;
+  transition: transform 180ms ease;
+}
+
+.nav-toggle[aria-expanded=true] span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded=true] span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    min-height: 64px;
+    padding-inline: 5%;
+  }
+  .brand-name {
+    gap: 4px;
+    font-size: 16px;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 16px 5%;
+    border-bottom: 1px solid #000000;
+    background-color: #FFF9EE;
+  }
+  .site-nav.is-open {
+    display: flex;
+  }
+  .site-nav a {
+    text-align: center;
+  }
+}
+@media (min-width: 2560px) {
+  .site-header {
+    min-height: 100px;
+    padding-inline: max(5%, (100% - 2200px) / 2);
+  }
+  .brand-name {
+    font-size: 22px;
+  }
+  .brand-mark {
+    width: 52px;
+    height: 52px;
+  }
+}
+/* Cursor con el logo y una estela breve; se activa solo con mouse. */
+.logo-cursor {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.logo-cursor.is-visible {
+  opacity: 1;
+}
+
+.logo-cursor__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  max-width: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+  will-change: transform;
+}
+
+.logo-cursor__mark--main {
+  z-index: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 3px rgba(255, 249, 238, 0.9)) drop-shadow(0 0 8px rgba(172, 111, 240, 0.82)) drop-shadow(0 0 14px rgba(41, 75, 245, 0.48));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-logo-cursor,
+  body.has-logo-cursor * {
+    cursor: none !important;
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Presentación con imagen, título y enlace principal al portafolio. */
+/* Imagen principal y superposición de texto */
+.hero,
+.hero-visual {
+  min-height: 600px;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  isolation: isolate;
+  padding: 60px 5%;
+  background-color: #000000;
+  color: #FFF9EE;
+}
+
+.hero-visual::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.08) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.62), transparent 58%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.hero-text,
+.hero-caption {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  width: min(850px, 80%);
+}
+
+.section-label {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero .section-label {
+  display: inline-flex;
+  margin-bottom: 24px;
+  padding: 7px 12px;
+  border: 1.5px solid #000000;
+  background-color: #FFD85A;
+  color: #000000;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.hero-link {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 12px 20px;
+  border: 1.5px solid #000000;
+  border-radius: 999px;
+  background-color: #7F92F9;
+  box-shadow: 3px 3px 0 #000000;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.hero-link:focus-visible {
+  outline: 2px solid #FFF9EE;
+  outline-offset: 4px;
+}
+
+.hero-caption {
+  position: absolute;
+  right: 5%;
+  bottom: 32px;
+  padding: 10px 14px;
+  background-color: rgba(0, 0, 0, 0.72);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .hero-visual {
+    min-height: 540px;
+  }
+  .hero-visual {
+    padding: 48px 5% 85px;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero-caption {
+    right: 5%;
+    bottom: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .hero,
+  .hero-visual {
+    min-height: 500px;
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero,
+  .hero-visual {
+    min-height: 680px;
+  }
+  .hero-visual {
+    padding: 85px 7%;
+  }
+  .hero h1 {
+    font-size: 80px;
+  }
+  .hero-caption {
+    right: 7%;
+    bottom: 48px;
+  }
+}
+@media (min-width: 2560px) {
+  .hero,
+  .hero-visual {
+    min-height: 850px;
+  }
+  .hero h1 {
+    font-size: 120px;
+  }
+  .hero-text {
+    width: min(1100px, 80%);
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Carrusel de proyectos, transiciones y vista previa responsive. */
+.featured-projects {
+  padding: 0 5%;
+}
+
+/* Aquí organizo visualmente el título, el contador y los botones de navegación. */
+.projects-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.projects-heading-text {
+  display: grid;
+  gap: 8px;
+}
+
+.projects-label {
+  width: fit-content;
+  padding: 4px 9px;
+  border: 1.5px solid #000000;
+  background: #AC6FF0;
+  color: #000000;
+  box-shadow: 3px 3px 0 #000000;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.projects-heading h2 {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.projects-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-count {
+  margin-right: 12px;
+  padding: 8px 12px;
+  border: 1.5px solid #000000;
+  background: #FFF9EE;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.projects-controls button {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1.5px solid #000000;
+  border-radius: 50%;
+  background: #FFF9EE;
+  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.projects-controls .project-next {
+  background: #294BF5;
+  color: #FFF9EE;
+}
+
+.projects-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 5px 0 #000000;
+}
+
+.projects-controls button:focus-visible,
+.project-preview:focus-visible,
+.project-link:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
+}
+
+/* Aquí doy estilo al contenedor principal donde JavaScript muestra cada proyecto. */
+.project-stage {
+  overflow: hidden;
+  border: 1.5px solid #000000;
+  border-radius: 6px;
+  background: #000000;
+  transition: border-color 1s ease;
+  box-shadow: 5px 5px 0 #000000, 0 0 28px 8px rgba(255, 249, 238, 0.48), 0 0 58px 18px rgba(255, 249, 238, 0.24);
+}
+
+.project-stage.is-transitioning {
+  border-color: rgba(255, 249, 238, 0.72);
+}
+
+.project-artwork {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Aquí ubico la categoría que JavaScript carga desde los datos del proyecto. */
+.project-category {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+  max-width: min(45%, 280px);
+  padding: 8px 11px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background: #FFD85A;
+  color: #000000;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-artwork::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.48) 43%, rgba(0, 0, 0, 0.12) 76%), linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+  content: "";
+}
+
+/* Aquí ubico sobre la imagen los textos del proyecto que JavaScript coloca en el HTML. */
+.project-details {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 5%;
+  display: flex;
+  width: min(390px, 44%);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.78);
+  color: #FFF9EE;
+  transform: translateY(-50%);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 18px;
+  color: #FFF9EE;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-details .project-title {
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.project-details .project-description {
+  max-width: 520px;
+  margin-top: 18px;
+  color: #FFF9EE;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.project-details .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+  padding: 12px 16px;
+  border: 1px solid #000000;
+  border-radius: 999px;
+  background: #FF475D;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.project-details .project-link[aria-disabled=true] {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.project-details .project-link:hover {
+  background: #FF687B;
+  box-shadow: 4px 5px 0 #000000;
+}
+
+.project-details.is-entering .project-meta {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-details.is-entering .project-title {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.project-details.is-entering .project-description {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* Aquí doy estilo al cliente que JavaScript muestra debajo de la descripción. */
+.project-client {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 249, 238, 0.38);
+  color: #FFF9EE;
+  font-size: 11px;
+}
+
+.project-details.is-entering .project-client {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.project-details.is-entering .project-link {
+  animation: textReveal 1.25s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+/* Aquí preparo la vista previa donde JavaScript coloca la imagen y el nombre del siguiente proyecto. */
+.project-preview {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 24px;
+  width: clamp(145px, 20%, 210px);
+  height: clamp(190px, 58%, 270px);
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 249, 238, 0.82);
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(255, 249, 238, 0.58), 0 0 42px 12px rgba(255, 249, 238, 0.28);
+  cursor: pointer;
+  scale: 1;
+  transform: translateY(-50%);
+  transition: scale 0.2s ease;
+}
+
+.project-preview::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: #000000;
+  background-image: inherit;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  filter: blur(2px) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.project-preview.is-entering {
+  animation: previewReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-preview:hover,
+.project-preview:focus-visible {
+  scale: 0.96;
+}
+
+.project-preview:hover::before,
+.project-preview:focus-visible::before {
+  filter: blur(0) brightness(1.08);
+}
+
+.project-preview:active {
+  scale: 0.92;
+}
+
+.project-preview-name {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 32px 12px 12px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.87));
+  color: #FFF9EE;
+  font-family: "Paytone One", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Aquí preparo la capa que JavaScript anima para pasar al siguiente proyecto. */
+.project-transition {
+  position: absolute;
+  z-index: 3;
+  top: var(--transition-top, 50%);
+  right: var(--transition-right, 24px);
+  bottom: var(--transition-bottom, auto);
+  left: var(--transition-left, auto);
+  width: var(--transition-width, clamp(145px, 20%, 210px));
+  height: var(--transition-height, clamp(190px, 58%, 270px));
+  transform: var(--transition-transform, translateY(-50%));
+  border: 1.5px solid rgba(255, 249, 238, 0.82);
+  border-radius: 5px;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(255, 249, 238, 0.58), 0 0 42px 12px rgba(255, 249, 238, 0.28);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Aquí mantengo el brillo alrededor de la imagen mientras se expande la transición. */
+.project-transition::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 24px 6px rgba(255, 249, 238, 0.62), inset 0 0 52px 14px rgba(255, 249, 238, 0.3);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease, box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-transition::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.48) 43%, rgba(0, 0, 0, 0.12) 76%), linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 38%);
+  content: "";
+  opacity: 0;
+}
+
+.project-stage.is-transitioning .project-transition {
+  visibility: visible;
+}
+
+.project-transition.is-expanding {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border: 1.5px solid rgba(255, 249, 238, 0.82);
+  border-radius: 0;
+  transition: inset 1.1s cubic-bezier(0.22, 1, 0.36, 1), width 1.1s cubic-bezier(0.22, 1, 0.36, 1), height 1.1s cubic-bezier(0.22, 1, 0.36, 1), transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), border-radius 1.1s cubic-bezier(0.22, 1, 0.36, 1), border-color 1s ease, box-shadow 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65), 0 0 22px 6px rgba(0, 0, 0, 0.58), 0 0 42px 12px rgba(0, 0, 0, 0.28);
+}
+
+.project-transition.is-expanding::before {
+  opacity: 1;
+  box-shadow: inset 0 0 24px 6px rgba(0, 0, 0, 0.62), inset 0 0 52px 14px rgba(0, 0, 0, 0.3);
+}
+
+.project-transition.is-expanding::after {
+  opacity: 1;
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-stage.is-transitioning .project-preview {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Aquí defino las animaciones de entrada para el texto y la vista previa del proyecto siguiente. */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(56px);
+    filter: blur(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes previewReveal {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Aquí adapto el contenido y la vista previa a pantallas estrechas. */
+@media (max-width: 768px) {
+  .featured-projects {
+    padding-inline: 5%;
+  }
+  .projects-heading {
+    align-items: flex-end;
+  }
+  .projects-heading h2 {
+    max-width: 280px;
+  }
+  .project-count {
+    display: none;
+  }
+  .project-artwork {
+    min-height: 620px;
+  }
+  .project-artwork::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.28) 35%, rgba(0, 0, 0, 0.78)), linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent);
+  }
+  .project-details {
+    top: 40px;
+    left: 24px;
+    width: calc(100% - 48px);
+    transform: none;
+  }
+  .project-details .project-title {
+    max-width: 460px;
+    font-size: 38px;
+  }
+  .project-details .project-description {
+    max-width: 420px;
+  }
+  .project-client {
+    margin-top: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .project-preview,
+  .project-transition {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .projects-controls {
+    align-self: flex-end;
+  }
+}
+/* Si el navegador indica que se prefiere menos movimiento, reduzco la duración de las animaciones. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@media (min-width: 1440px) {
+  .featured-projects {
+    max-width: 3200px;
+    margin-inline: auto;
+    padding-inline: 80px;
+  }
+  .projects-heading {
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  .projects-heading h2 {
+    font-size: 64px;
+  }
+  .projects-label {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  .projects-controls button {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+  .project-artwork {
+    min-height: 760px;
+  }
+  .project-category {
+    top: 32px;
+    left: 32px;
+    max-width: min(45%, 420px);
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .project-details {
+    left: 100px;
+    width: min(580px, 44%);
+  }
+  .project-meta {
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .project-details .project-title {
+    font-size: 88px;
+  }
+  .project-details .project-description {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+  .project-details .project-link {
+    gap: 32px;
+    margin-top: 32px;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .project-client {
+    margin-top: 28px;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  .project-preview {
+    right: 80px;
+    width: clamp(210px, 20%, 320px);
+    height: clamp(270px, 58%, 480px);
+  }
+  .project-transition {
+    right: var(--transition-right, 80px);
+    width: var(--transition-width, clamp(210px, 20%, 320px));
+    height: var(--transition-height, clamp(270px, 58%, 480px));
+  }
+  .project-preview-name {
+    padding: 32px 16px 16px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 2560px) {
+  .project-artwork {
+    min-height: 980px;
+  }
+  .projects-heading h2 {
+    font-size: 88px;
+  }
+  .project-details {
+    width: min(760px, 44%);
+  }
+  .project-details .project-title {
+    font-size: 112px;
+  }
+  .project-preview {
+    width: 360px;
+    height: 520px;
+  }
+  .project-transition {
+    width: var(--transition-width, 360px);
+    height: var(--transition-height, 520px);
+  }
+}
+/* Composición de las secciones de contenido de la página principal. */
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Presentación dividida y firma de la artista. */
+/* Distribución en dos columnas */
+.about {
+  display: grid;
+  grid-template-columns: 1.28fr 0.72fr;
+  min-height: 310px;
+  margin: 60px 5%;
+  overflow: hidden;
+  border: 1.5px solid #000000;
+  border-radius: 28px;
+  background-color: #FFD85A;
+  box-shadow: 8px 8px 0 #000000;
+}
+
+.about-text,
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px;
+}
+
+.about-text .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.about-text .section-label::before {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #000000;
+  content: "";
+}
+
+.about-text h2 {
+  max-width: 730px;
+  margin: 16px 0 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 34px;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.about-signature {
+  align-items: flex-end;
+  border-left: 1px solid currentColor;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.about-signature .section-label {
+  margin: 0;
+  padding: 7px 11px;
+  background-color: #000000;
+  color: #FFD85A;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.signature-note {
+  margin: auto 0 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.artist-signature {
+  margin: 4px 0 0;
+  font-size: 16px;
+}
+
+.artist-signature span {
+  display: inline-block;
+  margin-left: 4px;
+  font-family: "Paytone One", sans-serif;
+  font-size: 48px;
+  letter-spacing: -0.025em;
+  text-decoration: underline;
+  text-decoration-color: #294BF5;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-inline: 5%;
+  }
+  .about-text,
+  .about-signature {
+    min-height: 190px;
+    padding: 24px;
+  }
+  .about-signature {
+    border-top: 1px solid currentColor;
+    border-left: 0;
+  }
+  .about-text h2 {
+    font-size: 28px;
+  }
+  .signature-note {
+    margin-top: 32px;
+  }
+  .artist-signature span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 23px;
+  }
+  .artist-signature span {
+    font-size: 32px;
+  }
+}
+@media (min-width: 2560px) {
+  .about {
+    min-height: 420px;
+    margin-inline: 6%;
+  }
+  .about-text,
+  .about-signature {
+    padding: 60px;
+  }
+  .about-text h2 {
+    max-width: 1000px;
+    font-size: 54px;
+  }
+  .artist-signature span {
+    font-size: 72px;
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Título de servicios, tarjetas desplegables y nota sobre el alcance. */
+/* Espaciado de sección y énfasis en la palabra VIEW. */
+.services {
+  padding: 74px 5%;
+}
+
+.services-heading {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.services-heading .section-label {
+  width: fit-content;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid #000000;
+  background-color: #FF8998;
+  box-shadow: 3px 3px 0 #000000;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.services-heading h2 {
+  max-width: 760px;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.services-title-mobile {
+  display: none;
+}
+
+.services-title-desktop {
+  display: inline;
+}
+
+.services-title-view {
+  display: inline-block;
+  font-size: 1.6em;
+  line-height: 0.75;
+}
+
+/* Cuadrícula de tarjetas y sus estados. */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  border: 1.5px solid #000000;
+  border-radius: 18px;
+  background-color: #A9B7FB;
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.service-grid[data-state=all-closed],
+.service-grid[data-state=combined] {
+  align-items: center;
+}
+
+.service-grid[data-state=all-open] {
+  align-items: stretch;
+}
+
+.service-card {
+  min-width: 0;
+  cursor: pointer;
+}
+
+.service-content {
+  overflow: hidden;
+  border: 1.5px solid #000000;
+  border-radius: 24px;
+  background-color: #C394F4;
+  box-shadow: 6px 6px 0 #000000;
+  transition: transform 320ms cubic-bezier(0.65, 0, 0.35, 1), box-shadow 320ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.service-card--illustration .service-content {
+  background-color: #FFDF73;
+}
+
+.service-card--personalized .service-content {
+  background-color: #FF8998;
+}
+
+.service-card:hover .service-content {
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 0 #000000;
+}
+
+.service-topline {
+  position: relative;
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  background-color: #8153B4;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: auto, 230px auto;
+}
+
+.service-topline::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("../assets/patron.png");
+  background-position: center;
+  background-size: 230px auto;
+  content: "";
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.service-topline > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card--illustration .service-topline {
+  background-color: #BFA243;
+}
+
+.service-card--personalized .service-topline {
+  background-color: #BF3546;
+}
+
+.service-number {
+  color: #FFF9EE;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.service-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  flex: 0 0 55px;
+  place-items: center;
+  padding: 0;
+  border: 1.5px solid #000000;
+  border-radius: 50%;
+  background-color: #AC6FF0;
+  box-shadow: 2px 2px 0 #000000;
+  color: #FFF9EE;
+}
+
+.service-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.service-card--illustration .service-icon {
+  background-color: #FFD85A;
+  color: #000000;
+}
+
+.service-card--personalized .service-icon {
+  background-color: #FF475D;
+}
+
+.service-action:focus-visible {
+  outline: 2px solid #15267B;
+  outline-offset: 3px;
+}
+
+.service-body {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+/* Altura, opacidad y márgenes avanzan juntos para abrir y cerrar con suavidad. */
+.service-media {
+  display: grid;
+  --media-open-height: 360px;
+  max-height: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 720ms cubic-bezier(0.65, 0, 0.35, 1), margin-bottom 720ms cubic-bezier(0.65, 0, 0.35, 1), opacity 620ms ease, transform 720ms cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 720ms;
+  visibility: hidden;
+}
+
+.service-card.is-expanded .service-media {
+  max-height: var(--media-open-height);
+  margin-bottom: 24px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+.service-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.75;
+  border: 1.5px solid #000000;
+  border-radius: 16px;
+  background-color: #FFF9EE;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-action {
+  display: inline-flex;
+  width: fit-content;
+  max-height: 0;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  border: 0 solid #000000;
+  border-radius: 999px;
+  background-color: #FFF9EE;
+  box-shadow: 2px 2px 0 #000000;
+  font-size: 12px;
+  font-weight: 700;
+  align-self: flex-end;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  text-decoration: none;
+  transform: translateY(8px);
+  transition: max-height 600ms cubic-bezier(0.65, 0, 0.35, 1), margin-top 600ms cubic-bezier(0.65, 0, 0.35, 1), padding 600ms cubic-bezier(0.65, 0, 0.35, 1), border-width 600ms cubic-bezier(0.65, 0, 0.35, 1), opacity 520ms ease, transform 600ms cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 600ms, background-color 180ms ease;
+  visibility: hidden;
+}
+
+.service-card.is-expanded .service-action {
+  max-height: 60px;
+  min-height: 40px;
+  margin-top: 16px;
+  padding: 8px 14px;
+  border-width: 1px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+.service-action:hover {
+  transform: translateY(-1px);
+  background-color: #FFF7DE;
+}
+
+.service-body h3 {
+  margin: 0 0 16px;
+  font-family: "Paytone One", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.service-title-toggle {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  text-transform: inherit;
+}
+
+.service-title-toggle:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid #15267B;
+  outline-offset: 4px;
+}
+
+.service-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.service-notes {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.25fr) 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 16px 24px;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  background-color: #FFF9EE;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.service-notes-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.service-notes-title span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: #FFD85A;
+  box-shadow: 2px 2px 0 #000000;
+  font-size: 15px;
+}
+
+.service-notes > p {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .service-card--illustration {
+    grid-row: span 2;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 5%;
+  }
+  .services-heading {
+    margin-bottom: 32px;
+  }
+  .services-heading h2 {
+    max-width: 600px;
+    font-size: 44px;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+    padding: 16px;
+  }
+  .service-card--illustration {
+    grid-row: auto;
+  }
+  .service-topline {
+    min-height: 64px;
+  }
+  .service-body {
+    padding: 16px;
+  }
+  .service-body h3 {
+    font-size: 24px;
+  }
+  .service-body p {
+    font-size: 14px;
+  }
+  .service-media img {
+    aspect-ratio: 1.9;
+  }
+  .service-notes {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .service-notes-title {
+    justify-content: center;
+  }
+  .service-notes > p {
+    padding: 8px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .services {
+    padding-inline: 4%;
+  }
+  .services-heading h2 {
+    font-size: 38px;
+  }
+  .services-title-mobile {
+    display: inline;
+  }
+  .services-title-desktop {
+    display: none;
+  }
+  .service-grid {
+    padding: 8px;
+  }
+}
+@media (max-width: 320px) {
+  .services-heading h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 2560px) {
+  .service-media {
+    --media-open-height: 700px;
+  }
+  .services {
+    max-width: 2400px;
+    margin-inline: auto;
+    padding-block: 98px;
+  }
+  .services-heading {
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .services-heading h2 {
+    max-width: 1200px;
+    font-size: 76px;
+  }
+  .service-grid {
+    gap: 32px;
+    padding: 32px;
+  }
+  .service-topline {
+    min-height: 90px;
+    padding: 16px 24px;
+  }
+  .service-body {
+    padding: 32px;
+  }
+  .service-body h3 {
+    font-size: 36px;
+  }
+  .service-body p {
+    font-size: 18px;
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Call to action con patrón visual al final de la página. */
+/* Centra el contenido y mantiene el patrón como elemento decorativo. */
+.contact {
+  position: relative;
+  display: flex;
+  min-height: 500px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 74px 5% 96px;
+  background-color: #FFD85A;
+  text-align: center;
+}
+
+.contact::before {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/patron.png");
+  background-position: center;
+  background-size: 420px auto;
+  content: "";
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.contact > * {
+  position: relative;
+}
+
+.contact h2 {
+  max-width: 900px;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+  font-size: 64px;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.contact .section-label {
+  margin: 0 0 24px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background-color: #000000;
+  color: #FFD85A;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.contact > p:not(.section-label) {
+  max-width: 650px;
+  margin: 24px 0 32px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.contact-action {
+  display: inline-flex;
+  width: fit-content;
+  min-width: 190px;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 14px 24px;
+  border: 1.5px solid #000000;
+  border-radius: 999px;
+  background-color: #FF475D;
+  box-shadow: 4px 4px 0 #000000;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-action:hover,
+.contact-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+.contact-action:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: 440px;
+    padding-block: 60px 88px;
+    padding-inline: 7%;
+  }
+  .contact h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .contact {
+    min-height: 420px;
+    padding-block: 48px 80px;
+  }
+  .contact h2 {
+    font-size: 38px;
+  }
+  .contact > p:not(.section-label) {
+    font-size: 14px;
+  }
+}
+@media (min-width: 2560px) {
+  .contact {
+    min-height: 650px;
+    justify-content: center;
+    padding-top: 98px;
+    padding-inline: 8%;
+    padding-bottom: 108px;
+  }
+  .contact h2 {
+    font-size: 88px;
+  }
+  .contact > p:not(.section-label) {
+    max-width: 900px;
+    font-size: 20px;
+  }
+  .contact-action {
+    min-width: 240px;
+    min-height: 64px;
+    font-size: 16px;
+  }
+}
+/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Footer fijo y estados accesibles para los enlaces sociales. */
+/* Mantiene el footer visible durante el scroll. */
+.site-footer {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 5%;
+  border-top: 1.5px solid #000000;
+  background-color: #FFF9EE;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-name {
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.social-name:hover,
+.social-name:active {
+  background-color: #294BF5;
+  color: #FFF9EE;
+}
+
+.social-name:focus-visible {
+  outline: 2px solid #AC6FF0;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-inline: 5%;
+  }
+  .social-links {
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .site-footer {
+    gap: 8px;
+    padding-block: 10px;
+  }
+}
+@media (min-width: 2560px) {
+  .site-footer {
+    min-height: 76px;
+    padding-inline: max(5%, (100% - 2200px) / 2);
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
