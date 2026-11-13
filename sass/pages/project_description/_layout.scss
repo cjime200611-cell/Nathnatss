@@ -1,0 +1,60 @@
+@use "../../base" as tokens;
+
+.detalle-proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.project-process {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 tokens.$space-48;
+}
+
+.project-process-description {
+    padding: 0 95px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.project-process-title {
+    display: flex;
+    gap: tokens.$space-16;
+}
+
+.icon-design {
+    display: inline-flex;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
+
+    img {
+        display: block;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.project-process-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: tokens.$space-48;
+
+    img {
+        width: 100%;
+        height: 588px;
+        border: 2px solid tokens.$color-negro;
+        border-radius: 13px;
+        box-shadow: 2px 2px tokens.$color-negro;
+        object-fit: cover;
+    }
+}

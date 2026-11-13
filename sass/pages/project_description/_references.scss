@@ -1,3 +1,5 @@
+@use "../../base" as tokens;
+
 .project-process-reference {
     display: flex;
     flex-direction: column;
@@ -6,14 +8,15 @@
 
 .project-process-reference-img {
     display: flex;
-    gap: 108px;
     justify-content: center;
+    gap: 108px;
 
     img {
         width: 20%;
         height: 413px;
+        border: 2px solid tokens.$color-negro;
         border-radius: 13px;
-        border: 2px solid $color-negro;
-        box-shadow: 2px 2px $color-negro;
+        box-shadow: 2px 2px tokens.$color-negro;
+        object-fit: cover;
     }
 }

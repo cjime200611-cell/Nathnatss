@@ -1,16 +1,18 @@
+@use "../../base" as tokens;
+
 .principal-info {
-    padding: 24px 48px;
-    background-color: $color-amarillo;
     display: flex;
-    gap: 48px;
+    gap: tokens.$space-48;
+    padding: tokens.$space-24 tokens.$space-48;
+    background-color: tokens.$color-yellow-40-base;
 }
 
 .principal-info-description {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 8px 8px;
     width: 70%;
+    flex-direction: column;
+    gap: tokens.$space-24;
+    padding: tokens.$space-8;
 }
 
 .principal-info-description-text {
@@ -30,43 +32,43 @@
 
 .icon-form {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-azul-claro;
-    box-shadow: 4px 4px $color-negro;
     width: 42px;
     height: 42px;
-    border: 2px solid $color-negro;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
     border-radius: 50%;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
 
     img {
         display: block;
         width: 24px;
         height: 24px;
     }
-} 
+}
 
 .principal-info-description-programs {
+    display: flex;
     width: 5%;
     height: 72px;
-    display: flex;
-    gap: 24px;
-    padding-left: 32px;
+    gap: tokens.$space-24;
+    padding-left: tokens.$space-32;
 }
 
 .principal-info-card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    background-color: $color-azul-claro;
     width: 20%;
     height: 245px;
-    padding: 10px 20px;
-    border-radius: 24px;
-    border: 2px solid $color-negro;
-    box-shadow: 4px 4px $color-negro;
+    flex-direction: column;
+    justify-content: center;
+    gap: tokens.$space-16;
     margin: 0;
+    padding: 10px 20px;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 24px;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
 
     p {
         margin: 0;
@@ -81,18 +83,18 @@
 
 .icon-info {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-amarillo;
-    box-shadow: 2px 2px $color-negro;
     width: 32px;
     height: 32px;
-    border: 2px solid $color-negro;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
     border-radius: 50%;
+    background-color: tokens.$color-yellow-40-base;
+    box-shadow: 2px 2px tokens.$color-negro;
 
     img {
         display: block;
         width: 20px;
         height: 20px;
     }
-} 
+}

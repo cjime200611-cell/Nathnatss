@@ -1,29 +1,3 @@
-// @import "base/reset";
-// @import "base/variables";
-// @import "base/global";
-
-
-// @import "./pages/project_details/introduction";
-// @import "./pages/project_details/principal-info";
-// @import "./pages/project_details/references";
-// @import "./pages/project_details/sketches";
-// @import "./pages/project_details/processes";
-// @import "./pages/project_details/result";
-// @import "./pages/project_details/footerCTA.scss";
-// // BASE
-// @use "./base/variables";
-// @use "./base/reset";
-
-// // COMPONENTES
-// @use "./pages/form/modal";
-// @use "./pages/form/form";
-// @use "./pages/form/buttons";
-// @use "./pages/form/confirmation";
-
-// // RESPONSIVE
-// @use "./layout/responsive";
-
-
 /* Carga estilos base, componentes y secciones en orden de dependencia. */
 @use "base/reset";
 @use "base/global";
@@ -33,3 +7,11 @@
 @use "components/featured-projects";
 @use "pages/home/main";
 @use "components/footer";
+@use "pages/project_description/layout";
+@use "pages/project_description/introduction";
+@use "pages/project_description/principal-info";
+@use "pages/project_description/references";
+@use "pages/project_description/sketches";
+@use "pages/project_description/processes";
+@use "pages/project_description/result";
+@use "pages/project_description/footer-cta";

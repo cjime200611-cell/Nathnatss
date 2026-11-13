@@ -1,23 +1,6 @@
-@use "variables" as tokens;
-
-:root {
-    --blue: #{tokens.$color-azul};
-    --yellow: #{tokens.$color-amarillo};
-    --red: #{tokens.$color-rojo};
-    --purple: #{tokens.$color-morado};
-    --paper: #{tokens.$color-fondo};
-    --ink: #{tokens.$color-negro};
-    --blue-light: #{tokens.$color-azul-claro};
-    --yellow-light: #{tokens.$color-amarillo-claro};
-    --red-light: #{tokens.$color-rojo-claro};
-    --purple-light: #{tokens.$color-morado-claro};
-    --paper-light: #{tokens.$color-crema-claro};
-    --line: rgba(22, 22, 22, 0.2);
-}
-/* Base global, fondo, tipografía compartida y preferencias de movimiento. */
+/* Estilos compartidos por las páginas y tokens expuestos al CSS. */
 @use "index" as tokens;
 
-/* Tokens de color y tipografía expuestos al CSS compilado. */
 :root {
     --blue: #{tokens.$color-blue-40-base};
     --yellow: #{tokens.$color-yellow-40-base};
@@ -31,13 +14,6 @@
     text-rendering: optimizeLegibility;
 }
 
-body {
-    margin: 0;
-    background-color: tokens.$color-fondo;
-    background-image: radial-gradient(rgba(22, 22, 22, 0.055) 1px, transparent 1px);
-    background-size: 15px 15px;
-    color: tokens.$color-negro;
-}
 html {
     height: 100%;
     scroll-behavior: smooth;
@@ -49,25 +25,22 @@ html {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
 body {
     display: flex;
     min-height: 100%;
     flex-direction: column;
+    margin: 0;
     background-color: tokens.$color-crema;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.20) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
     background-size: 40px 40px;
     color: tokens.$color-negro;
 }
 
-/* El contenido llena páginas cortas; el footer fijo no necesita espacio extra. */
 body > main {
     width: 100%;
     flex: 1 0 auto;
 }
 
-/* Aplica la tipografía de títulos de forma consistente. */
 h1,
 h2,
 h3 {
@@ -75,7 +48,46 @@ h3 {
     text-transform: uppercase;
 }
 
-/* Mantiene imágenes flexibles y enlaces compatibles con cada sección. */
+h1 {
+    margin: 0;
+    font-size: 4.375rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h4 {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+h5 {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: 36px;
+    text-transform: uppercase;
+
+    span {
+        color: tokens.$color-blue-30;
+    }
+}
+
 img {
     max-width: 100%;
 }
@@ -84,124 +96,16 @@ a {
     color: inherit;
 }
 
-h1 {
-    font-family: $font-title;
-    text-transform: uppercase;
-    font-size: 4.375rem;
-    margin: 0;
-}
-
-h2 {
-    font-family: $font-title;
-    text-transform: uppercase;
-    font-size: 48px;
-    margin: 0;
-}
-
-h3 {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-h4 {
-    font-family: $font-title;
-    text-transform: uppercase;
-    font-size: 32px;
-    margin: 0;
-}
-
-h5 {
-    font-family: $font-title;
-    text-transform: uppercase;
-    font-size: 20px;
-    margin: 0;
-}
-
-h6 {
-    font-family: $font-title;
-    text-transform: uppercase;
-    font-size: 36px;
-    margin: 0;
-
-    span {
-        color: $color-azul-oscuro;
-    }
-}
-
-.detalle-proyecto {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.project-process {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.icon-design {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-azul-claro;
-    box-shadow: 4px 4px $color-negro;
-    width: 58px;
-    height: 58px;
-    border: 2px solid $color-negro;
-    border-radius: 50%;
-
-    img {
-        display: block;
-        width: 36px;
-        height: 36px;
-    }
-}
-
-.project-process {
-    padding: 0px 48px;
-}
-
-.project-process-description {
-    padding: 0px 95px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.project-process-title {
-    display: flex;
-    gap: 16px;
-}
-
-.project-process-img {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    align-items: center;
-
-    img {
-        width: 100%;
-        height: 588px;
-        border-radius: 13px;
-        border: 2px solid $color-negro;
-        box-shadow: 2px 2px $color-negro;
-    }
-}
-
-/* Respeta la preferencia del sistema para reducir el movimiento. */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto !important;
-    }
-}
-
 @media (min-width: 1441px) {
     :root {
         font-size: clamp(16px, 0.82vw, 20px);
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
     *,
     *::before,
