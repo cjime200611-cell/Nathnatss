@@ -1,7 +1,7 @@
-@use "../../base/variables" as v;
+@use "../../base" as tokens;
 
 // CONTENEDOR DEL MENSAJE DE CONFIRMACION
-.mensaje-exito{
+.contact-modal .mensaje-exito{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +15,10 @@
     padding: 35px 30px;
     box-sizing: border-box;
 
-    background-color: v.$color-input;
-    border: 2px solid v.$color-negro;
+    background-color: tokens.$color-blue-90;
+    border: 2px solid tokens.$color-negro;
     border-radius: 22px;
-    box-shadow: 5px 5px 0 v.$color-negro;
+    box-shadow: 5px 5px 0 tokens.$color-negro;
     text-align: center;
 
     // ESTADO INICIAL DE LA ANIMACIÓN
@@ -27,12 +27,12 @@
 }
 
 // ANIMACIÓN AL MOSTRAR LA CONFIRMACION
-.mensaje-exito.mostrar{
-    animation: apaparecer 0.5s ease forwards;
+.contact-modal .mensaje-exito.mostrar{
+    animation: contact-form-appear 360ms ease-out both;
 }
 
-// CIRCULO VERDE CON EL CHECK
-.icono-exito{
+// CIRCULO DE CONFIRMACION CON EL CHECK
+.contact-modal .icono-exito{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,35 +40,35 @@
     height: 90px;
     margin-bottom: 22px;
 
-    background-color: v.$color-exito;
-    border: 3px solid v.$color-texto-exito;
+    background-color: tokens.$color-purple-90;
+    border: 3px solid tokens.$color-purple-30;
     border-radius: 50%;
 
-    color: v.$color-texto-exito;
-    font-family: v.$font-body;
+    color: tokens.$color-purple-30;
+    font-family: tokens.$font-body;
     font-size: 48px;
     font-weight: 800;
 }
 
 //TITULO DE CONFIRMACION
-.mensaje-exito h2{
+.contact-modal .mensaje-exito h2{
     margin-bottom: 15px;
-    color: v.$color-negro;
-    font-family: v.$font-title;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-title;
     font-size: 22px;
     line-height: 1.2;
     text-transform: uppercase;
 }
 
 // DESCRIPCION
-.mensaje-exito p{
-    color: v.$color-negro;
-    font-family: v.$font-body;
+.contact-modal .mensaje-exito p{
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
     font-size: 15px;
     line-height: 1.6;
 }
 // ANIMACION DE ENTRADA
-@keyframes apaparecer {
+@keyframes contact-form-appear {
     from{
         opacity: 0;
         transform: translateY(15px);
@@ -81,12 +81,12 @@
 }
 
 // OCULTAR MENSAJE MIENTRAS NO SE UTILIZA
-.mensaje-exito[hidden]{
+.contact-modal .mensaje-exito[hidden]{
     display: none !important;
 }
 
 //CENTRAR LA CONFIRMACION EN EL PANEL DERECHO
-.contact-form-container:has(#formulario[hidden]){
+.contact-modal .contact-form-container:has(#formulario[hidden]){
     display: flex;
     align-items: center;
     justify-content: center;

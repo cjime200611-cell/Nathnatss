@@ -1,115 +1,154 @@
-@use "../../base/variables" as v;
+@use "../../base" as tokens;
 
 // CONTENEDOR DEL FORMULARIO
-.contact-form-container{
+.contact-modal .contact-form-container{
     padding: 32px 30px 34px;
-    background-color: v.$color-fondo;
+    background-color: tokens.$color-crema;
 }
 
 // DISTRIBUCION DE LOS CAMPOS
-#formulario{
+.contact-modal #formulario{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px 17px;
 }
 
+.contact-modal #formulario:not([hidden]) {
+    animation: contact-form-enter 260ms ease-out both;
+}
+
+.contact-modal #formulario.is-leaving {
+    animation: contact-form-exit 180ms ease-in both;
+}
+
 // CAMPOS QUE OCUPAN TODA UNA FILA
-.grupo-nombre,
-.grupo-servicio,
-.grupo-mensaje{
+.contact-modal .grupo-nombre,
+.contact-modal .grupo-servicio,
+.contact-modal .grupo-mensaje{
     grid-column: span 2;
 }
 
 // ETIQUETAS 
-#formulario label{
+.contact-modal #formulario label{
     display: block;
     margin-bottom: 8px;
-    color: v.$color-negro;
-    font-family: v.$font-body;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
     font-size: 14px;
     font-weight: 700;
 }
 
 // CAMPOS DE TEXTO Y SELECT
-#formulario input,
-#formulario select,
-#formulario textarea{
+.contact-modal #formulario input,
+.contact-modal #formulario select,
+.contact-modal #formulario textarea{
     width: 100%;
     padding: 13px 15px;
-    background-color: v.$color-input;
-    border: 1.5px solid v.$color-negro;
+    background-color: tokens.$color-blue-90;
+    border: 1.5px solid tokens.$color-negro;
     border-radius: 14px;
-    color: v.$color-negro;
-    font-family: v.$font-body;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
     font-size: 14px;
     outline: none;
 }
 
 // PLACEHOLDER
-#formulario input::placeholder,
-#formulario select::placeholder{
+.contact-modal #formulario input::placeholder,
+.contact-modal #formulario select::placeholder{
     color: #777777;
-    font-family: v.$font-body;
+    font-family: tokens.$font-body;
 }
 
 //SELECT 
-#formulario select{
+.contact-modal #formulario select{
     cursor: pointer;
 }
 
 // TEXTAREA
-#formulario textarea{
+.contact-modal #formulario textarea{
     resize: vertical;
     min-height: 110px;
 }
 
 // ESTADO ENFOCADO
-#formulario input:focus,
-#formulario select:focus,
-#formulario textarea:focus{
-    border-color: v.$color-azul;
+.contact-modal #formulario input:focus,
+.contact-modal #formulario select:focus,
+.contact-modal #formulario textarea:focus{
+    border-color: tokens.$color-blue-40-base;
     border-width: 2px;
 }
 
 // MENSAJE DE ERROR
-.error{
+.contact-modal .error{
     display: block;
     margin-top: 6px;
-    color: v.$color-rojo;
-    font-family: v.$font-body;
+    color: tokens.$color-pink-40-base;
+    font-family: tokens.$font-body;
     font-size: 12px;
     font-weight: 600;
 }
 
-.select-container{
+.contact-modal .select-container{
     position: relative;
 }
 
-.select-container::after{
+.contact-modal .select-container::after{
     content: "";
     position: absolute;
     top: 36%;
     right: 20px;
     width: 9px;
     height: 9px;
-    border-right: 2px solid v.$color-negro;
-    border-bottom: 2px solid v.$color-negro;
+    border-right: 2px solid tokens.$color-negro;
+    border-bottom: 2px solid tokens.$color-negro;
     transform: translate(-70%) rotate(45deg);
     pointer-events: none;
 }
 
-#formulario select{
+.contact-modal #formulario select{
     appearance: none;
     padding-right: 45px;
     cursor: pointer;
 }
 
 // OCUALTAR FORMULARIO DESPUES DE ENVIAR
-#formulario[hidden]{
+.contact-modal #formulario[hidden]{
     display: none !important;
 }
 
-// OCULTAR FORMULARIO DESPUES DE ENVIAR
-.contact-info[hidden]{
-    display: none !important;
+@include tokens.small-mobile {
+    .contact-modal #formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-modal .grupo-nombre,
+    .contact-modal .grupo-servicio,
+    .contact-modal .grupo-mensaje {
+        grid-column: auto;
+    }
+}
+
+@keyframes contact-form-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-form-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
 }
