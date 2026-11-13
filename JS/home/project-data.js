@@ -64,7 +64,7 @@ function validateUrl(value, label, allowRelative) {
 
 export async function loadProjects() {
     // La URL se calcula desde este módulo para que no dependa de la página actual.
-    const response = await fetch(new URL("../projects.json", import.meta.url));
+    const response = await fetch(new URL("../../projects.json", import.meta.url));
     if (!response.ok) {
         throw new Error(`Could not load projects.json: ${response.status} ${response.statusText}`);
     }

@@ -1,59 +1,85 @@
-@use "../base/variables" as tokens;
+/* Footer fijo y estados accesibles para los enlaces sociales. */
+@use "../base" as tokens;
 
+/* Mantiene el footer visible durante el scroll. */
 .site-footer {
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
-    min-height: 58px;
+    width: 100%;
+    min-height: 64px;
+    flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.85rem 5vw;
+    gap: tokens.$space-16;
+    padding: tokens.$space-16 5%;
     border-top: 1.5px solid tokens.$color-negro;
-    background-color: tokens.$color-fondo;
+    background-color: tokens.$color-crema;
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
     color: tokens.$color-negro;
 }
 
 .site-footer p {
     margin: 0;
-    font-size: 0.72rem;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: tokens.$space-24;
 }
 
 .social-name {
-    font-size: 0.68rem;
+    padding: tokens.$space-4;
+    border-radius: 4px;
+    font-size: 13px;
     font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 160ms ease, background-color 160ms ease;
 }
 
-@media (max-width: 700px) {
+.social-name:hover,
+.social-name:active {
+    background-color: tokens.$color-blue-40-base;
+    color: tokens.$color-crema;
+}
+
+.social-name:focus-visible {
+    outline: 2px solid tokens.$color-purple-40-base;
+    outline-offset: 3px;
+}
+
+@include tokens.mobile {
     .site-footer {
-        padding-inline: 5vw;
+        padding-inline: 5%;
     }
 
     .social-links {
-        gap: 0.75rem;
+        gap: tokens.$space-8;
     }
 }
 
-@media (min-width: 1441px) {
+@include tokens.small-mobile {
     .site-footer {
-        min-height: clamp(58px, 4vw, 96px);
-        padding-inline: clamp(5vw, 6vw, 8rem);
+        gap: tokens.$space-8;
+        padding-block: tokens.$space-10;
+    }
+}
+
+@include tokens.from-2k {
+    .site-footer {
+        min-height: 76px;
+        padding-inline: max(5%, calc((100% - 2200px) / 2));
     }
 
-    .site-footer p {
-        font-size: clamp(0.72rem, 0.8vw, 1rem);
-    }
-
-    .social-links {
-        gap: clamp(1.25rem, 2vw, 2.5rem);
-    }
-
+    .site-footer p,
     .social-name {
-        font-size: clamp(0.68rem, 0.75vw, 0.95rem);
+        font-size: 15px;
     }
 }

@@ -1,189 +1,329 @@
-@use "../../base/variables" as tokens;
+/* Título de servicios, tarjetas desplegables y nota sobre el alcance. */
+@use "../../base" as tokens;
 
+/* Espaciado de sección y énfasis en la palabra VIEW. */
 .services {
-    min-height: 40vh;
-    min-height: 40svh;
-    padding: clamp(4rem, 9vw, 8rem) 5vw;
+    padding: tokens.$space-74 5%;
 }
 
 .services-heading {
     display: grid;
-    gap: 0.85rem;
-    margin-bottom: 1.5rem;
+    gap: tokens.$space-16;
+    margin-bottom: tokens.$space-32;
 }
 
 .services-heading .section-label {
     width: fit-content;
     margin: 0;
-    padding: 0.38rem 0.68rem;
+    padding: 6px 12px;
     border: 1px solid tokens.$color-negro;
-    background-color: tokens.$color-rojo-claro;
+    background-color: tokens.$color-pink-60;
     box-shadow: 3px 3px 0 tokens.$color-negro;
     color: tokens.$color-negro;
-    font-size: 0.64rem;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
 
 .services-heading h2 {
-    max-width: 20ch;
-    font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+    max-width: 760px;
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
     line-height: 0.9;
     text-transform: uppercase;
 }
 
-.services-heading h2 span {
-    font-size: 1.13em;
+.services-title-mobile {
+    display: none;
 }
 
+.services-title-desktop {
+    display: inline;
+}
+
+.services-title-view {
+    display: inline-block;
+    font-size: 1.6em;
+    line-height: 0.75;
+}
+
+/* Cuadrícula de tarjetas y sus estados. */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(0.8rem, 1.5vw, 1.25rem);
+    gap: tokens.$space-24;
     align-items: center;
-    padding: clamp(0.85rem, 1.5vw, 1.25rem);
+    padding: tokens.$space-24;
     border: 1.5px solid tokens.$color-negro;
-    border-radius: 16px;
-    background-color: tokens.$color-azul-claro;
+    border-radius: 18px;
+    background-color: tokens.$color-blue-70;
     box-shadow: 6px 6px 0 tokens.$color-negro;
 }
 
-.service-card {
-    display: flex;
+.service-grid[data-state="all-closed"],
+.service-grid[data-state="combined"] {
     align-items: center;
+}
+
+.service-grid[data-state="all-open"] {
+    align-items: stretch;
+}
+
+.service-card {
     min-width: 0;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .service-content {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: clamp(300px, 25vw, 365px);
     overflow: hidden;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: clamp(1rem, 1.8vw, 1.5rem);
-    border: 1px solid tokens.$color-negro;
-    border-radius: 18px;
-    box-shadow: 4px 4px 0 tokens.$color-negro;
-}
-
-.service-card--commercial .service-content {
-    background-color: tokens.$color-morado-claro;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 24px;
+    background-color: tokens.$color-purple-60;
+    box-shadow: 6px 6px 0 tokens.$color-negro;
+    transition: transform 320ms cubic-bezier(0.65, 0, 0.35, 1),
+        box-shadow 320ms cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .service-card--illustration .service-content {
-    background-color: tokens.$color-amarillo-claro;
+    background-color: tokens.$color-yellow-50;
 }
 
 .service-card--personalized .service-content {
-    background-color: tokens.$color-rosa-claro;
+    background-color: tokens.$color-pink-60;
 }
 
-.service-card--illustration .service-content {
-    min-height: clamp(390px, 34vw, 475px);
-    padding: clamp(0.75rem, 1.2vw, 1rem);
+.service-card:hover .service-content {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 0 tokens.$color-negro;
 }
 
-.service-icon {
+.service-topline {
+    position: relative;
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    background-color: tokens.$color-purple-30;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: auto, 230px auto;
+}
+
+.service-topline::before {
     position: absolute;
-    top: clamp(1rem, 1.7vw, 1.4rem);
-    right: clamp(1rem, 1.7vw, 1.4rem);
-    display: grid;
-    width: 38px;
-    height: 38px;
-    place-items: center;
-    border: 1px solid tokens.$color-negro;
-    border-radius: 50%;
-    background-color: tokens.$color-morado;
-    box-shadow: 2px 2px 0 tokens.$color-negro;
-    color: tokens.$color-crema-claro;
-    font-size: 1.2rem;
+    z-index: 0;
+    inset: 0;
+    background-image: url("../assets/patron.png");
+    background-position: center;
+    background-size: 230px auto;
+    content: "";
+    opacity: 0.15; // Baja este valor para atenuar solo el patrón
+    pointer-events: none;
 }
 
-.service-card--illustration .service-icon {
-    background-color: tokens.$color-amarillo;
-    color: tokens.$color-negro;
-}
-
-.service-card--personalized .service-icon {
-    background-color: tokens.$color-rojo;
-}
-
-.service-number,
-.service-content h3,
-.service-content p {
+.service-topline > * {
     position: relative;
     z-index: 1;
 }
 
+.service-card--illustration .service-topline {
+    background-color: tokens.$color-yellow-30;
+}
+
+.service-card--personalized .service-topline {
+    background-color: tokens.$color-pink-30;
+}
+
 .service-number {
-    position: absolute;
-    top: clamp(1rem, 1.7vw, 1.4rem);
-    left: clamp(1rem, 1.7vw, 1.4rem);
-    color: rgba(22, 22, 22, 0.45);
-    font-size: 1rem;
+    color: tokens.$color-crema;
+    font-size: 24px;
     font-weight: 800;
 }
 
-.service-card--illustration .service-number {
+.service-icon {
+    display: grid;
+    width: 55px;
+    height: 55px;
+    flex: 0 0 55px;
+    place-items: center;
+    padding: 0;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-purple-40-base;
+    box-shadow: 2px 2px 0 tokens.$color-negro;
+    color: tokens.$color-crema;
+}
+.service-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.service-card--illustration .service-icon {
+    background-color: tokens.$color-yellow-40-base;
     color: tokens.$color-negro;
 }
 
-.service-content h3 {
-    margin: 0 0 0.75rem;
+.service-card--personalized .service-icon {
+    background-color: tokens.$color-pink-40-base;
+}
+
+.service-action:focus-visible {
+    outline: 2px solid tokens.$color-blue-20;
+    outline-offset: 3px;
+}
+
+.service-body {
+    display: flex;
+    flex-direction: column;
+    padding: tokens.$space-24;
+}
+
+/* Altura, opacidad y márgenes avanzan juntos para abrir y cerrar con suavidad. */
+.service-media {
+    display: grid;
+    --media-open-height: 360px;
+    max-height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 720ms cubic-bezier(0.65, 0, 0.35, 1),
+        margin-bottom 720ms cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 620ms ease,
+        transform 720ms cubic-bezier(0.65, 0, 0.35, 1),
+        visibility 0s linear 720ms;
+    visibility: hidden;
+}
+
+.service-card.is-expanded .service-media {
+    max-height: var(--media-open-height);
+    margin-bottom: tokens.$space-24;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+}
+
+.service-media img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.75;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 16px;
+    background-color: tokens.$color-crema;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-action {
+    display: inline-flex;
+    width: fit-content;
+    max-height: 0;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+    gap: tokens.$space-16;
+    padding: 0;
+    border: 0 solid tokens.$color-negro;
+    border-radius: 999px;
+    background-color: tokens.$color-crema;
+    box-shadow: 2px 2px 0 tokens.$color-negro;
+    font-size: 12px;
+    font-weight: 700;
+    align-self: flex-end;
+    margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
+    text-decoration: none;
+    transform: translateY(8px);
+    transition: max-height 600ms cubic-bezier(0.65, 0, 0.35, 1),
+        margin-top 600ms cubic-bezier(0.65, 0, 0.35, 1),
+        padding 600ms cubic-bezier(0.65, 0, 0.35, 1),
+        border-width 600ms cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 520ms ease,
+        transform 600ms cubic-bezier(0.65, 0, 0.35, 1),
+        visibility 0s linear 600ms,
+        background-color 180ms ease;
+    visibility: hidden;
+}
+
+.service-card.is-expanded .service-action {
+    max-height: 60px;
+    min-height: 40px;
+    margin-top: tokens.$space-16;
+    padding: 8px 14px;
+    border-width: 1px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+}
+
+.service-action:hover {
+    transform: translateY(-1px);
+    background-color: tokens.$color-yellow-80;
+}
+
+.service-body h3 {
+    margin: 0 0 tokens.$space-16;
     font-family: tokens.$font-title;
-    font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+    font-size: 28px;
     font-weight: 400;
     line-height: 1.05;
     text-transform: uppercase;
 }
 
-.service-content p {
-    margin: 0;
-    font-size: clamp(0.68rem, 0.8vw, 0.78rem);
-    line-height: 1.5;
-}
-
-.service-image {
+.service-title-toggle {
     display: block;
-    width: 100%;
-    aspect-ratio: 1.85;
-    margin: 2.2rem 0 1rem;
-    border: 1px solid tokens.$color-negro;
-    border-radius: 10px;
-    background-color: tokens.$color-azul;
-    object-fit: cover;
-    object-position: center 35%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: inherit;
+    text-align: left;
+    text-transform: inherit;
 }
 
-.service-card--illustration .service-content h3 {
-    margin-bottom: 0.65rem;
+.service-title-toggle:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid tokens.$color-blue-20;
+    outline-offset: 4px;
+}
+
+.service-body p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
 }
 
 .service-notes {
     display: grid;
-    grid-template-columns: minmax(170px, 0.25fr) 1fr;
-    gap: clamp(1rem, 2vw, 2rem);
+    grid-template-columns: minmax(180px, 0.25fr) 1fr;
+    gap: tokens.$space-24;
     align-items: center;
-    margin-top: 1.25rem;
-    padding: 1rem clamp(1rem, 1.7vw, 1.5rem);
+    margin-top: tokens.$space-24;
+    padding: tokens.$space-16 tokens.$space-24;
     border: 1px solid tokens.$color-negro;
     border-radius: 12px;
-    background-color: tokens.$color-crema-claro;
+    background-color: tokens.$color-crema;
     box-shadow: 4px 4px 0 tokens.$color-negro;
 }
 
 .service-notes-title {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: tokens.$space-8;
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 0.82rem;
-    font-weight: 800;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -195,201 +335,158 @@
     place-items: center;
     border: 1px solid tokens.$color-negro;
     border-radius: 50%;
-    background-color: tokens.$color-amarillo;
+    background-color: tokens.$color-yellow-40-base;
     box-shadow: 2px 2px 0 tokens.$color-negro;
-    font-size: 0.95rem;
+    font-size: 15px;
 }
 
 .service-notes > p {
-    padding-left: 1rem;
-    border-left: 1px solid rgba(22, 22, 22, 0.25);
     margin: 0;
-    font-size: clamp(0.7rem, 0.85vw, 0.82rem);
-    line-height: 1.5;
+    padding-left: tokens.$space-16;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+    line-height: 1.55;
 }
 
-@media (max-width: 700px) {
+@include tokens.tablet-and-below {
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card--illustration {
+        grid-row: span 2;
+    }
+}
+
+@include tokens.mobile {
+    .services {
+        padding: tokens.$space-60 5%;
+    }
+
     .services-heading {
-        margin-bottom: 2rem;
+        margin-bottom: tokens.$space-32;
     }
 
     .services-heading h2 {
-        max-width: 17ch;
-        font-size: clamp(2.25rem, 9vw, 3.25rem);
+        max-width: 600px;
+        font-size: 44px;
     }
 
     .service-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: tokens.$space-16;
+        align-items: stretch;
+        padding: tokens.$space-16;
     }
 
-    .service-content {
-        min-height: 310px;
-        padding: 1.4rem;
+    .service-card--illustration {
+        grid-row: auto;
     }
 
-    .service-card--illustration .service-content {
-        min-height: 390px;
-        padding: 1rem;
+    .service-topline {
+        min-height: 64px;
+    }
+
+    .service-body {
+        padding: tokens.$space-16;
+    }
+
+    .service-body h3 {
+        font-size: 24px;
+    }
+
+    .service-body p {
+        font-size: 14px;
+    }
+
+    .service-media img {
+        aspect-ratio: 1.9;
     }
 
     .service-notes {
         grid-template-columns: 1fr;
-        gap: 0.85rem;
+        gap: tokens.$space-8;
+    }
+
+    .service-notes-title {
+        justify-content: center;
     }
 
     .service-notes > p {
-        padding: 0.85rem 0 0;
-        border-top: 1px solid rgba(22, 22, 22, 0.25);
+        padding: tokens.$space-8 0 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
         border-left: 0;
     }
 }
 
-@media (min-width: 1441px) {
+@include tokens.small-mobile {
     .services {
-        max-width: 3200px;
-        margin-inline: auto;
-        padding: clamp(8rem, 10vw, 14rem) clamp(5vw, 6vw, 8rem);
-    }
-
-    .services-heading {
-        gap: clamp(0.85rem, 1.2vw, 1.75rem);
-        margin-bottom: clamp(1.5rem, 2.5vw, 4rem);
-    }
-
-    .services-heading .section-label {
-        padding: 0.5rem 0.85rem;
-        font-size: clamp(0.64rem, 0.7vw, 0.9rem);
+        padding-inline: 4%;
     }
 
     .services-heading h2 {
-        max-width: 22ch;
-        font-size: clamp(3.8rem, 5vw, 7.5rem);
+        font-size: 38px;
+    }
+
+    .services-title-mobile {
+        display: inline;
+    }
+
+    .services-title-desktop {
+        display: none;
     }
 
     .service-grid {
-        gap: clamp(1.25rem, 2vw, 3rem);
-        padding: clamp(1.25rem, 2vw, 3rem);
-        border-radius: clamp(16px, 1.5vw, 28px);
-        box-shadow: clamp(6px, 0.6vw, 12px) clamp(6px, 0.6vw, 12px) 0 tokens.$color-negro;
-    }
-
-    .service-content {
-        min-height: clamp(420px, 24vw, 640px);
-        padding: clamp(1.5rem, 2.2vw, 3rem);
-        border-radius: clamp(18px, 1.8vw, 32px);
-        box-shadow: clamp(4px, 0.45vw, 9px) clamp(4px, 0.45vw, 9px) 0 tokens.$color-negro;
-    }
-
-    .service-card--illustration .service-content {
-        min-height: clamp(520px, 29vw, 760px);
-        padding: clamp(1rem, 1.5vw, 2.5rem);
-    }
-
-    .service-icon {
-        top: clamp(1.4rem, 2vw, 3rem);
-        right: clamp(1.4rem, 2vw, 3rem);
-        width: clamp(38px, 3vw, 58px);
-        height: clamp(38px, 3vw, 58px);
-        font-size: clamp(1.2rem, 1.5vw, 2rem);
-    }
-
-    .service-number {
-        top: clamp(1.4rem, 2vw, 3rem);
-        left: clamp(1.4rem, 2vw, 3rem);
-        font-size: clamp(1rem, 1.2vw, 1.5rem);
-    }
-
-    .service-content h3 {
-        margin-bottom: clamp(0.75rem, 1vw, 1.5rem);
-        font-size: clamp(1.45rem, 1.8vw, 2.2rem);
-    }
-
-    .service-content p {
-        font-size: clamp(0.85rem, 1vw, 1.15rem);
-    }
-
-    .service-image {
-        margin: clamp(2.2rem, 3vw, 4.5rem) 0 clamp(1rem, 1.5vw, 2.25rem);
-        border-radius: clamp(10px, 1vw, 18px);
-    }
-
-    .service-notes {
-        grid-template-columns: minmax(220px, 0.25fr) 1fr;
-        gap: clamp(2rem, 3vw, 4rem);
-        margin-top: clamp(1.25rem, 2vw, 3rem);
-        padding: clamp(1rem, 1.5vw, 2rem) clamp(1.5rem, 2vw, 3rem);
-    }
-
-    .service-notes-title {
-        gap: 0.75rem;
-        font-size: clamp(0.82rem, 0.9vw, 1.15rem);
-    }
-
-    .service-notes-title span {
-        width: clamp(34px, 2.7vw, 52px);
-        height: clamp(34px, 2.7vw, 52px);
-        flex-basis: clamp(34px, 2.7vw, 52px);
-        font-size: clamp(0.95rem, 1vw, 1.2rem);
-    }
-
-    .service-notes > p {
-        font-size: clamp(0.82rem, 0.95vw, 1.1rem);
+        padding: tokens.$space-8;
     }
 }
 
-@media (min-width: 1441px) and (max-height: 1200px) {
+@include tokens.narrow-mobile {
+    .services-heading h2 {
+        font-size: 32px;
+    }
+}
+
+@include tokens.from-2k {
+    .service-media {
+        --media-open-height: 700px;
+    }
+
     .services {
-        padding-block: clamp(2rem, 4vh, 3rem);
+        max-width: 2400px;
+        margin-inline: auto;
+        padding-block: tokens.$space-98;
     }
 
     .services-heading {
-        gap: 0.65rem;
-        margin-bottom: clamp(1rem, 2vh, 1.5rem);
+        gap: tokens.$space-24;
+        margin-bottom: tokens.$space-48;
     }
 
     .services-heading h2 {
-        font-size: clamp(3rem, 4vw, 4.5rem);
+        max-width: 1200px;
+        font-size: 76px;
     }
 
     .service-grid {
-        gap: clamp(0.85rem, 1.2vw, 1.5rem);
-        padding: clamp(0.85rem, 1.2vw, 1.5rem);
+        gap: tokens.$space-32;
+        padding: tokens.$space-32;
     }
 
-    .service-content {
-        min-height: clamp(320px, 38vh, 410px);
-        padding: clamp(1rem, 1.5vw, 1.75rem);
+    .service-topline {
+        min-height: 90px;
+        padding: tokens.$space-16 tokens.$space-24;
     }
 
-    .service-card--illustration .service-content {
-        min-height: clamp(400px, 41vh, 450px);
-        padding: clamp(0.85rem, 1vw, 1.25rem);
+    .service-body {
+        padding: tokens.$space-32;
     }
 
-    .service-image {
-        aspect-ratio: 2.1;
-        margin: clamp(1rem, 1.5vh, 1.4rem) 0 0.5rem;
+    .service-body h3 {
+        font-size: 36px;
     }
 
-    .service-content h3 {
-        margin-bottom: 0.65rem;
-        font-size: clamp(1.25rem, 1.45vw, 1.7rem);
-    }
-
-    .service-content p {
-        font-size: clamp(0.78rem, 0.8vw, 0.95rem);
-        line-height: 1.4;
-    }
-
-    .service-notes {
-        gap: clamp(1rem, 2vw, 2rem);
-        margin-top: 1rem;
-        padding-block: 0.75rem;
-    }
-
-    .service-notes-title,
-    .service-notes > p {
-        font-size: clamp(0.75rem, 0.8vw, 0.95rem);
+    .service-body p {
+        font-size: 18px;
     }
 }

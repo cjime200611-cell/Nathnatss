@@ -15,13 +15,18 @@
             <img class="brand-mark" src="./public/assets/logo.png" alt="">
             <span>NATHNATSS</span>
         </a>
-        <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <a href="#home" aria-current="page">Home</a>
             <a href="#projects">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <main>
     <!-- PORTADA | Sass: sass/pages/home/_hero.scss -->
     
         <section class="hero" id="home" aria-label="Introduction">
@@ -40,7 +45,7 @@
         <section class="about" aria-labelledby="about-title">
             <div class="about-text">
                 <p class="section-label">A little about me</p>
-                <h2 id="about-title">I bring ideas to life<br>through illustration, design, and 3D art.</h2>
+                <h2 id="about-title">I bring ideas to life<br>through illustration, design,<br>and 3D art.</h2>
             </div>
             <div class="about-signature">
                 <p class="section-label">2D &amp; 3D artist</p>
@@ -86,31 +91,55 @@
         <section class="services" id="services" aria-labelledby="services-title">
             <div class="services-heading">
                 <p class="section-label">What I do</p>
-                <h2 id="services-title">Visuals with a point<br>of <span>view</span></h2>
+                <h2 id="services-title">Visuals with a<span class="services-title-desktop"> point</span><br><span class="services-title-mobile">point of </span><span class="services-title-desktop">of </span><span class="services-title-view">view</span></h2>
             </div>
-            <div class="service-grid">
+            <div class="service-grid" data-service-grid data-state="all-closed">
                 <article class="service-card service-card--commercial">
                     <div class="service-content">
-                        <span class="service-number">01</span>
-                        <span class="service-icon" aria-hidden="true">✿</span>
-                        <h3>Commercial<br>Visualization</h3>
-                        <p>Bold, tactile product renders and bespoke campaign assets that turn digital concepts into tangible, memorable consumer engagement.</p>
+                        <div class="service-topline">
+                            <span class="service-number">01</span>
+                            <span class="service-icon" aria-hidden="true"><img src="./public/assets/commercial_icon.svg" alt="commercial_icon"></span>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-media" id="service-media-01" inert>
+                                <img src="./public/assets/BLOCKING%20STAGE_1%201.png" alt="Colorful 3D commercial scene render" loading="lazy">
+                            </div>
+                            <h3><button class="service-title-toggle" type="button" aria-controls="service-media-01" aria-expanded="false">Commercial<br>Visualization</button></h3>
+                            <p>Bold, tactile product renders and bespoke campaign assets that turn digital concepts into tangible, memorable consumer engagement.</p>
+                            <a class="service-action" href="mailto:?subject=Commercial%20visualization%20inquiry" inert>Explore this category <span aria-hidden="true">↗</span></a>
+                        </div>
                     </div>
                 </article>
                 <article class="service-card service-card--illustration">
                     <div class="service-content">
-                        <span class="service-number">02</span>
-                        <img class="service-image" src="./public/assets/service-illustration.png" alt="" loading="lazy">
-                        <h3>3D<br>Illustration</h3>
-                        <p>End-to-end procedural shaders, stylized lighting, expressive character sculpts, and immersive spatial environments tailored for print and screens.</p>
+                        <div class="service-topline">
+                            <span class="service-number">02</span>
+                            <span class="service-icon" aria-hidden="true"><img src="./public/assets/3d_icon.svg" alt="3d_icon"></span>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-media" id="service-media-02" inert>
+                                <img src="./public/assets/service-illustration.png" alt="Stylized purple 3D character illustration" loading="lazy">
+                            </div>
+                            <h3><button class="service-title-toggle" type="button" aria-controls="service-media-02" aria-expanded="false">3D<br>Illustration</button></h3>
+                            <p>End-to-end procedural shaders, stylized lighting, expressive character sculpts, and immersive spatial environments tailored for print and screens.</p>
+                            <a class="service-action" href="mailto:?subject=3D%20illustration%20inquiry" inert>Explore this category <span aria-hidden="true">↗</span></a>
+                        </div>
                     </div>
                 </article>
                 <article class="service-card service-card--personalized">
                     <div class="service-content">
-                        <span class="service-number">03</span>
-                        <span class="service-icon" aria-hidden="true">✎</span>
-                        <h3>Personalized<br>Illustrations</h3>
-                        <p>Handcrafted editorial cover art, limited edition art prints, and custom avatars fusing expressive digital drawing with rich textural depth.</p>
+                        <div class="service-topline">
+                            <span class="service-number">03</span>
+                            <span class="service-icon" aria-hidden="true"><img src="./public/assets/personalized_icon.svg" alt="personalized_icon"></span>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-media" id="service-media-03" inert>
+                                <img src="./public/assets/Expresiones%208.png" alt="Character expressions for a personalized illustration" loading="lazy">
+                            </div>
+                            <h3><button class="service-title-toggle" type="button" aria-controls="service-media-03" aria-expanded="false">Personalized<br>Illustrations</button></h3>
+                            <p>Handcrafted editorial cover art, limited edition art prints, and custom avatars fusing expressive digital drawing with rich textural depth.</p>
+                            <a class="service-action" href="mailto:?subject=Personalized%20illustration%20inquiry" inert>Explore this category <span aria-hidden="true">↗</span></a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -125,17 +154,18 @@
             <p class="section-label">Have a project in mind?</p>
             <h2 id="contact-title">Bring your idea<br>to the table.</h2>
             <p>Feel free to fill out the contact form to transform that great idea into something real.</p>
-            <span class="contact-action">Get in touch <span aria-hidden="true">↗</span></span>
+            <a class="contact-action" href="mailto:?subject=Project%20inquiry%20-%20Nathnatss">Get in touch <span aria-hidden="true">↗</span></a>
         </section>
 
+    </main>
     <!-- PIE DE PAGINA | Sass: sass/components/_footer.scss -->
     <footer class="site-footer">
         <p>© Nathnatss</p>
         <div class="social-links">
-            <span class="social-name">Instagram <span aria-hidden="true">↗</span></span>
-            <span class="social-name">LinkedIn <span aria-hidden="true">↗</span></span>
+            <a class="social-name" href="https://www.instagram.com/nathnatss/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a class="social-name" href="https://www.linkedin.com/in/nathaliedelg/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
     </footer>
-    <script type="module" src="./JS/main-v2.js"></script>
+    <script type="module" src="./JS/home/main-v2.js"></script>
 </body>
 </html>

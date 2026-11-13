@@ -1,14 +1,18 @@
-@use "../base/variables" as tokens;
+/* Marca, navegación de escritorio y menú responsive para móvil. */
+@use "../base" as tokens;
 
+/* Estructura del encabezado y marca */
 .site-header {
+    position: relative;
+    z-index: 5;
     display: flex;
     min-height: 78px;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
-    padding: 0 5vw;
+    gap: tokens.$space-24;
+    padding: tokens.$space-8 5%;
     border-bottom: 1px solid tokens.$color-negro;
-    background-color: tokens.$color-fondo;
+    background-color: tokens.$color-crema;
 }
 
 .brand-name,
@@ -19,11 +23,11 @@
 .brand-name {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: tokens.$space-8;
     font-family: tokens.$font-title;
-    font-size: 1.18rem;
-    font-weight: 400;
+    font-size: 30px;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
@@ -34,110 +38,125 @@
     object-fit: contain;
 }
 
+/* Navegación, controles y foco de teclado */
 .site-nav {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: tokens.$space-8;
 }
 
 .site-nav a {
-    padding: 0.58rem 1.15rem;
+    padding: 9px 18px;
     border: 1.5px solid tokens.$color-negro;
     border-radius: 999px;
-    background-color: tokens.$color-crema-claro;
-    font-size: 0.88rem;
-    font-weight: 500;
+    background-color: tokens.$color-crema;
+    font-size: 14px;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .site-nav a[aria-current="page"],
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    background-color: tokens.$color-morado-claro;
+    background-color: tokens.$color-purple-30;
+    font-weight: bold;
+    color: tokens.$color-crema;
 }
 
 .site-nav a:hover {
     transform: translateY(-2px);
 }
 
-.site-nav a:focus-visible {
-    outline: 2px solid tokens.$color-azul;
+.site-nav a:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 2px solid tokens.$color-blue-40-base;
     outline-offset: 3px;
 }
 
-@media (max-width: 700px) {
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: tokens.$color-negro;
+    transition: transform 180ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+@include tokens.mobile {
     .site-header {
-        min-height: 68px;
-    }
-
-    .site-nav {
-        gap: 0.35rem;
-    }
-
-    .site-nav a {
-        padding: 0.48rem 0.72rem;
-        font-size: 0.76rem;
+        min-height: 64px;
+        padding-inline: 5%;
     }
 
     .brand-name {
-        gap: 0.35rem;
-        font-size: 0.9rem;
+        gap: tokens.$space-4;
+        font-size: 16px;
     }
 
     .brand-mark {
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: tokens.$space-8;
+        padding: tokens.$space-16 5%;
+        border-bottom: 1px solid tokens.$color-negro;
+        background-color: tokens.$color-crema;
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        text-align: center;
     }
 }
 
-@media (max-width: 420px) {
+@include tokens.from-2k {
     .site-header {
-        gap: 0.5rem;
-        padding-inline: 3vw;
-    }
-
-    .site-nav {
-        gap: 0.2rem;
-    }
-
-    .site-nav a {
-        padding: 0.4rem 0.42rem;
-        font-size: 0.68rem;
+        min-height: 100px;
+        padding-inline: max(5%, calc((100% - 2200px) / 2));
     }
 
     .brand-name {
-        gap: 0.25rem;
-        font-size: 0.82rem;
+        font-size: 22px;
     }
 
     .brand-mark {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media (min-width: 1441px) {
-    .site-header {
-        min-height: clamp(78px, 5vw, 112px);
-        padding-inline: clamp(5vw, 6vw, 8rem);
-    }
-
-    .brand-name {
-        gap: 0.65rem;
-        font-size: clamp(1.18rem, 1.2vw, 1.6rem);
-    }
-
-    .brand-mark {
-        width: clamp(42px, 3vw, 60px);
-        height: clamp(42px, 3vw, 60px);
-    }
-
-    .site-nav {
-        gap: clamp(0.65rem, 0.8vw, 1.2rem);
-    }
-
-    .site-nav a {
-        padding: 0.7rem clamp(1.15rem, 1.4vw, 2rem);
-        font-size: clamp(0.88rem, 0.8vw, 1.1rem);
+        width: 52px;
+        height: 52px;
     }
 }

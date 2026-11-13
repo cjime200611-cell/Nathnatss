@@ -71,6 +71,10 @@ export function createProjectView(projects) {
     }
 
     function animateTransition(image) {
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            return Promise.resolve();
+        }
+
         setBackgroundImage(transitionImage, image.src);
         const previewBounds = preview.getBoundingClientRect();
         const visualBounds = visual.getBoundingClientRect();

@@ -1,38 +1,59 @@
-@use "../../base/variables" as tokens;
+/* Call to action con patrón visual al final de la página. */
+@use "../../base" as tokens;
 
+/* Centra el contenido y mantiene el patrón como elemento decorativo. */
 .contact {
+    position: relative;
     display: flex;
-    min-height: 440px;
+    min-height: 500px;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(3.5rem, 6vw, 5rem) 1.5rem;
-    background-color: tokens.$color-amarillo;
+    padding: tokens.$space-74 5% 96px;
+    background-color: tokens.$color-yellow-40-base;
     text-align: center;
 }
 
+.contact::before {
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/patron.png");
+    background-position: center;
+    background-size: 420px auto;
+    content: "";
+    opacity: 0.07;
+    pointer-events: none;
+}
+
+.contact > * {
+    position: relative;
+}
+
 .contact h2 {
-    max-width: none;
-    font-size: clamp(2.8rem, 4.2vw, 3.75rem);
+    max-width: 900px;
+    margin: 0;
+    font-family: tokens.$font-title;
+    font-size: 64px;
     line-height: 0.95;
     text-transform: uppercase;
 }
 
 .contact .section-label {
-    margin: 0 0 1.25rem;
-    padding: 0.42rem 0.8rem;
+    margin: 0 0 tokens.$space-24;
+    padding: 7px 14px;
     border-radius: 999px;
     background-color: tokens.$color-negro;
-    color: tokens.$color-amarillo;
-    font-size: 0.62rem;
+    color: tokens.$color-yellow-40-base;
+    font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
 
 .contact > p:not(.section-label) {
     max-width: 650px;
-    margin: 1.25rem 0 1.75rem;
-    font-size: clamp(0.88rem, 1.15vw, 1rem);
+    margin: tokens.$space-24 0 tokens.$space-32;
+    font-size: 16px;
     line-height: 1.55;
 }
 
@@ -40,24 +61,25 @@
     display: inline-flex;
     width: fit-content;
     min-width: 190px;
-    min-height: 48px;
+    min-height: 52px;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 0.85rem 1.4rem;
+    gap: tokens.$space-24;
+    padding: 14px 24px;
     border: 1.5px solid tokens.$color-negro;
     border-radius: 999px;
-    background-color: tokens.$color-rojo;
+    background-color: tokens.$color-pink-40-base;
     box-shadow: 4px 4px 0 tokens.$color-negro;
-    color: tokens.$color-crema-claro;
-    font-size: 0.85rem;
+    color: tokens.$color-negro;
+    font-size: 14px;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.contact-action:hover {
+.contact-action:hover,
+.contact-action:active {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 tokens.$color-negro;
 }
@@ -67,42 +89,54 @@
     outline-offset: 4px;
 }
 
-@media (max-width: 700px) {
+@include tokens.mobile {
     .contact {
-        min-height: 400px;
-        padding-inline: 7vw;
+        min-height: 440px;
+        padding-block: tokens.$space-60 88px;
+        padding-inline: 7%;
     }
 
     .contact h2 {
-        font-size: clamp(2.7rem, 12vw, 4.1rem);
+        font-size: 48px;
     }
 }
 
-@media (min-width: 1441px) {
+@include tokens.small-mobile {
     .contact {
-        min-height: clamp(440px, 32vw, 760px);
-        padding: clamp(5rem, 8vw, 10rem) 2rem;
+        min-height: 420px;
+        padding-block: tokens.$space-48 80px;
     }
 
     .contact h2 {
-        font-size: clamp(3.75rem, 5.2vw, 7.5rem);
+        font-size: 38px;
     }
 
-    .contact .section-label {
-        margin-bottom: clamp(1.25rem, 1.8vw, 2.5rem);
-        padding: 0.6rem 1rem;
-        font-size: clamp(0.62rem, 0.7vw, 0.9rem);
+    .contact > p:not(.section-label) {
+        font-size: 14px;
+    }
+}
+
+@include tokens.from-2k {
+    .contact {
+        min-height: 650px;
+        justify-content: center;
+        padding-top: tokens.$space-98;
+        padding-inline: 8%;
+        padding-bottom: 108px;
+    }
+
+    .contact h2 {
+        font-size: 88px;
     }
 
     .contact > p:not(.section-label) {
         max-width: 900px;
-        margin: clamp(1.25rem, 2vw, 3rem) 0;
-        font-size: clamp(1rem, 1.1vw, 1.4rem);
+        font-size: 20px;
     }
 
     .contact-action {
-        min-width: clamp(190px, 15vw, 300px);
-        min-height: clamp(48px, 4vw, 72px);
-        font-size: clamp(0.85rem, 0.9vw, 1.15rem);
+        min-width: 240px;
+        min-height: 64px;
+        font-size: 16px;
     }
 }

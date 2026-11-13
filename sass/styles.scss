@@ -1,6 +1,8 @@
+/* Carga estilos base, componentes y secciones en orden de dependencia. */
 @use "base/reset";
 @use "base/global";
 @use "components/header";
+@use "components/cursor";
 @use "pages/home/hero";
 @use "components/featured-projects";
 @use "pages/home/main";
