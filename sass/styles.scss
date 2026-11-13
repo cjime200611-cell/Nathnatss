@@ -1,12 +1,12 @@
-@import "LIB/reset";
-@import "LIB/variables";
-@import "LIB/global";
+@import "base/reset";
+@import "base/variables";
+@import "base/global";
 
 
-@import "partials/introduction";
-@import "partials/principal-info";
-@import "partials/references";
-@import "partials/sketches";
-@import "partials/processes";
-@import "partials/result";
-@import "partials/footerCTA.scss";
+@import "./pages/project_details/introduction";
+@import "./pages/project_details/principal-info";
+@import "./pages/project_details/references";
+@import "./pages/project_details/sketches";
+@import "./pages/project_details/processes";
+@import "./pages/project_details/result";
+@import "./pages/project_details/footerCTA.scss";

@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass:public/css",
-    "sass-build": "sass --watch sass:public-build/css --style compressed"
+    "sass": "sass --watch sass/styles.scss:public/css/styles.css sass/form.scss:public/css/form.css",
+    "sass-build": "sass sass/styles.scss:public/css/styles.css sass/form.scss:public/css/form.css --style compressed"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.108.1"
+    "sass": "^1.107.1"
   }
 }
