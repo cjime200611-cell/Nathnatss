@@ -1,0 +1,65 @@
+.portfolio {
+    padding: 0px 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 63px;
+}
+
+.Target-design {
+    width: 43%;
+    height: 394px;
+    box-shadow: 4px 4px $color-negro;
+    border-radius: 16px;
+}
+
+.cover-design {
+    position: relative;
+}
+
+.cover-design img {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px 16px 0px 0px;
+    display: block;
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 0;
+
+    background-color: $color-yellow-40-base;
+    color: $color-negro;
+    padding: 6px 16px;
+    border: 2px solid $color-negro;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 74px;
+    padding: 0px 30px;
+    background-color: $color-blue-40-base;
+    border-radius: 0px 0px 16px 16px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: white;
+    p {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+}
+
+.project-year {
+    display: flex;
+    align-items: center;
+    color: white;
+}

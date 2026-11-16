@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Elementos del HTML
     const portfolio = document.querySelector(".portfolio");
-    const projects = Array.from(document.querySelectorAll(".Columna"));
+    const projects = Array.from(document.querySelectorAll(".Target-design"));
     const filterButtons = document.querySelectorAll(".botton button");
     const moreButton = document.querySelector(".btn-more");
-    const tellMoreButton = document.querySelector (".tell-more-btn");
+    const tellMoreButton = document.querySelector(".tell-more-btn");
     const portfolioTitle = document.querySelector(".portfolio-title");
 
     //Configuración
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function getCategory(project) {
         const tag = project.querySelector(".category-tag");
 
-            return tag ? tag.textContent.trim().toLowerCase(): "";
-        }
+        return tag ? tag.textContent.trim().toLowerCase() : "";
+    }
 
     // Actualizar Título
     function updatePortfolioTitle() {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Comprobar si el proyecto pertenece a su categoria
     function matchesFilter(project) {
-        
+
         if (currentFilter === "all") {
             return true;
         }
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //Ordenar por fecha
-    function sortProjects () {
+    function sortProjects() {
 
         if (!portfolio) return;
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filteredProjects.forEach((project, index) => {
 
             project.style.display =
-                index < visibleProjects ? "": "none";
+                index < visibleProjects ? "" : "none";
         });
 
         projects.forEach(project => {
@@ -98,22 +98,22 @@ document.addEventListener("DOMContentLoaded", function () {
         if (moreButton) {
 
             moreButton.style.display =
-            filteredProjects.length > visibleProjects
-            ? "inline-block"
-            : "none";
+                filteredProjects.length > visibleProjects
+                    ? "inline-block"
+                    : "none";
         }
     }
 
     //Filtros de categoría
     filterButtons.forEach(button => {
 
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
 
-            
+
 
             const buttonText = this.textContent.trim().toLowerCase();
 
-            if (buttonText === "3d illustration"){
+            if (buttonText === "3d illustration") {
 
                 currentFilter = "3d";
 
@@ -125,81 +125,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 currentFilter = "commercial";
 
-        } else if (buttonText === "all"){
+            } else if (buttonText === "all") {
 
-            currentFilter = "all";
+                currentFilter = "all";
 
-        } else {
+            } else {
 
-            return;
-        }
-        
-        visibleProjects = projectsPerPage;
+                return;
+            }
 
-        //Cambio color del botón seleccionado
-filterButtons.forEach(btn => {
-    btn.classList.remove("active");
-});
+            visibleProjects = projectsPerPage;
 
-this.classList.add("active");
+            //Cambio color del botón seleccionado
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
 
-        updatePortfolioTitle();
-        displayProjects();
+            this.classList.add("active");
 
+            updatePortfolioTitle();
+            displayProjects();
+
+        });
     });
-});
 
-// Most Recent
-filterButtons.forEach(button => {
+    // Most Recent
+    filterButtons.forEach(button => {
 
-    if (button.textContent.trim().toLowerCase() === "most recent"){
+        if (button.textContent.trim().toLowerCase() === "most recent") {
 
-        button.addEventListener("click", function (){
+            button.addEventListener("click", function () {
 
-            recentFirst = true;
+                recentFirst = true;
 
-            sortProjects();
+                sortProjects();
+                displayProjects();
+
+            });
+        }
+    });
+
+    //Botón More
+    if (moreButton) {
+
+        moreButton.addEventListener("click", function () {
+
+            visibleProjects += 3;
+
             displayProjects();
 
         });
     }
-});
 
-//Botón More
-if (moreButton) {
+    // Botón Tell Me More
+    if (tellMoreButton) {
 
-    moreButton.addEventListener("click", function (){
+        tellMoreButton.addEventListener("click", function () {
 
-        visibleProjects += 3;
+            const contactSection = document.querySelector("#contact");
 
-        displayProjects();
+            if (contactSection) {
 
-    });
-}
+                contactSection.scrollIntoView({
+                    behavior: "smooth"
+                });
 
-// Botón Tell Me More
-if (tellMoreButton) {
+            } else {
 
-    tellMoreButton.addEventListener("click", function () {
+                alert("Contact section coming soon!");
 
-        const contactSection = document.querySelector("#contact");
+            }
+        });
+    }
 
-        if (contactSection){
-
-            contactSection.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        } else {
-
-            alert("Contact section coming soon!");
-
-        }
-    });
-}
-
-//Iniciar Portfolio
-updatePortfolioTitle()
-displayProjects();
+    //Iniciar Portfolio
+    updatePortfolioTitle()
+    displayProjects();
 
 });
