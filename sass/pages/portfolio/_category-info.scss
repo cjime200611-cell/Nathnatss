@@ -1,0 +1,41 @@
+@use "../../base/variables" as tokens;
+
+.category-section {
+    width: 100%;
+    height: 220px;
+    background-color: tokens.$color-yellow-70;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    transition: background-color 0.3s ease;
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 10px 121px;
+        text-align: center;
+        margin: 0;
+        color: tokens.$color-negro;
+    }
+
+    h1 {
+        color: tokens.$color-negro;
+    }
+}
+
+.category-section.category-3d {
+    background-color: tokens.$color-yellow-70;
+}
+
+.category-section.category-personalized {
+    background-color: tokens.$color-pink-70;
+}
+
+.category-section.category-commercial {
+    background-color: tokens.$color-purple-70;
+}
+
+.category-section.category-all {
+    background-color: tokens.$color-blue-70;
+}

@@ -354,15 +354,7 @@ template {
 /* Neutros */
 /* Escala de espaciados en píxeles */
 /* Tipografías para títulos y cuerpo */
-/* Tokens de color y tipografía expuestos al CSS compilado. */
 :root {
-  --blue: #294BF5;
-  --yellow: #FFD85A;
-  --pink: #FF475D;
-  --purple: #AC6FF0;
-  --paper: #FFF9EE;
-  --ink: #000000;
-  --line: rgba(0, 0, 0, 0.2);
   font-family: "Inter", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -490,7 +482,7 @@ a {
   width: 258;
   height: 255px;
 }
-.intro .separador {
+.intro .separator {
   width: 2px;
   height: 265px;
   background-color: #000000;
@@ -507,8 +499,16 @@ a {
   margin: 0;
 }
 
-.botton {
-  background-color: #8153B4;
+/* Paletas de marca, ordenadas del tono más claro (90) al más oscuro (10). */
+/* Blue */
+/* Purple */
+/* Yellow */
+/* Pink */
+/* Neutros */
+/* Escala de espaciados en píxeles */
+/* Tipografías para títulos y cuerpo */
+.button-group {
+  background-color: #806C2D;
   width: 100%;
   height: 102px;
   padding: 10px 36px;
@@ -516,9 +516,26 @@ a {
   gap: 100px;
   justify-content: space-between;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
-.filters {
+.button-group.category-3d {
+  background-color: #806C2D;
+}
+
+.button-group.category-personalized {
+  background-color: #80242F;
+}
+
+.button-group.category-commercial {
+  background-color: #563878;
+}
+
+.button-group.category-all {
+  background-color: #15267B;
+}
+
+.filter-group {
   display: flex;
   height: 70px;
   gap: 12px;
@@ -526,45 +543,165 @@ a {
   align-self: center;
   width: 67%;
 }
-.filters .filter-btn {
-  width: 100%;
+.filter-group a {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.filter-group .filter-btn {
   height: 70px;
   font-size: 1.25rem;
   padding: 8px 20px;
   border-radius: 10px;
   border: 2px solid #000000;
   background-color: #FFF9EE;
+  color: #000000;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
 }
-.filters .filter-btn:hover {
-  background-color: #FFE78D;
+.filter-group .filter-btn.active {
+  background-color: #FFDF73;
+  font-weight: 600;
 }
 
-.order {
+.button-group.category-3d .filter-group .filter-btn {
+  background-color: #FFF9EE;
+}
+.button-group.category-3d .filter-group .filter-btn.active {
+  background-color: #FFDF73;
+}
+
+.button-group.category-personalized .filter-group .filter-btn {
+  background-color: #FFF1F3;
+}
+.button-group.category-personalized .filter-group .filter-btn.active {
+  background-color: #FF687B;
+}
+
+.button-group.category-commercial .filter-group .filter-btn {
+  background-color: #F7F1FE;
+}
+.button-group.category-commercial .filter-group .filter-btn.active {
+  background-color: #B982F2;
+}
+
+.button-group.category-all .filter-group .filter-btn {
+  background-color: #EAEFFF;
+}
+.button-group.category-all .filter-group .filter-btn.active {
+  background-color: #546EF7;
+}
+
+.order-group {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.order .filter-btn {
-  width: auto;
+.order-group .order-label {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.order-group .filter-btn {
   height: 70px;
   font-size: 1.25rem;
   padding: 8px 20px;
   border-radius: 10px;
   border: 2px solid #000000;
   background-color: #FFF9EE;
-}
-.order .filter-btn:hover {
-  background-color: #FFE78D;
+  color: #000000;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 150px;
+  font-family: "Inter", sans-serif;
 }
 
+.button-group.category-3d .order-group .filter-btn {
+  background-color: #FFDF73;
+}
+
+.button-group.category-personalized .order-group .filter-btn {
+  background-color: #FF687B;
+}
+
+.button-group.category-commercial .order-group .filter-btn {
+  background-color: #B982F2;
+}
+
+.button-group.category-all .order-group .filter-btn {
+  background-color: #546EF7;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 150px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background-color: white;
+  color: #000000;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dropdown-item.selected {
+  font-weight: 600;
+}
+
+/* Paletas de marca, ordenadas del tono más claro (90) al más oscuro (10). */
+/* Blue */
+/* Purple */
+/* Yellow */
+/* Pink */
+/* Neutros */
+/* Escala de espaciados en píxeles */
+/* Tipografías para títulos y cuerpo */
 .category-section {
   width: 100%;
   height: 220px;
-  background-color: #EEE2FC;
+  background-color: #FFEFB5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 18px;
+  transition: background-color 0.3s ease;
 }
 .category-section p {
   font-size: 1.5rem;
@@ -572,6 +709,26 @@ a {
   padding: 10px 121px;
   text-align: center;
   margin: 0;
+  color: #000000;
+}
+.category-section h1 {
+  color: #000000;
+}
+
+.category-section.category-3d {
+  background-color: #FFEFB5;
+}
+
+.category-section.category-personalized {
+  background-color: #FFB5BE;
+}
+
+.category-section.category-commercial {
+  background-color: #D6B9F8;
+}
+
+.category-section.category-all {
+  background-color: #A9B7FB;
 }
 
 .portfolio {
@@ -582,7 +739,7 @@ a {
   gap: 63px;
 }
 
-.Target-design {
+.project-card {
   width: 43%;
   height: 394px;
   box-shadow: 4px 4px #000000;
