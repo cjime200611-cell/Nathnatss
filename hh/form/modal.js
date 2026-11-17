@@ -1,7 +1,7 @@
 import { initializeContactForm, resetContactForm } from "./form.js";
 
 const openers = document.querySelectorAll("[data-contact-modal-open]");
-const contactFormUrl = new URL("../../Form.html", import.meta.url);
+const contactFormUrl = new URL("../../form.html", import.meta.url);
 let modalPromise;
 let lastOpener;
 
