@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding-bottom: 64px;
 }
 
 .project-process {
@@ -50,11 +51,35 @@
     gap: tokens.$space-48;
 
     img {
-        width: 100%;
-        height: 588px;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 80vh;
         border: 2px solid tokens.$color-negro;
         border-radius: 13px;
         box-shadow: 2px 2px tokens.$color-negro;
-        object-fit: cover;
     }
+}
+
+.project-back-to-top {
+    display: flex;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
+    color: inherit;
+    font-size: 32px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.project-back-to-top:focus-visible {
+    outline: 2px solid tokens.$color-blue-40-base;
+    outline-offset: 3px;
 }

@@ -1,4 +1,4 @@
-/* Marca, navegación de escritorio y menú responsive para móvil. */
+/* Marca y navegación compartidas por las páginas. */
 @use "../base" as tokens;
 
 /* Estructura del encabezado y marca */
@@ -50,6 +50,7 @@
     border: 1.5px solid tokens.$color-negro;
     border-radius: 999px;
     background-color: tokens.$color-crema;
+    box-shadow: 4px 4px tokens.$color-negro;
     font-size: 14px;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -100,63 +101,4 @@
 
 .nav-toggle[aria-expanded="true"] span:last-child {
     transform: translateY(-4px) rotate(-45deg);
-}
-
-@include tokens.mobile {
-    .site-header {
-        min-height: 64px;
-        padding-inline: 5%;
-    }
-
-    .brand-name {
-        gap: tokens.$space-4;
-        font-size: 16px;
-    }
-
-    .brand-mark {
-        width: 36px;
-        height: 36px;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .site-nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: tokens.$space-8;
-        padding: tokens.$space-16 5%;
-        border-bottom: 1px solid tokens.$color-negro;
-        background-color: tokens.$color-crema;
-    }
-
-    .site-nav.is-open {
-        display: flex;
-    }
-
-    .site-nav a {
-        text-align: center;
-    }
-}
-
-@include tokens.from-2k {
-    .site-header {
-        min-height: 100px;
-        padding-inline: max(5%, calc((100% - 2200px) / 2));
-    }
-
-    .brand-name {
-        font-size: 22px;
-    }
-
-    .brand-mark {
-        width: 52px;
-        height: 52px;
-    }
 }

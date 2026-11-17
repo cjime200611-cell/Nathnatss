@@ -16,14 +16,7 @@
 }
 
 .contact::before {
-    position: absolute;
-    inset: 0;
-    background-image: url("../assets/patron.png");
-    background-position: center;
-    background-size: 420px auto;
-    content: "";
-    opacity: 0.07;
-    pointer-events: none;
+    @include tokens.pattern-overlay;
 }
 
 .contact > * {
@@ -87,56 +80,4 @@
 .contact-action:focus-visible {
     outline: 2px solid tokens.$color-negro;
     outline-offset: 4px;
-}
-
-@include tokens.mobile {
-    .contact {
-        min-height: 440px;
-        padding-block: tokens.$space-60 88px;
-        padding-inline: 7%;
-    }
-
-    .contact h2 {
-        font-size: 48px;
-    }
-}
-
-@include tokens.small-mobile {
-    .contact {
-        min-height: 420px;
-        padding-block: tokens.$space-48 80px;
-    }
-
-    .contact h2 {
-        font-size: 38px;
-    }
-
-    .contact > p:not(.section-label) {
-        font-size: 14px;
-    }
-}
-
-@include tokens.from-2k {
-    .contact {
-        min-height: 650px;
-        justify-content: center;
-        padding-top: tokens.$space-98;
-        padding-inline: 8%;
-        padding-bottom: 108px;
-    }
-
-    .contact h2 {
-        font-size: 88px;
-    }
-
-    .contact > p:not(.section-label) {
-        max-width: 900px;
-        font-size: 20px;
-    }
-
-    .contact-action {
-        min-width: 240px;
-        min-height: 64px;
-        font-size: 16px;
-    }
 }

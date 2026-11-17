@@ -1,16 +1,18 @@
 // Para qué sirve: punto de entrada de la página; carga los datos, prepara la
 // vista y pone en marcha la navegación entre proyectos.
-import { loadProjects } from "./project-data.js";
-import { createProjectView } from "./project-view.js";
-import { initializeProjectSlider } from "./project-slider.js";
-import { initializeServiceCards } from "./service-accordion.js";
-import { initializeMobileNavigation } from "./mobile-navigation.js";
-import { initializeLogoCursor } from "./logo-cursor.js";
+import { loadProjects } from "./projectData.js";
+import { createProjectView } from "./projectView.js";
+import { initializeProjectSlider } from "./projectSlider.js";
+import { initializeServiceCards } from "./serviceAccordion.js";
+import { initializeMobileNavigation } from "./mobileNavigation.js";
+import { initializeLogoCursor } from "./logoCursor.js";
+import { initializeFlowerBurst } from "../components/flowerBurst.js";
 
 async function initialize() {
     initializeMobileNavigation();
     initializeServiceCards();
     initializeLogoCursor();
+    initializeFlowerBurst();
 
     // Carga y valida los datos antes de conectar la vista y sus controles.
     const projects = await loadProjects();

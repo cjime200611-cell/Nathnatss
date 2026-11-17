@@ -50,10 +50,18 @@
 
 .principal-info-description-programs {
     display: flex;
-    width: 5%;
+    width: auto;
     height: 72px;
     gap: tokens.$space-24;
     padding-left: tokens.$space-32;
+
+    img {
+        display: block;
+        width: auto;
+        height: 100%;
+        flex: 0 0 auto;
+        object-fit: contain;
+    }
 }
 
 .principal-info-card {

@@ -3,6 +3,7 @@
 @use "base/global";
 @use "components/header";
 @use "components/cursor";
+@use "components/flower-burst";
 @use "pages/home/hero";
 @use "components/featured-projects";
 @use "pages/home/main";
@@ -15,3 +16,4 @@
 @use "pages/project_description/processes";
 @use "pages/project_description/result";
 @use "pages/project_description/footer-cta";
+@use "responsive";

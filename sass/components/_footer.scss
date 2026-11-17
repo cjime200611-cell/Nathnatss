@@ -54,32 +54,3 @@
     outline: 2px solid tokens.$color-purple-40-base;
     outline-offset: 3px;
 }
-
-@include tokens.mobile {
-    .site-footer {
-        padding-inline: 5%;
-    }
-
-    .social-links {
-        gap: tokens.$space-8;
-    }
-}
-
-@include tokens.small-mobile {
-    .site-footer {
-        gap: tokens.$space-8;
-        padding-block: tokens.$space-10;
-    }
-}
-
-@include tokens.from-2k {
-    .site-footer {
-        min-height: 76px;
-        padding-inline: max(5%, calc((100% - 2200px) / 2));
-    }
-
-    .site-footer p,
-    .social-name {
-        font-size: 15px;
-    }
-}

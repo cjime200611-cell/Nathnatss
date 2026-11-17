@@ -32,10 +32,3 @@
         drop-shadow(0 0 8px rgba(172, 111, 240, 0.82))
         drop-shadow(0 0 14px rgba(41, 75, 245, 0.48));
 }
-
-@media (hover: hover) and (pointer: fine) {
-    body.has-logo-cursor,
-    body.has-logo-cursor * {
-        cursor: none !important;
-    }
-}

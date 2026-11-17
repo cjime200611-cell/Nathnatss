@@ -172,46 +172,6 @@
     transform: scale(1.1) rotate(-3deg);
 }
 
-@include tokens.tablet-and-below {
-    .contact-modal {
-        width: min(680px, calc(100vw - 32px));
-        max-height: calc(100dvh - 32px);
-    }
-
-    .contact-modal .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-modal .contact-info {
-        min-height: auto;
-        padding: 48px 32px 32px;
-    }
-
-    .contact-modal .social-section {
-        margin-top: 32px;
-        margin-bottom: 0;
-    }
-
-    .contact-modal .social-links {
-        flex-wrap: wrap;
-    }
-}
-
-@include tokens.small-mobile {
-    .contact-modal {
-        width: calc(100vw - 20px);
-        max-height: calc(100dvh - 20px);
-    }
-
-    .contact-modal .contact-info {
-        padding: 48px 22px 26px;
-    }
-
-    .contact-modal .contact-form-container {
-        padding: 26px 22px;
-    }
-}
-
 @keyframes contact-modal-fade-in {
     from { opacity: 0; }
     to { opacity: 1; }

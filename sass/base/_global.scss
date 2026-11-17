@@ -95,23 +95,3 @@ img {
 a {
     color: inherit;
 }
-
-@media (min-width: 1441px) {
-    :root {
-        font-size: clamp(16px, 0.82vw, 20px);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}

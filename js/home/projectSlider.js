@@ -1,6 +1,6 @@
 // Para qué sirve: conecta los controles de navegación, cambia el proyecto
 // seleccionado y coordina la carga de imágenes con la transición animada.
-import { resolveImageUrl } from "./project-data.js";
+import { resolveImageUrl } from "./projectData.js";
 
 export function initializeProjectSlider(projects, view) {
     // IDs del HTML usados para conectar la navegación del carrusel.

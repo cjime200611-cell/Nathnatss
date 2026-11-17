@@ -117,18 +117,6 @@
     display: none !important;
 }
 
-@include tokens.small-mobile {
-    .contact-modal #formulario {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-modal .grupo-nombre,
-    .contact-modal .grupo-servicio,
-    .contact-modal .grupo-mensaje {
-        grid-column: auto;
-    }
-}
-
 @keyframes contact-form-enter {
     from {
         opacity: 0;

@@ -1,5 +1,5 @@
 // Actualiza los datos visibles del proyecto y controla sus animaciones.
-import { resolveImageUrl } from "./project-data.js";
+import { resolveImageUrl } from "./projectData.js";
 
 function getRequiredElement(id) {
     const element = document.getElementById(id);
