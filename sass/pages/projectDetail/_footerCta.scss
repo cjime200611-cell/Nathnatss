@@ -12,6 +12,11 @@
     background-color: tokens.$color-yellow-40-base;
 }
 
+.footer-section-CTA-text {
+    display: flex;
+    align-items: center;
+}
+
 .footer-section-CTA::before {
     @include tokens.pattern-overlay;
 }

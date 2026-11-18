@@ -4,20 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Nathnatss — selected 2D, 3D, and commercial illustration projects.">
+    <title>Portfolio — Nathnatss</title>
+    <link rel="icon" type="image/png" href="public/assets/shared/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Paytone+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/styles.css?v=7">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/form.css">
 </head>
 
 <body>
+    <header class="site-header" id="top">
+        <a class="brand-name" href="index.html" aria-label="Nathnatss home">
+            <img class="brand-mark" src="public/assets/shared/logo.png" alt="">
+            <span>NATHNATSS</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html?category=all" aria-current="page">Portfolio</a>
+            <a href="#contact" data-contact-modal-open>Contact</a>
+        </nav>
+    </header>
     <main class="portfolio-section">
         <div class="introduction-info">
             <!-- Header / Introduction -->
             <div class="intro">
-                <img src="/public/assets/logo-portfolio.png" class="logo" alt="Logo">
+                <img src="public/assets/portfolio/logoPortfolio.png" class="logo" alt="Logo">
 
                 <div class="separator"></div>
 
@@ -72,7 +90,7 @@
             <!-- Project 1 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/carroza-2.png" alt="">
+                    <img src="public/assets/portfolio/carroza2.png" alt="">
                     <div class="category-tag">
                         <h2>3D Illustration</h2>
                     </div>
@@ -92,7 +110,7 @@
             <!-- Project 2 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/expresiones.png" alt="">
+                    <img src="public/assets/portfolio/expresiones.png" alt="">
                     <div class="category-tag">
                         <h2>Commercial Visualization</h2>
                     </div>
@@ -112,7 +130,7 @@
             <!-- Project 3 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/carrito1-1.png" alt="">
+                    <img src="public/assets/portfolio/carrito1.png" alt="">
                     <div class="category-tag">
                         <h2>3D Illustration</h2>
                     </div>
@@ -132,7 +150,7 @@
             <!-- Project 4 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/blocking-stage_1.png" alt="">
+                    <img src="public/assets/portfolio/blockingStage1.png" alt="">
                     <div class="category-tag">
                         <h2>3D Illustration</h2>
                     </div>
@@ -152,7 +170,7 @@
             <!-- Project 5 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/carrito2-1.png" alt="">
+                    <img src="public/assets/portfolio/carrito2.png" alt="">
                     <div class="category-tag">
                         <h2>3D Illustration</h2>
                     </div>
@@ -172,7 +190,7 @@
             <!-- Project 6 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/render-chapulin-1.png" alt="">
+                    <img src="public/assets/portfolio/renderChapulin.png" alt="">
                     <div class="category-tag">
                         <h2>3D Illustration</h2>
                     </div>
@@ -192,7 +210,7 @@
             <!-- Project 7 -->
             <div class="project-card">
                 <div class="cover-design">
-                    <img src="/public/assets/flor-2.jpg" alt="">
+                    <img src="public/assets/portfolio/flor2.jpg" alt="">
                     <div class="category-tag">
                         <h2>Personalized Illustration</h2>
                     </div>
@@ -231,13 +249,29 @@
                 <button class="tell-more-btn">Tell me more</button>
             </div>
             <div class="tell-more-figure">
-                <img src="/public/assets/figura_portfolio.png" alt="Decorative figure">
+                <img src="public/assets/portfolio/figuraPortfolio.png" alt="Decorative figure">
             </div>
         </section>
 
-        <script src="/js/mainPortfolio.js"> </script>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" async></script>
+    <footer class="site-footer">
+        <p>© Nathnatss</p>
+        <div class="social-links">
+            <a class="social-name" href="https://www.instagram.com/nathnatss/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a class="social-name" href="https://www.linkedin.com/in/nathaliedelg/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+    </footer>
+    <script src="js/mainPortfolio.js"></script>
+    <script type="module">
+        import { initializeMobileNavigation } from "./js/home/mobileNavigation.js";
+        import { initializeFlowerBurst } from "./js/components/flowerBurst.js";
+        import { initializeLogoCursor } from "./js/home/logoCursor.js";
+
+        initializeMobileNavigation();
+        initializeFlowerBurst();
+        initializeLogoCursor();
+    </script>
+    <script type="module" src="js/form/modal.js"></script>
 </body>
 
 </html>

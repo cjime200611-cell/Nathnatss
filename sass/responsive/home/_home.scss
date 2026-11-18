@@ -1,7 +1,8 @@
 @use "../../base" as tokens;
+@use "../mixins" as r;
 
 /* Ajusta altura, tipografía y texto de la portada. */
-@include tokens.mobile {
+@include r.mobile {
     .hero,
     .hero-visual {
         min-height: 540px;
@@ -25,7 +26,7 @@
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .hero,
     .hero-visual {
         min-height: 500px;
@@ -36,7 +37,7 @@
     }
 }
 
-@include tokens.from-desktop {
+@include r.from-desktop {
     .hero,
     .hero-visual {
         min-height: 680px;
@@ -56,7 +57,7 @@
     }
 }
 
-@include tokens.from-2k {
+@include r.from-2k {
     .hero,
     .hero-visual {
         min-height: 850px;
@@ -72,7 +73,7 @@
 }
 
 /* Adapta carrusel, tarjetas y controles de proyectos a cada pantalla. */
-@include tokens.mobile {
+@include r.mobile {
     .featured-projects {
         padding-inline: 5%;
     }
@@ -120,14 +121,14 @@
     }
 }
 
-@include tokens.tablet-and-below {
+@include r.tablet-and-below {
     .project-preview,
     .project-transition {
         display: none;
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .projects-heading {
         align-items: flex-start;
         flex-direction: column;
@@ -139,7 +140,7 @@
     }
 }
 
-@include tokens.from-desktop {
+@include r.from-desktop {
     .featured-projects {
         max-width: 3200px;
         margin-inline: auto;
@@ -229,7 +230,7 @@
     }
 }
 
-@include tokens.from-2k {
+@include r.from-2k {
     .project-artwork {
         min-height: 980px;
     }
@@ -258,7 +259,7 @@
 }
 
 /* Reorganiza la biografía en columnas en pantallas pequeñas y amplias. */
-@include tokens.mobile {
+@include r.mobile {
     .about {
         grid-template-columns: 1fr;
         min-height: 0;
@@ -289,7 +290,7 @@
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .about-text h2 {
         font-size: 23px;
     }
@@ -299,7 +300,7 @@
     }
 }
 
-@include tokens.from-2k {
+@include r.from-2k {
     .about {
         min-height: 420px;
         margin-inline: 6%;
@@ -321,7 +322,7 @@
 }
 
 /* Cambia la cuadrícula de servicios para tablet, móvil y pantallas 2K. */
-@include tokens.tablet-and-below {
+@include r.tablet-and-below {
     .service-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -331,7 +332,7 @@
     }
 }
 
-@include tokens.mobile {
+@include r.mobile {
     .services {
         padding: tokens.$space-60 5%;
     }
@@ -392,7 +393,7 @@
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .services {
         padding-inline: 4%;
     }
@@ -414,13 +415,13 @@
     }
 }
 
-@include tokens.narrow-mobile {
+@include r.narrow-mobile {
     .services-heading h2 {
         font-size: 32px;
     }
 }
 
-@include tokens.from-2k {
+@include r.from-2k {
     .service-media {
         --media-open-height: 700px;
     }
@@ -465,7 +466,7 @@
 }
 
 /* Reduce tamaños y espaciado de la sección de contacto según pantalla. */
-@include tokens.mobile {
+@include r.mobile {
     .contact {
         min-height: 440px;
         padding-block: tokens.$space-60 88px;
@@ -477,7 +478,7 @@
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .contact {
         min-height: 420px;
         padding-block: tokens.$space-48 80px;
@@ -492,7 +493,7 @@
     }
 }
 
-@include tokens.from-2k {
+@include r.from-2k {
     .contact {
         min-height: 650px;
         justify-content: center;

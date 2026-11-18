@@ -1,7 +1,8 @@
 @use "../../base" as tokens;
+@use "../mixins" as r;
 
 /* Reacomoda modal y redes sociales en tablet y móvil. */
-@include tokens.tablet-and-below {
+@include r.tablet-and-below {
     .contact-modal {
         width: min(680px, calc(100vw - 32px));
         max-height: calc(100dvh - 32px);
@@ -26,7 +27,7 @@
     }
 }
 
-@include tokens.small-mobile {
+@include r.small-mobile {
     .contact-modal {
         width: calc(100vw - 20px);
         max-height: calc(100dvh - 20px);

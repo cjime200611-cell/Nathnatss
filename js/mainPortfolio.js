@@ -17,7 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Configuration
     const projectsPerPage = 6;
     let visibleProjects = projectsPerPage;
-    let currentFilter = "3d";
+    const queryCategory = new URLSearchParams(window.location.search).get("category");
+    const validCategories = ["3d", "personalized", "commercial", "all"];
+    const initialCategory = validCategories.includes(queryCategory)
+        ? queryCategory
+        : (sessionStorage.getItem("portfolio-category") || "all");
+    let currentFilter = initialCategory;
     let currentSort = "recent";
 
     // Category data with descriptions
@@ -57,6 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 btn.classList.add("active");
             }
         });
+
+        filterHeader.classList.remove("category-entering");
+        categorySection.classList.remove("category-entering");
+        void filterHeader.offsetWidth;
+        filterHeader.classList.add("category-entering");
+        categorySection.classList.add("category-entering");
     }
 
     // Get category from project
@@ -131,8 +142,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (moreButton) {
-            moreButton.style.display = filteredProjects.length > visibleProjects ? "inline-block" : "none";
+            moreButton.style.display = "inline-block";
+            moreButton.disabled = filteredProjects.length <= visibleProjects;
         }
+
+        projects.forEach(function (project) {
+            project.classList.remove("is-entering");
+        });
+        void portfolio.offsetWidth;
+        let visibleIndex = 0;
+        projects.forEach(function (project) {
+            if (project.style.display !== "none") {
+                project.classList.add("is-entering");
+                project.style.animationDelay = `${visibleIndex * 60}ms`;
+                visibleIndex += 1;
+            } else {
+                project.style.animationDelay = "0ms";
+            }
+        });
     }
 
     // Handle filter button clicks
@@ -147,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updateCategory(categoryKey);
             sortProjects();
             displayProjects();
+            sessionStorage.setItem("portfolio-category", categoryKey);
         });
     });
 
@@ -209,10 +237,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    projects.forEach(function (project) {
+        project.addEventListener("click", function () {
+            sessionStorage.setItem("portfolio-scroll-y", String(window.scrollY));
+            sessionStorage.setItem("portfolio-category", currentFilter);
+            window.location.href = "detalleProyecto.html";
+        });
+    });
+
     // Initialize
-    updateCategory("3d");
+    updateCategory(initialCategory);
     dropdownItems[0]?.classList.add("selected");
     sortProjects();
     displayProjects();
+
+    const restoredScroll = Number(sessionStorage.getItem("portfolio-scroll-y"));
+    if (Number.isFinite(restoredScroll) && restoredScroll > 0) {
+        window.requestAnimationFrame(function () {
+            window.scrollTo({ top: restoredScroll, behavior: "auto" });
+        });
+    }
 
 });

@@ -1,0 +1,83 @@
+@use "../../base" as tokens;
+@use "../mixins" as r;
+
+@include r.portfolio-tablet {
+    .button-group {
+        gap: 20px;
+        padding-inline: 20px;
+    }
+
+    .filter-group {
+        max-width: 100%;
+        flex-basis: 100%;
+
+        .filter-btn {
+            flex: 1 1 140px;
+        }
+    }
+}
+
+@include r.portfolio-mobile {
+    .button-group {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .filter-group {
+        height: auto;
+
+        a {
+            flex-basis: 100%;
+            margin-right: 0;
+        }
+
+        .filter-btn {
+            flex: 1 1 calc(50% - 12px);
+            min-width: 140px;
+        }
+    }
+
+    .order-group {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0;
+
+        .filter-btn {
+            min-width: 140px;
+        }
+    }
+
+    .portfolio {
+        padding-inline: 16px;
+    }
+
+    .project-card {
+        height: auto;
+        min-height: 394px;
+    }
+
+    .project-info {
+        height: auto;
+        min-height: 74px;
+        padding-block: 8px;
+    }
+
+    .project-card .project-details p,
+    .project-card .project-details h3 {
+        overflow-wrap: anywhere;
+    }
+
+    .category-section {
+        height: auto;
+        min-height: 220px;
+        padding-inline: 24px;
+
+        h1 {
+            padding-left: 24px;
+        }
+
+        p {
+            padding-inline: 24px;
+        }
+    }
+}

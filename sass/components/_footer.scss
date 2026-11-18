@@ -24,7 +24,9 @@
 
 .site-footer p {
     margin: 0;
-    font-size: 13px;
+    align-self: center;
+    font-family: tokens.$font-body;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -35,10 +37,13 @@
 }
 
 .social-name {
+    display: inline-flex;
+    align-items: center;
     padding: tokens.$space-4;
     border-radius: 4px;
-    font-size: 13px;
-    font-weight: 600;
+    font-family: tokens.$font-body;
+    font-size: 16px;
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color 160ms ease, background-color 160ms ease;

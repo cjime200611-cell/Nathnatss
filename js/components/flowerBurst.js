@@ -25,7 +25,7 @@ export function initializeFlowerBurst() {
         const marks = Array.from({ length: flowerCount }, function (_, index) {
             const mark = document.createElement("img");
             mark.className = "flower-burst__mark";
-            mark.src = new URL("../../public/assets/logo.png", import.meta.url).href;
+            mark.src = new URL("../../public/assets/shared/logo.png", import.meta.url).href;
             mark.alt = "";
             mark.draggable = false;
             mark.style.setProperty("--flower-angle", index * (360 / flowerCount) + "deg");

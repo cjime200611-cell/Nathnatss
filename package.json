@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch sass/styles.scss:public/css/styles.css sass/form.scss:public/css/form.css",
-    "sass-build": "sass sass/styles.scss:public/css/styles.css sass/form.scss:public/css/form.css --style compressed"
+    "sass-build": "sass sass/styles.scss:public/css/styles.css sass/form.scss:public/css/form.css --style expanded"
   },
   "author": "",
   "license": "ISC",

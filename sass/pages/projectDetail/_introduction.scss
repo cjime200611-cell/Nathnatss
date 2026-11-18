@@ -1,0 +1,58 @@
+@use "../../base" as tokens;
+
+.introduction-section {
+    position: relative;
+}
+
+.back-to-grid {
+    position: absolute;
+    z-index: 3;
+    top: 24px;
+    left: 24px;
+    display: flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-crema;
+    box-shadow: 4px 4px 0 tokens.$color-negro;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.introduction-section-hero img {
+    display: block;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+}
+
+.introduction-section-category {
+    position: absolute;
+    top: 15px;
+    right: -12px;
+    min-width: 210px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border: 2px solid tokens.$color-negro;
+    background-color: tokens.$color-yellow-40-base;
+    color: tokens.$color-negro;
+
+    h3 {
+        margin: 0;
+        font-family: tokens.$font-body;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+}

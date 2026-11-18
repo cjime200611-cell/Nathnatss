@@ -8,9 +8,6 @@
 /* Neutros */
 /* Escala de espaciados en píxeles */
 /* Tipografías para títulos y cuerpo */
-/* Puntos de quiebre reutilizables para los parciales SASS. */
-/* Escritorio amplio y pantallas 2K */
-/* Límites inclusivos para tablet y pantallas pequeñas */
 .contact-modal .mensaje-exito {
   display: flex;
   flex-direction: column;

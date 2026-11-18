@@ -14,7 +14,7 @@ export function initializeLogoCursor() {
     const marks = [38, 34, 30, 27, 24, 21, 18, 15, 12, 10, 8, 6].map(function (size, index) {
         const mark = document.createElement("img");
         mark.className = index === 0 ? "logo-cursor__mark logo-cursor__mark--main" : "logo-cursor__mark";
-        mark.src = new URL("../../public/assets/logo.png", import.meta.url).href;
+        mark.src = new URL("../../public/assets/shared/logo.png", import.meta.url).href;
         mark.alt = "";
         mark.draggable = false;
         mark.style.width = size + "px";

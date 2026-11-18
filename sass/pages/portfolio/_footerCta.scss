@@ -1,12 +1,18 @@
+@use "../../base" as tokens;
+
+.portfolio-section {
+    padding-bottom: 24px;
+}
+
 .tell-more {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 430px;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $color-yellow-40-base;
+    background-color: tokens.$color-yellow-40-base;
     overflow: visible;
     
 
@@ -19,7 +25,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/public/assets/patron.png);
+    background-image: url(../assets/shared/patron.png);
     background-repeat: repeat;
     background-size: auto;
     opacity: 0.11;
@@ -34,7 +40,7 @@
 .tell-more-info {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 18px;
     max-width: 55%;
     height: auto;
     padding-left: 10%;
@@ -47,43 +53,49 @@
     width: fit-content;
     padding: 10px 25px;
     border-radius: 25px;
-    background-color: $color-negro;
+    background-color: tokens.$color-negro;
     color: white;
-    font-family: $font-body;
+    font-family: tokens.$font-body;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    h6 {
+        font-family: tokens.$font-body;
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 
 .tell-more-title {
-    font-family: $font-title;
-    font-size: 4rem;
+    font-family: tokens.$font-title;
+    font-size: 3.25rem;
     margin: 0;
-    color: $color-negro;
+    color: tokens.$color-negro;
     line-height: 1.1;
     font-weight: 900;
 }
 
 .tell-more-description {
-    font-family: $font-body;
-    font-size: 2rem;
+    font-family: tokens.$font-body;
+    font-size: 1.625rem;
     margin: 0;
-    color: $color-negro;
+    color: tokens.$color-negro;
     line-height: 1.5;
 }
 
 .tell-more-btn {
     width: fit-content;
     padding: 12px 35px;
-    font-family: $font-title;
+    font-family: tokens.$font-title;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.05em;
     border-radius: 25px;
-    border: 3px solid $color-negro;
-    background-color: $color-pink-30;
-    box-shadow: 4px 4px $color-negro;
+    border: 3px solid tokens.$color-negro;
+    background-color: tokens.$color-pink-30;
+    box-shadow: 4px 4px tokens.$color-negro;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -91,22 +103,21 @@
 
     &:hover {
         transform: translateY(2px) translateX(2px);
-        box-shadow: 2px 2px $color-negro;
+        box-shadow: 2px 2px tokens.$color-negro;
     }
 }
 
 .tell-more-figure {
     width: auto;
-    height: 500px;
+    height: 430px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    overflow: visible;
+    overflow: hidden;
 
     img {
-        padding-right: -1px;
-        height: auto;
-        width: auto;
+        max-height: 100%;
+        max-width: 100%;
         object-fit: contain;
         object-position: right bottom;
     }

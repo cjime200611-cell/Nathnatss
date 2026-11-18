@@ -169,7 +169,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-bottom: 18px;
+    margin: 0 0 14px;
     color: tokens.$color-crema;
     font-size: 10px;
     font-weight: 700;
@@ -190,7 +190,7 @@
 
 .project-details .project-description {
     max-width: 520px;
-    margin-top: 18px;
+    margin: 14px 0 0;
     color: tokens.$color-crema;
     font-size: 14px;
     line-height: 1.65;
@@ -200,7 +200,7 @@
     display: inline-flex;
     align-items: center;
     gap: 22px;
-    margin-top: 22px;
+    margin-top: 16px;
     padding: 12px 16px;
     border: 1px solid tokens.$color-negro;
     border-radius: 999px;

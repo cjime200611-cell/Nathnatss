@@ -1,14 +1,3 @@
-@import "base/reset";
-@import "base/variables";
-@import "base/global";
-
-@import "pages/portfolio/intro-portfolio";
-@import "pages/portfolio/filters";
-@import "pages/portfolio/category-info";
-@import "pages/portfolio/grilla";
-@import "pages/portfolio/more-button";
-@import "pages/portfolio/footerCta";
-/* Carga estilos base, componentes y secciones en orden de dependencia. */
 @use "base/reset";
 @use "base/global";
 @use "components/header";
@@ -18,12 +7,18 @@
 @use "components/featured-projects";
 @use "pages/home/main";
 @use "components/footer";
-@use "pages/project_description/layout";
-@use "pages/project_description/introduction";
-@use "pages/project_description/principal-info";
-@use "pages/project_description/references";
-@use "pages/project_description/sketches";
-@use "pages/project_description/processes";
-@use "pages/project_description/result";
-@use "pages/project_description/footer-cta";
+@use "pages/portfolio/intro-portfolio";
+@use "pages/portfolio/filters";
+@use "pages/portfolio/category-info";
+@use "pages/portfolio/grilla";
+@use "pages/portfolio/more-button";
+@use "pages/portfolio/footerCta" as portfolioFooterCta;
+@use "pages/projectDetail/layout";
+@use "pages/projectDetail/introduction";
+@use "pages/projectDetail/principalInfo";
+@use "pages/projectDetail/references";
+@use "pages/projectDetail/sketches";
+@use "pages/projectDetail/processes";
+@use "pages/projectDetail/result";
+@use "pages/projectDetail/footerCta" as projectFooterCta;
 @use "responsive";

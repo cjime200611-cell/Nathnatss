@@ -51,20 +51,31 @@
     border-radius: 999px;
     background-color: tokens.$color-crema;
     box-shadow: 4px 4px tokens.$color-negro;
-    font-size: 14px;
+    font-family: tokens.$font-body;
+    font-size: 16px;
+    font-weight: 500;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.site-nav a[aria-current="page"],
+.site-nav a[aria-current="page"] {
+    background-color: tokens.$color-purple-30;
+    font-weight: 800;
+    color: tokens.$color-crema;
+}
+
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    background-color: tokens.$color-purple-30;
-    font-weight: bold;
-    color: tokens.$color-crema;
+    background-color: tokens.$color-purple-90;
+    color: tokens.$color-negro;
 }
 
 .site-nav a:hover {
     transform: translateY(-2px);
+}
+
+.back-to-grid {
+    font-family: tokens.$font-body;
+    font-weight: 700;
 }
 
 .site-nav a:focus-visible,

@@ -1,3 +1,10 @@
+@use "../../base" as tokens;
+
+@keyframes cardReveal {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .portfolio {
     padding: 0px 45px;
     display: flex;
@@ -7,34 +14,72 @@
 }
 
 .project-card {
-    width: 43%;
+    width: 100%;
+    max-width: 620px;
     height: 394px;
-    box-shadow: 4px 4px $color-negro;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 0 tokens.$color-negro;
     border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+
+    &.is-entering {
+        animation: cardReveal 300ms ease-out both;
+    }
+
+    &:hover,
+    &:focus-visible {
+        transform: translate(-2px, -4px);
+        box-shadow: 7px 9px 0 tokens.$color-negro;
+    }
 }
 
 .cover-design {
     position: relative;
+    height: 320px;
 }
 
 .cover-design img {
-    width: 100%;
-    height: 320px;
-    border-radius: 16px 16px 0px 0px;
     display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0px 0px;
     object-fit: cover;
     object-position: center;
+    transition: transform 240ms ease;
+}
+
+.project-card:hover .cover-design img,
+.project-card:focus-visible .cover-design img {
+    transform: scale(1.025);
 }
 
 .category-tag {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 0;
+    height: 32px;
+    min-width: 210px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    background-color: tokens.$color-yellow-40-base;
+    color: #161616;
+    border: 2px solid #161616;
+    border-radius: 0;
+    box-shadow: inset 2px 2px 0 #161616;
 
-    background-color: $color-yellow-40-base;
-    color: $color-negro;
-    padding: 6px 16px;
-    border: 2px solid $color-negro;
+    h2 {
+        margin: 0;
+        font-family: tokens.$font-body;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
 }
 
 .project-info {
@@ -44,24 +89,66 @@
     gap: 16px;
     width: 100%;
     height: 74px;
+    box-sizing: border-box;
     padding: 0px 30px;
-    background-color: $color-blue-40-base;
+    background-color: #1F38B8;
     border-radius: 0px 0px 16px 16px;
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+    color: white;
 }
 
-.project-details {
+.project-card .project-details {
+    min-width: 0;
+    flex: 1;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: auto;
+    transform: none;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     gap: 2px;
-    color: white;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+
     p {
         margin: 0;
-        font-size: 1.25rem;
+        font-family: tokens.$font-body;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.019em;
+    }
+
+    h3 {
+        margin: 0;
+        font-family: tokens.$font-title;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -0.019em;
     }
 }
 
-.project-year {
+.project-card .project-year {
+    width: 90px;
+    flex: 0 0 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
+
+    h4 {
+        margin: 0;
+        font-family: tokens.$font-body;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.019em;
+        text-align: center;
+    }
 }
+
