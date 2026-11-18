@@ -1,0 +1,108 @@
+@use "../../base" as tokens;
+
+.principal-info {
+    display: flex;
+    gap: tokens.$space-48;
+    padding: tokens.$space-24 tokens.$space-48;
+    background-color: tokens.$color-yellow-40-base;
+}
+
+.principal-info-description {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: tokens.$space-24;
+    padding: tokens.$space-8;
+}
+
+.principal-info-description-text {
+    width: 100%;
+
+    p {
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+.principal-info-description-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-form {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
+
+    img {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.principal-info-description-programs {
+    display: flex;
+    width: auto;
+    height: 72px;
+    gap: tokens.$space-24;
+    padding-left: tokens.$space-32;
+
+    img {
+        display: block;
+        width: auto;
+        height: 100%;
+        flex: 0 0 auto;
+        object-fit: contain;
+    }
+}
+
+.principal-info-card {
+    display: flex;
+    width: 20%;
+    height: 245px;
+    flex-direction: column;
+    justify-content: center;
+    gap: tokens.$space-16;
+    margin: 0;
+    padding: 10px 20px;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 24px;
+    background-color: tokens.$color-blue-70;
+    box-shadow: 4px 4px tokens.$color-negro;
+
+    p {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+.icon-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-info {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 50%;
+    background-color: tokens.$color-yellow-40-base;
+    box-shadow: 2px 2px tokens.$color-negro;
+
+    img {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+}

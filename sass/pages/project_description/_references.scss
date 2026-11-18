@@ -1,0 +1,24 @@
+@use "../../base" as tokens;
+
+.project-process-reference {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-process-reference-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 108px;
+
+    img {
+        display: block;
+        width: 20%;
+        height: auto;
+        max-height: 80vh;
+        border: 2px solid tokens.$color-negro;
+        border-radius: 13px;
+        box-shadow: 2px 2px tokens.$color-negro;
+    }
+}

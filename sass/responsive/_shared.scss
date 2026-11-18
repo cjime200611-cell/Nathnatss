@@ -1,0 +1,120 @@
+@use "../base" as tokens;
+
+/* Ajusta escala y movimiento global según pantalla y preferencias del sistema. */
+@media (min-width: 1441px) {
+    :root {
+        font-size: clamp(16px, 0.82vw, 20px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Oculta el cursor del sistema solo si hay mouse preciso disponible. */
+@media (hover: hover) and (pointer: fine) {
+    body.has-logo-cursor,
+    body.has-logo-cursor * {
+        cursor: none !important;
+    }
+}
+
+/* Adapta marca y menú de navegación a móvil y pantallas 2K. */
+@include tokens.mobile {
+    .site-header {
+        min-height: 64px;
+        padding-inline: 5%;
+    }
+
+    .brand-name {
+        gap: tokens.$space-4;
+        font-size: 16px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: tokens.$space-8;
+        padding: tokens.$space-16 5%;
+        border-bottom: 1px solid tokens.$color-negro;
+        background-color: tokens.$color-crema;
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        text-align: center;
+    }
+}
+
+@include tokens.from-2k {
+    .site-header {
+        min-height: 100px;
+        padding-inline: max(5%, calc((100% - 2200px) / 2));
+    }
+
+    .brand-name {
+        font-size: 22px;
+    }
+
+    .brand-mark {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* Ajusta footer fijo y enlaces sociales a móvil y pantallas 2K. */
+@include tokens.mobile {
+    .site-footer {
+        padding-inline: 5%;
+    }
+
+    .social-links {
+        gap: tokens.$space-8;
+    }
+}
+
+@include tokens.small-mobile {
+    .site-footer {
+        gap: tokens.$space-8;
+        padding-block: tokens.$space-10;
+    }
+}
+
+@include tokens.from-2k {
+    .site-footer {
+        min-height: 76px;
+        padding-inline: max(5%, calc((100% - 2200px) / 2));
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 15px;
+    }
+}

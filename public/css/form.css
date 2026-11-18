@@ -1,0 +1,525 @@
+@charset "UTF-8";
+/* Punto de entrada independiente para el modal de contacto reutilizable. */
+/* API SASS pública: comparte tokens de diseño y mixins responsive. */
+/* Paletas de marca, ordenadas del tono más claro (90) al más oscuro (10). */
+/* Blue */
+/* Purple */
+/* Yellow */
+/* Pink */
+/* Neutros */
+/* Escala de espaciados en píxeles */
+/* Tipografías para títulos y cuerpo */
+/* Puntos de quiebre reutilizables para los parciales SASS. */
+/* Escritorio amplio y pantallas 2K */
+/* Límites inclusivos para tablet y pantallas pequeñas */
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  width: min(1080px, 100vw - 48px);
+  max-width: calc(100vw - 20px);
+  max-height: calc(100dvh - 20px);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.contact-modal[open] {
+  animation: contact-modal-fade-in 220ms ease-out both;
+}
+
+.contact-modal[open]::backdrop {
+  animation: contact-backdrop-fade-in 220ms ease-out both;
+}
+
+.contact-modal[open].is-leaving {
+  animation: contact-modal-fade-out 180ms ease-in both;
+}
+
+.contact-modal[open].is-leaving::backdrop {
+  animation: contact-backdrop-fade-out 180ms ease-in both;
+}
+
+.contact-modal .close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 1;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #FF475D;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.contact-modal .close-button:hover,
+.contact-modal .close-button:focus-visible {
+  transform: scale(1.1);
+  background-color: #FF475D;
+  color: #FFF9EE;
+}
+
+.contact-modal .close-button:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
+}
+
+.contact-modal .contact-content {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 566px;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  border: 2px solid #000000;
+  border-radius: 22px;
+  background-color: #FFF9EE;
+  box-shadow: 8px 8px 0 #000000;
+  animation: contact-card-enter 280ms cubic-bezier(0.2, 0.75, 0.3, 1) both;
+}
+
+.contact-modal.is-leaving .contact-content {
+  animation: contact-card-exit 180ms ease-in both;
+}
+
+.contact-modal .contact-info {
+  display: flex;
+  min-height: 566px;
+  flex-direction: column;
+  padding: 72px 35px 60px;
+  background-color: #FFD85A;
+}
+
+.contact-modal .contact-label {
+  display: inline-block;
+  width: fit-content;
+  padding: 9px 18px;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  background-color: #AC6FF0;
+  box-shadow: 3px 3px 0 #000000;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contact-modal .contact-info h1 {
+  margin-top: 30px;
+  color: #000000;
+  font-family: "Paytone One", sans-serif;
+  font-size: clamp(36px, 3.2vw, 46px);
+  line-height: 1.1;
+}
+
+.contact-modal .contact-description {
+  margin-top: 20px;
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact-modal .social-section {
+  margin-top: auto;
+  margin-bottom: 35px;
+}
+
+.contact-modal .social-section h2 {
+  margin-bottom: 18px;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contact-modal .social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.contact-modal .social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transform-origin: left center;
+  transition: transform 180ms ease;
+}
+
+.contact-modal .social-link:hover,
+.contact-modal .social-link:focus-visible {
+  transform: scale(1.05);
+}
+
+.contact-modal .social-link img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  transition: transform 180ms ease;
+}
+
+.contact-modal .social-link:hover img,
+.contact-modal .social-link:focus-visible img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+@keyframes contact-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes contact-modal-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes contact-backdrop-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes contact-backdrop-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes contact-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes contact-card-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+}
+.contact-modal .contact-form-container {
+  padding: 32px 30px 34px;
+  background-color: #FFF9EE;
+}
+
+.contact-modal #formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 17px;
+}
+
+.contact-modal #formulario:not([hidden]) {
+  animation: contact-form-enter 260ms ease-out both;
+}
+
+.contact-modal #formulario.is-leaving {
+  animation: contact-form-exit 180ms ease-in both;
+}
+
+.contact-modal .grupo-nombre,
+.contact-modal .grupo-servicio,
+.contact-modal .grupo-mensaje {
+  grid-column: span 2;
+}
+
+.contact-modal #formulario label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-modal #formulario input,
+.contact-modal #formulario select,
+.contact-modal #formulario textarea {
+  width: 100%;
+  padding: 13px 15px;
+  background-color: #EAEFFF;
+  border: 1.5px solid #000000;
+  border-radius: 14px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-modal #formulario input::placeholder,
+.contact-modal #formulario select::placeholder {
+  color: #777777;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-modal #formulario select {
+  cursor: pointer;
+}
+
+.contact-modal #formulario textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-modal #formulario input:focus,
+.contact-modal #formulario select:focus,
+.contact-modal #formulario textarea:focus {
+  border-color: #294BF5;
+  border-width: 2px;
+}
+
+.contact-modal .error {
+  display: block;
+  margin-top: 6px;
+  color: #FF475D;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contact-modal .select-container {
+  position: relative;
+}
+
+.contact-modal .select-container::after {
+  content: "";
+  position: absolute;
+  top: 36%;
+  right: 20px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: translate(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+.contact-modal #formulario select {
+  appearance: none;
+  padding-right: 45px;
+  cursor: pointer;
+}
+
+.contact-modal #formulario[hidden] {
+  display: none !important;
+}
+
+@keyframes contact-form-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes contact-form-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.contact-modal .boton {
+  display: block;
+  width: 235px;
+  max-width: 100%;
+  grid-column: 1/-1;
+  justify-self: center;
+  padding: 15px 22px;
+  background-color: #294BF5;
+  color: #FFF9EE;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0 #000000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-modal .boton:hover {
+  background-color: #15267B;
+  color: #FFF9EE;
+}
+
+.contact-modal .boton:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.contact-modal .boton:focus-visible {
+  outline: 3px solid #294BF5;
+  outline-offset: 4px;
+}
+
+.contact-modal .boton:disabled {
+  background-color: #D1D1D1;
+  color: #777777;
+  border-color: #777777;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-modal .mensaje-exito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 430px;
+  max-width: 100%;
+  min-height: 330px;
+  margin: 0;
+  padding: 35px 30px;
+  box-sizing: border-box;
+  background-color: #EAEFFF;
+  border: 2px solid #000000;
+  border-radius: 22px;
+  box-shadow: 5px 5px 0 #000000;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.contact-modal .mensaje-exito.mostrar {
+  animation: contact-form-appear 360ms ease-out both;
+}
+
+.contact-modal .icono-exito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 22px;
+  background-color: #F7F1FE;
+  border: 3px solid #8153B4;
+  border-radius: 50%;
+  color: #8153B4;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.contact-modal .mensaje-exito h2 {
+  margin-bottom: 15px;
+  color: #000000;
+  font-family: "Paytone One", sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-modal .mensaje-exito p {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@keyframes contact-form-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-modal .mensaje-exito[hidden] {
+  display: none !important;
+}
+
+.contact-modal .contact-form-container:has(#formulario[hidden]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reacomoda modal y redes sociales en tablet y móvil. */
+@media (max-width: 1024px) {
+  .contact-modal {
+    width: min(680px, 100vw - 32px);
+    max-height: calc(100dvh - 32px);
+  }
+  .contact-modal .contact-content {
+    grid-template-columns: 1fr;
+  }
+  .contact-modal .contact-info {
+    min-height: auto;
+    padding: 48px 32px 32px;
+  }
+  .contact-modal .social-section {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .contact-modal .social-links {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .contact-modal {
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+  .contact-modal .contact-info {
+    padding: 48px 22px 26px;
+  }
+  .contact-modal .contact-form-container {
+    padding: 26px 22px;
+  }
+  .contact-modal #formulario {
+    grid-template-columns: 1fr;
+  }
+  .contact-modal .grupo-nombre,
+  .contact-modal .grupo-servicio,
+  .contact-modal .grupo-mensaje {
+    grid-column: auto;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

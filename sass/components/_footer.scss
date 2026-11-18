@@ -1,0 +1,56 @@
+/* Footer fijo y estados accesibles para los enlaces sociales. */
+@use "../base" as tokens;
+
+/* Mantiene el footer visible durante el scroll. */
+.site-footer {
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    min-height: 64px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: tokens.$space-16;
+    padding: tokens.$space-16 5%;
+    border-top: 1.5px solid tokens.$color-negro;
+    background-color: tokens.$color-crema;
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+    color: tokens.$color-negro;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: tokens.$space-24;
+}
+
+.social-name {
+    padding: tokens.$space-4;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.social-name:hover,
+.social-name:active {
+    background-color: tokens.$color-blue-40-base;
+    color: tokens.$color-crema;
+}
+
+.social-name:focus-visible {
+    outline: 2px solid tokens.$color-purple-40-base;
+    outline-offset: 3px;
+}

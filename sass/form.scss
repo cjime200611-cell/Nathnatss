@@ -1,0 +1,6 @@
+/* Punto de entrada independiente para el modal de contacto reutilizable. */
+@use "pages/form/modal";
+@use "pages/form/form";
+@use "pages/form/buttons";
+@use "pages/form/confirmation";
+@use "responsive/form/form" as form-responsive;

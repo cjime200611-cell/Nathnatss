@@ -8,3 +8,22 @@
 @import "pages/portfolio/grilla";
 @import "pages/portfolio/more-button";
 @import "pages/portfolio/footerCta";
+/* Carga estilos base, componentes y secciones en orden de dependencia. */
+@use "base/reset";
+@use "base/global";
+@use "components/header";
+@use "components/cursor";
+@use "components/flower-burst";
+@use "pages/home/hero";
+@use "components/featured-projects";
+@use "pages/home/main";
+@use "components/footer";
+@use "pages/project_description/layout";
+@use "pages/project_description/introduction";
+@use "pages/project_description/principal-info";
+@use "pages/project_description/references";
+@use "pages/project_description/sketches";
+@use "pages/project_description/processes";
+@use "pages/project_description/result";
+@use "pages/project_description/footer-cta";
+@use "responsive";

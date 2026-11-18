@@ -1,0 +1,91 @@
+/* Presentación dividida y firma de la artista. */
+@use "../../base" as tokens;
+
+/* Distribución en dos columnas */
+.about {
+    display: grid;
+    grid-template-columns: 1.28fr 0.72fr;
+    min-height: 310px;
+    margin: tokens.$space-60 5%;
+    overflow: hidden;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 28px;
+    background-color: tokens.$color-yellow-40-base;
+    box-shadow: 8px 8px 0 tokens.$color-negro;
+}
+
+.about-text,
+.about-signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: tokens.$space-48;
+}
+
+.about-text .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: tokens.$space-8;
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+}
+
+.about-text .section-label::before {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: tokens.$color-negro;
+    content: "";
+}
+
+.about-text h2 {
+    max-width: 730px;
+    margin: tokens.$space-16 0 0;
+    font-family: tokens.$font-title;
+    font-size: 34px;
+    line-height: 1.12;
+    text-transform: uppercase;
+}
+
+.about-signature {
+    align-items: flex-end;
+    border-left: 1px solid currentColor;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.about-signature .section-label {
+    margin: 0;
+    padding: 7px 11px;
+    background-color: tokens.$color-negro;
+    color: tokens.$color-yellow-40-base;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+
+.signature-note {
+    margin: auto 0 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.artist-signature {
+    margin: tokens.$space-4 0 0;
+    font-size: 16px;
+}
+
+.artist-signature span {
+    display: inline-block;
+    margin-left: tokens.$space-4;
+    font-family: tokens.$font-title;
+    font-size: 48px;
+    letter-spacing: -0.025em;
+    text-decoration: underline;
+    text-decoration-color: tokens.$color-blue-40-base;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.12em;
+    text-transform: uppercase;
+}

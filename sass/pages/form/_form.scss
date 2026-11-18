@@ -1,0 +1,142 @@
+@use "../../base" as tokens;
+
+// CONTENEDOR DEL FORMULARIO
+.contact-modal .contact-form-container{
+    padding: 32px 30px 34px;
+    background-color: tokens.$color-crema;
+}
+
+// DISTRIBUCION DE LOS CAMPOS
+.contact-modal #formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 17px;
+}
+
+.contact-modal #formulario:not([hidden]) {
+    animation: contact-form-enter 260ms ease-out both;
+}
+
+.contact-modal #formulario.is-leaving {
+    animation: contact-form-exit 180ms ease-in both;
+}
+
+// CAMPOS QUE OCUPAN TODA UNA FILA
+.contact-modal .grupo-nombre,
+.contact-modal .grupo-servicio,
+.contact-modal .grupo-mensaje{
+    grid-column: span 2;
+}
+
+// ETIQUETAS 
+.contact-modal #formulario label{
+    display: block;
+    margin-bottom: 8px;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+// CAMPOS DE TEXTO Y SELECT
+.contact-modal #formulario input,
+.contact-modal #formulario select,
+.contact-modal #formulario textarea{
+    width: 100%;
+    padding: 13px 15px;
+    background-color: tokens.$color-blue-90;
+    border: 1.5px solid tokens.$color-negro;
+    border-radius: 14px;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
+    font-size: 14px;
+    outline: none;
+}
+
+// PLACEHOLDER
+.contact-modal #formulario input::placeholder,
+.contact-modal #formulario select::placeholder{
+    color: #777777;
+    font-family: tokens.$font-body;
+}
+
+//SELECT 
+.contact-modal #formulario select{
+    cursor: pointer;
+}
+
+// TEXTAREA
+.contact-modal #formulario textarea{
+    resize: vertical;
+    min-height: 110px;
+}
+
+// ESTADO ENFOCADO
+.contact-modal #formulario input:focus,
+.contact-modal #formulario select:focus,
+.contact-modal #formulario textarea:focus{
+    border-color: tokens.$color-blue-40-base;
+    border-width: 2px;
+}
+
+// MENSAJE DE ERROR
+.contact-modal .error{
+    display: block;
+    margin-top: 6px;
+    color: tokens.$color-pink-40-base;
+    font-family: tokens.$font-body;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.contact-modal .select-container{
+    position: relative;
+}
+
+.contact-modal .select-container::after{
+    content: "";
+    position: absolute;
+    top: 36%;
+    right: 20px;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid tokens.$color-negro;
+    border-bottom: 2px solid tokens.$color-negro;
+    transform: translate(-70%) rotate(45deg);
+    pointer-events: none;
+}
+
+.contact-modal #formulario select{
+    appearance: none;
+    padding-right: 45px;
+    cursor: pointer;
+}
+
+// OCUALTAR FORMULARIO DESPUES DE ENVIAR
+.contact-modal #formulario[hidden]{
+    display: none !important;
+}
+
+@keyframes contact-form-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-form-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}

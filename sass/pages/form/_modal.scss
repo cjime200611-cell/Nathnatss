@@ -1,0 +1,217 @@
+@use "../../base" as tokens;
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    width: min(1080px, calc(100vw - 48px));
+    max-width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+    margin: auto;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-body;
+}
+
+.contact-modal::backdrop {
+    background: rgba(tokens.$color-negro, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.contact-modal[open] {
+    animation: contact-modal-fade-in 220ms ease-out both;
+}
+
+.contact-modal[open]::backdrop {
+    animation: contact-backdrop-fade-in 220ms ease-out both;
+}
+
+.contact-modal[open].is-leaving {
+    animation: contact-modal-fade-out 180ms ease-in both;
+}
+
+.contact-modal[open].is-leaving::backdrop {
+    animation: contact-backdrop-fade-out 180ms ease-in both;
+}
+
+.contact-modal .close-button {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 1;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: tokens.$color-pink-40-base;
+    font-family: tokens.$font-body;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.contact-modal .close-button:hover,
+.contact-modal .close-button:focus-visible {
+    transform: scale(1.1);
+    background-color: tokens.$color-pink-40-base;
+    color: tokens.$color-crema;
+}
+
+.contact-modal .close-button:focus-visible {
+    outline: 2px solid tokens.$color-blue-40-base;
+    outline-offset: 3px;
+}
+
+.contact-modal .contact-content {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    min-height: 566px;
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 22px;
+    background-color: tokens.$color-crema;
+    box-shadow: 8px 8px 0 tokens.$color-negro;
+    animation: contact-card-enter 280ms cubic-bezier(0.2, 0.75, 0.3, 1) both;
+}
+
+.contact-modal.is-leaving .contact-content {
+    animation: contact-card-exit 180ms ease-in both;
+}
+
+.contact-modal .contact-info {
+    display: flex;
+    min-height: 566px;
+    flex-direction: column;
+    padding: 72px 35px 60px;
+    background-color: tokens.$color-yellow-40-base;
+}
+
+.contact-modal .contact-label {
+    display: inline-block;
+    width: fit-content;
+    padding: 9px 18px;
+    border: 2px solid tokens.$color-negro;
+    border-radius: 30px;
+    background-color: tokens.$color-purple-40-base;
+    box-shadow: 3px 3px 0 tokens.$color-negro;
+    color: tokens.$color-negro;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.contact-modal .contact-info h1 {
+    margin-top: 30px;
+    color: tokens.$color-negro;
+    font-family: tokens.$font-title;
+    font-size: clamp(36px, 3.2vw, 46px);
+    line-height: 1.1;
+}
+
+.contact-modal .contact-description {
+    margin-top: 20px;
+    color: tokens.$color-negro;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-modal .social-section {
+    margin-top: auto;
+    margin-bottom: 35px;
+}
+
+.contact-modal .social-section h2 {
+    margin-bottom: 18px;
+    color: tokens.$color-negro;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.contact-modal .social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+}
+
+.contact-modal .social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: tokens.$color-negro;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transform-origin: left center;
+    transition: transform 180ms ease;
+}
+
+.contact-modal .social-link:hover,
+.contact-modal .social-link:focus-visible {
+    transform: scale(1.05);
+}
+
+.contact-modal .social-link img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+    transition: transform 180ms ease;
+}
+
+.contact-modal .social-link:hover img,
+.contact-modal .social-link:focus-visible img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+@keyframes contact-modal-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes contact-modal-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes contact-backdrop-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes contact-backdrop-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes contact-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes contact-card-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(6px) scale(0.98);
+    }
+}

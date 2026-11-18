@@ -1,0 +1,22 @@
+@use "../../base" as tokens;
+
+.introduction-section {
+    position: relative;
+}
+
+.introduction-section-hero img {
+    display: block;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+}
+
+.introduction-section-category {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    padding: 1px 16px;
+    border: 1px solid tokens.$color-negro;
+    background-color: tokens.$color-yellow-40-base;
+    color: tokens.$color-negro;
+}
