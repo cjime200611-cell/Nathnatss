@@ -1763,6 +1763,8 @@ a {
   }
 }
 .button-group {
+  position: relative;
+  z-index: 1;
   background-color: #806C2D;
   width: 100%;
   min-height: 86px;

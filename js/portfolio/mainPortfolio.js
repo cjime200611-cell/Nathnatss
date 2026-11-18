@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const projects = Array.from(document.querySelectorAll(".project-card"));
     const filterButtons = document.querySelectorAll(".filter-group .filter-btn");
     const moreButton = document.querySelector(".btn-more");
-    const tellMoreButton = document.querySelector(".tell-more-btn");
     const portfolioTitle = document.querySelector(".portfolio-title");
     const introText = document.querySelector(".intro-text");
     const categorySection = document.querySelector(".category-section");
@@ -137,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display projects
     function displayProjects() {
-        const filteredProjects = projects.filter(matchesFilter);
+        const filteredProjects = Array.from(portfolio.querySelectorAll(".project-card")).filter(matchesFilter);
 
         filteredProjects.forEach((project, index) => {
             project.style.display = index < visibleProjects ? "" : "none";
@@ -150,8 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (moreButton) {
-            moreButton.style.display = "inline-block";
-            moreButton.disabled = filteredProjects.length <= visibleProjects;
+            const hasMoreProjects = filteredProjects.length > visibleProjects;
+            moreButton.style.display = hasMoreProjects ? "inline-block" : "none";
+            moreButton.disabled = !hasMoreProjects;
         }
 
         projects.forEach(function (project) {
@@ -230,18 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
         moreButton.addEventListener("click", function () {
             visibleProjects += 3;
             displayProjects();
-        });
-    }
-
-    // Handle "Tell Me More" button
-    if (tellMoreButton) {
-        tellMoreButton.addEventListener("click", function () {
-            const contactSection = document.querySelector("#contact");
-            if (contactSection) {
-                contactSection.scrollIntoView({ behavior: "smooth" });
-            } else {
-                alert("Contact section coming soon!");
-            }
         });
     }
 
