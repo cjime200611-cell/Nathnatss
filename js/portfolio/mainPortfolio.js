@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Display projects
-    function displayProjects() {
+    function displayProjects(newProjectsStart = 0) {
         const filteredProjects = Array.from(portfolio.querySelectorAll(".project-card")).filter(matchesFilter);
 
         filteredProjects.forEach((project, index) => {
@@ -154,20 +154,27 @@ document.addEventListener("DOMContentLoaded", function () {
             moreButton.disabled = !hasMoreProjects;
         }
 
-        projects.forEach(function (project) {
-            project.classList.remove("is-entering");
-        });
-        void portfolio.offsetWidth;
-        let visibleIndex = 0;
-        projects.forEach(function (project) {
-            if (project.style.display !== "none") {
+        if (newProjectsStart > 0) {
+            filteredProjects.slice(newProjectsStart, visibleProjects).forEach(function (project, index) {
                 project.classList.add("is-entering");
-                project.style.animationDelay = `${visibleIndex * 60}ms`;
-                visibleIndex += 1;
-            } else {
-                project.style.animationDelay = "0ms";
-            }
-        });
+                project.style.animationDelay = `${index * 60}ms`;
+            });
+        } else {
+            projects.forEach(function (project) {
+                project.classList.remove("is-entering");
+            });
+            void portfolio.offsetWidth;
+            let visibleIndex = 0;
+            projects.forEach(function (project) {
+                if (project.style.display !== "none") {
+                    project.classList.add("is-entering");
+                    project.style.animationDelay = `${visibleIndex * 60}ms`;
+                    visibleIndex += 1;
+                } else {
+                    project.style.animationDelay = "0ms";
+                }
+            });
+        }
     }
 
     // Handle filter button clicks
@@ -228,8 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle "More" button
     if (moreButton) {
         moreButton.addEventListener("click", function () {
+            const previousVisibleProjects = visibleProjects;
             visibleProjects += 3;
-            displayProjects();
+            displayProjects(previousVisibleProjects);
         });
     }
 
