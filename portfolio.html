@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Paytone+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/styles.css?v=3">
+    <link rel="stylesheet" href="/public/css/styles.css?v=7">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <!-- Filter buttons -->
             <div class="button-group" id="filter-header">
                 <div class="filter-group">
-                    <a>Filter</a>
+                    <a class="filter-label">Filter</a>
                     <button class="filter-btn active" data-category="3d" data-icon="cube">3D Illustration</button>
                     <button class="filter-btn" data-category="personalized" data-icon="pen-nib">Personalized Illustrations</button>
                     <button class="filter-btn" data-category="commercial" data-icon="storefront">Commercial Visualization</button>
@@ -217,27 +217,27 @@
 
         <!-- Tell Me More section -->
         <section class="tell-more">
-            <div class="talk-label">
-                <h6>Let's Talk</h6>
-            </div>
             <div class="tell-more-info">
-                <h5>
-                    Bring your idea <br>
-                    to the table
-                </h5>
-
-                <p>
-                    Feel free to reach out - I would love to hear
-                    what you are thinking
+                
+                    <div class="talk-label">
+                    <h6>Let's Talk</h6>
+                </div>
+                <div>
+                <h2 class="tell-more-title">Let's create<br>together</h2>
+                <p class="tell-more-description">
+                    Have a project in mind? I would love to hear from you.
                 </p>
-
-
+                </div>
                 <button class="tell-more-btn">Tell me more</button>
+            </div>
+            <div class="tell-more-figure">
+                <img src="/public/assets/figura_portfolio.png" alt="Decorative figure">
             </div>
         </section>
 
         <script src="/js/mainPortfolio.js"> </script>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" async></script>
 </body>
 
 </html>

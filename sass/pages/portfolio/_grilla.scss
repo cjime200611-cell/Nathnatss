@@ -6,7 +6,7 @@
     gap: 63px;
 }
 
-.Target-design {
+.project-card {
     width: 43%;
     height: 394px;
     box-shadow: 4px 4px $color-negro;
@@ -22,6 +22,8 @@
     height: 320px;
     border-radius: 16px 16px 0px 0px;
     display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .category-tag {

@@ -1,3 +1,28 @@
 # Dependency directories
+
+# Dependencies
 node_modules/
-package-lock.json
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.angular/
+
+# Test outputs
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.vite/
+.turbo/
+
+# Logs
+*.log
+
+# Temporary files
+.tmp/
+temp/

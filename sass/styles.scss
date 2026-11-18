@@ -2,9 +2,9 @@
 @import "base/variables";
 @import "base/global";
 
-@import "partials/intro-portfolio";
-@import "partials/filters";
-@import "partials/category-info";
-@import "partials/grilla";
-@import "partials/more-button";
-@import "partials/footer-CTA";
+@import "pages/portfolio/intro-portfolio";
+@import "pages/portfolio/filters";
+@import "pages/portfolio/category-info";
+@import "pages/portfolio/grilla";
+@import "pages/portfolio/more-button";
+@import "pages/portfolio/footerCta";

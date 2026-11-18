@@ -1,14 +1,6 @@
 @use "variables" as tokens;
 
-/* Tokens de color y tipografía expuestos al CSS compilado. */
 :root {
-    --blue: #{tokens.$color-blue-40-base};
-    --yellow: #{tokens.$color-yellow-40-base};
-    --pink: #{tokens.$color-pink-40-base};
-    --purple: #{tokens.$color-purple-40-base};
-    --paper: #{tokens.$color-crema};
-    --ink: #{tokens.$color-negro};
-    --line: rgba(0, 0, 0, 0.2);
     font-family: tokens.$font-body;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -72,16 +64,16 @@ h4 {
 }
 
 h5 {
-    font-family: $font-title;
+    font-family: tokens.$font-title;
     font-size: 6rem;
     margin: 0;
 }
 
 h6 {
-    font-family: $font-body;
+    font-family: tokens.$font-body;
     font-size: 1.25rem;
     font-weight: bold;
-    color: $color-yellow-40-base;
+    color: tokens.$color-yellow-40-base;
     margin: 0;
 }
 
