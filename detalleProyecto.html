@@ -196,22 +196,7 @@
             <a class="social-name" href="https://www.linkedin.com/in/nathaliedelg/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
     </footer>
-    <script type="module">
-        import { initializeMobileNavigation } from "./js/home/mobileNavigation.js";
-        import { initializeFlowerBurst } from "./js/components/flowerBurst.js";
-        import { initializeLogoCursor } from "./js/home/logoCursor.js";
-
-        initializeMobileNavigation();
-        initializeFlowerBurst();
-        initializeLogoCursor();
-
-        const backToGrid = document.querySelector(".back-to-grid");
-        const savedCategory = sessionStorage.getItem("portfolio-category");
-        if (backToGrid && savedCategory) {
-            backToGrid.href = `portfolio.html?category=${encodeURIComponent(savedCategory)}`;
-        }
-
-    </script>
+    <script type="module" src="js/projectDetails/projectDetail.js"></script>
     <script type="module" src="js/form/modal.js"></script>
 </body>
 </html>

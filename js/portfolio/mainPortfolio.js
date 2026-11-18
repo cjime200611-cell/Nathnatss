@@ -1,3 +1,11 @@
+import { initializeMobileNavigation } from "../home/mobileNavigation.js";
+import { initializeFlowerBurst } from "../components/flowerBurst.js";
+import { initializeLogoCursor } from "../home/logoCursor.js";
+
+initializeMobileNavigation();
+initializeFlowerBurst();
+initializeLogoCursor();
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Elements

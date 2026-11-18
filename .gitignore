@@ -29,5 +29,5 @@ coverage/
 temp/
 
 .github/
-
+.vscode/
 vscode/
