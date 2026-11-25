@@ -2,8 +2,7 @@
 // datos, categorías, enlaces e imágenes sean válidos antes de mostrarlos.
 const portfolioCategories = [
     "3D ILLUSTRATION",
-    "COMMERCIAL VISUALIZATION",
-    "PERSONALIZED ILLUSTRATIONS"
+    "COMMERCIAL VISUALIZATION"
 ];
 
 // Campos que cada proyecto necesita para mostrarse correctamente.
@@ -29,10 +28,6 @@ function validateProject(project, index, projectIds) {
             throw new Error(`Project ${index + 1} is missing a valid "${field}" value.`);
         }
     });
-
-    if (!portfolioCategories.includes(project.portfolioCategory)) {
-        throw new Error(`Project "${project.id}" has an unsupported portfolio category.`);
-    }
 
     if (projectIds.has(project.id)) {
         throw new Error(`Project id "${project.id}" must be unique.`);
@@ -76,12 +71,19 @@ export async function loadProjects() {
         throw new Error("Project data must be a non-empty array in projects.json.");
     }
 
+    const homeProjects = projects.filter(function (project) {
+        return project && portfolioCategories.includes(project.portfolioCategory);
+    });
+    if (homeProjects.length === 0) {
+        throw new Error("projects.json does not contain projects for the home categories.");
+    }
+
     const projectIds = new Set();
-    projects.forEach(function (project, index) {
+    homeProjects.forEach(function (project, index) {
         validateProject(project, index, projectIds);
     });
 
-    return projects;
+    return homeProjects;
 }
 
 export function resolveImageUrl(image) {

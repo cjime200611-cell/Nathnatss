@@ -1,7 +1,30 @@
 @use "../../base" as tokens;
 @use "../mixins" as r;
 
-/* Ajusta altura, tipografía y texto de la portada. */
+/* ==============================================================================
+   TABLET Y MENORES | max-width: 1024px
+   ============================================================================= */
+
+/* Proyectos destacados */
+@include r.tablet-and-below {
+    .project-transition {
+        display: none;
+    }
+}
+
+/* Servicios */
+@include r.tablet-and-below {
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        box-shadow: none;
+    }
+}
+
+/* ==============================================================================
+   MÓVIL | max-width: 768px
+   ============================================================================= */
+
+/* Hero */
 @include r.mobile {
     .hero,
     .hero-visual {
@@ -17,15 +40,305 @@
     }
 
     .hero h1 {
-        font-size: 64px;
+        font-size: 58px;
     }
 
     .hero-caption {
         right: 5%;
         bottom: tokens.$space-16;
     }
+
+    .hero-link {
+        min-height: 44px;
+        box-shadow: 2px 2px 0 tokens.$color-negro;
+    }
 }
 
+/* Proyectos destacados */
+@include r.mobile {
+    .featured-projects {
+        padding-inline: 5%;
+        container-type: inline-size;
+    }
+
+    .projects-heading {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .projects-heading-text {
+        width: 100%;
+    }
+
+    .projects-heading h2 {
+        display: block;
+        max-width: 260px;
+        margin: 0;
+        font-size: 38px;
+    }
+
+    .project-count {
+        display: block;
+        min-width: 168px;
+        margin: 0;
+        padding: 10px 18px;
+        text-align: center;
+        box-shadow: 3px 3px 0 tokens.$color-negro;
+    }
+
+    .projects-controls {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 38px 168px 38px;
+        grid-auto-flow: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .projects-controls button {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        box-shadow: 2px 2px 0 tokens.$color-negro;
+    }
+
+    .projects-controls .project-previous {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .project-count {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .projects-controls .project-next {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .project-stage {
+        width: calc(90% - 9px);
+        margin-right: 0;
+        overflow: visible;
+        box-shadow:
+            3px 3px 0 tokens.$color-negro,
+            0 0 12px 3px rgba(255, 249, 238, 0.32);
+    }
+
+    .project-artwork {
+        min-height: 420px;
+        overflow: visible;
+    }
+
+    .project-artwork::before {
+        background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.28) 35%, rgba(0, 0, 0, 0.78)),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent);
+    }
+
+    .project-details {
+        top: auto;
+        bottom: 16px;
+        left: 16px;
+        width: calc(100% - 32px);
+        max-width: 260px;
+        padding: 14px;
+        transform: none;
+    }
+
+    .project-details .project-title {
+        max-width: 240px;
+        font-size: 32px;
+    }
+
+    .project-details .project-description {
+        max-width: 420px;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .project-client {
+        margin-top: 18px;
+    }
+
+    .project-details .project-link {
+        box-shadow: 2px 2px 0 tokens.$color-negro;
+    }
+
+    .project-preview {
+        position: absolute;
+        z-index: 12;
+        display: block;
+        top: 0;
+        right: calc(-10cqw - 9px);
+        bottom: 0;
+        left: auto;
+        width: calc(10cqw - 1px);
+        height: 100%;
+        margin-left: 10px;
+        border-left: 1.5px solid rgba(255, 249, 238, 0.82);
+        visibility: visible;
+        border-width: 1.5px;
+        border-radius: 4px;
+        box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.65);
+        transform: none;
+    }
+
+    .project-preview::before {
+        filter: blur(1px) brightness(0.78);
+    }
+
+    .project-preview-name {
+        display: none;
+    }
+
+    .project-stage.is-at-end .project-preview {
+        right: auto;
+        left: calc(-10cqw - 9px);
+    }
+}
+
+/* Sobre mí */
+@include r.mobile {
+    .about {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        margin-inline: 5%;
+        box-shadow: 4px 4px 0 tokens.$color-negro;
+    }
+
+    .about-text {
+        min-height: 170px;
+        padding: tokens.$space-24;
+    }
+
+    .about-signature {
+        min-height: 120px;
+        padding: tokens.$space-16 tokens.$space-24;
+        border-top: 1px solid currentColor;
+        border-left: 0;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .signature-note {
+        margin-top: tokens.$space-32;
+    }
+
+    .artist-signature span {
+        font-size: 40px;
+    }
+}
+
+/* Servicios */
+@include r.mobile {
+    .services {
+        padding: tokens.$space-60 5%;
+    }
+
+    .services-heading {
+        margin-bottom: tokens.$space-32;
+    }
+
+    .services-heading h2 {
+        max-width: 600px;
+        font-size: 38px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: tokens.$space-16;
+        align-items: stretch;
+        padding: tokens.$space-16;
+        border-radius: 14px;
+        box-shadow: none;
+    }
+
+    .service-content {
+        border-radius: 18px;
+        box-shadow: 3px 3px 0 tokens.$color-negro;
+    }
+
+    .service-card:hover .service-content {
+        box-shadow: 4px 4px 0 tokens.$color-negro;
+    }
+
+    .service-topline {
+        min-height: 64px;
+    }
+
+    .service-body {
+        padding: tokens.$space-16;
+    }
+
+    .service-body h3 {
+        font-size: 24px;
+    }
+
+    .service-body p {
+        font-size: 14px;
+    }
+
+    .service-media img {
+        aspect-ratio: 1.9;
+    }
+
+    .service-notes {
+        grid-template-columns: 1fr;
+        gap: tokens.$space-8;
+        box-shadow: 3px 3px 0 tokens.$color-negro;
+    }
+
+    .service-notes-title {
+        justify-content: center;
+    }
+
+    .service-notes > p {
+        padding: tokens.$space-8 0 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
+        border-left: 0;
+    }
+}
+
+/* Contacto y footer */
+@include r.mobile {
+    .contact {
+        min-height: 440px;
+        padding-block: tokens.$space-60 88px;
+        padding-inline: 7%;
+    }
+
+    .contact h2 {
+        font-size: 48px;
+    }
+
+    .contact-action {
+        min-height: 48px;
+        box-shadow: 3px 3px 0 tokens.$color-negro;
+    }
+
+    .site-footer {
+        min-height: 48px;
+        padding-block: tokens.$space-8;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 12px;
+    }
+}
+
+/* ==============================================================================
+   MÓVIL PEQUEÑO | max-width: 480px
+   ============================================================================= */
+
+/* Hero */
 @include r.small-mobile {
     .hero,
     .hero-visual {
@@ -33,10 +346,116 @@
     }
 
     .hero h1 {
-        font-size: 52px;
+        font-size: 48px;
     }
 }
 
+/* Proyectos destacados */
+@include r.small-mobile {
+    .projects-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .projects-heading h2 {
+        display: block;
+        font-size: 34px;
+    }
+
+    .projects-controls {
+        align-self: stretch;
+        justify-content: center;
+    }
+
+    .project-artwork {
+        min-height: 400px;
+    }
+
+    .project-category {
+        top: 12px;
+        left: 12px;
+        font-size: 9px;
+    }
+
+    .project-details {
+        bottom: 12px;
+        left: 12px;
+        width: calc(100% - 24px);
+        padding: 12px;
+    }
+
+    .project-details .project-title {
+        font-size: 32px;
+    }
+}
+
+/* Sobre mí */
+@include r.small-mobile {
+    .about-text h2 {
+        font-size: 23px;
+    }
+
+    .artist-signature span {
+        font-size: 32px;
+    }
+}
+
+/* Servicios */
+@include r.small-mobile {
+    .services {
+        padding-inline: 4%;
+    }
+
+    .services-heading h2 {
+        font-size: 38px;
+    }
+
+    .services-title-mobile {
+        display: inline;
+    }
+
+    .services-title-desktop {
+        display: none;
+    }
+
+    .service-grid {
+        padding: tokens.$space-8;
+    }
+}
+
+/* Contacto y footer */
+@include r.small-mobile {
+    .contact {
+        min-height: 420px;
+        padding-block: tokens.$space-48 80px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+
+    .contact > p:not(.section-label) {
+        font-size: 14px;
+    }
+}
+
+/* ==============================================================================
+   MÓVIL ESTRECHO | max-width: 320px
+   ============================================================================= */
+
+/* Servicios */
+@include r.narrow-mobile {
+    .services-heading h2 {
+        font-size: 32px;
+    }
+}
+
+/* ==============================================================================
+   ESCRITORIO | min-width: 1440px
+   ============================================================================= */
+
+/* Hero */
 @include r.from-desktop {
     .hero,
     .hero-visual {
@@ -57,89 +476,7 @@
     }
 }
 
-@include r.from-2k {
-    .hero,
-    .hero-visual {
-        min-height: 850px;
-    }
-
-    .hero h1 {
-        font-size: 120px;
-    }
-
-    .hero-text {
-        width: min(1100px, 80%);
-    }
-}
-
-/* Adapta carrusel, tarjetas y controles de proyectos a cada pantalla. */
-@include r.mobile {
-    .featured-projects {
-        padding-inline: 5%;
-    }
-
-    .projects-heading {
-        align-items: flex-end;
-    }
-
-    .projects-heading h2 {
-        max-width: 280px;
-    }
-
-    .project-count {
-        display: none;
-    }
-
-    .project-artwork {
-        min-height: 620px;
-    }
-
-    .project-artwork::before {
-        background:
-            linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.28) 35%, rgba(0, 0, 0, 0.78)),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent);
-    }
-
-    .project-details {
-        top: 40px;
-        left: 24px;
-        width: calc(100% - 48px);
-        transform: none;
-    }
-
-    .project-details .project-title {
-        max-width: 460px;
-        font-size: 38px;
-    }
-
-    .project-details .project-description {
-        max-width: 420px;
-    }
-
-    .project-client {
-        margin-top: 18px;
-    }
-}
-
-@include r.tablet-and-below {
-    .project-preview,
-    .project-transition {
-        display: none;
-    }
-}
-
-@include r.small-mobile {
-    .projects-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .projects-controls {
-        align-self: flex-end;
-    }
-}
-
+/* Proyectos destacados */
 @include r.from-desktop {
     .featured-projects {
         max-width: 3200px;
@@ -230,6 +567,27 @@
     }
 }
 
+/* ==============================================================================
+   2K Y SUPERIORES | min-width: 2560px
+   ============================================================================= */
+
+/* Hero */
+@include r.from-2k {
+    .hero,
+    .hero-visual {
+        min-height: 850px;
+    }
+
+    .hero h1 {
+        font-size: 120px;
+    }
+
+    .hero-text {
+        width: min(1100px, 80%);
+    }
+}
+
+/* Proyectos destacados */
 @include r.from-2k {
     .project-artwork {
         min-height: 980px;
@@ -258,48 +616,7 @@
     }
 }
 
-/* Reorganiza la biografía en columnas en pantallas pequeñas y amplias. */
-@include r.mobile {
-    .about {
-        grid-template-columns: 1fr;
-        min-height: 0;
-        margin-inline: 5%;
-    }
-
-    .about-text,
-    .about-signature {
-        min-height: 190px;
-        padding: tokens.$space-24;
-    }
-
-    .about-signature {
-        border-top: 1px solid currentColor;
-        border-left: 0;
-    }
-
-    .about-text h2 {
-        font-size: 28px;
-    }
-
-    .signature-note {
-        margin-top: tokens.$space-32;
-    }
-
-    .artist-signature span {
-        font-size: 40px;
-    }
-}
-
-@include r.small-mobile {
-    .about-text h2 {
-        font-size: 23px;
-    }
-
-    .artist-signature span {
-        font-size: 32px;
-    }
-}
-
+/* Sobre mí */
 @include r.from-2k {
     .about {
         min-height: 420px;
@@ -321,106 +638,7 @@
     }
 }
 
-/* Cambia la cuadrícula de servicios para tablet, móvil y pantallas 2K. */
-@include r.tablet-and-below {
-    .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .service-card--illustration {
-        grid-row: span 2;
-    }
-}
-
-@include r.mobile {
-    .services {
-        padding: tokens.$space-60 5%;
-    }
-
-    .services-heading {
-        margin-bottom: tokens.$space-32;
-    }
-
-    .services-heading h2 {
-        max-width: 600px;
-        font-size: 44px;
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: tokens.$space-16;
-        align-items: stretch;
-        padding: tokens.$space-16;
-    }
-
-    .service-card--illustration {
-        grid-row: auto;
-    }
-
-    .service-topline {
-        min-height: 64px;
-    }
-
-    .service-body {
-        padding: tokens.$space-16;
-    }
-
-    .service-body h3 {
-        font-size: 24px;
-    }
-
-    .service-body p {
-        font-size: 14px;
-    }
-
-    .service-media img {
-        aspect-ratio: 1.9;
-    }
-
-    .service-notes {
-        grid-template-columns: 1fr;
-        gap: tokens.$space-8;
-    }
-
-    .service-notes-title {
-        justify-content: center;
-    }
-
-    .service-notes > p {
-        padding: tokens.$space-8 0 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.25);
-        border-left: 0;
-    }
-}
-
-@include r.small-mobile {
-    .services {
-        padding-inline: 4%;
-    }
-
-    .services-heading h2 {
-        font-size: 38px;
-    }
-
-    .services-title-mobile {
-        display: inline;
-    }
-
-    .services-title-desktop {
-        display: none;
-    }
-
-    .service-grid {
-        padding: tokens.$space-8;
-    }
-}
-
-@include r.narrow-mobile {
-    .services-heading h2 {
-        font-size: 32px;
-    }
-}
-
+/* Servicios */
 @include r.from-2k {
     .service-media {
         --media-open-height: 700px;
@@ -465,34 +683,7 @@
     }
 }
 
-/* Reduce tamaños y espaciado de la sección de contacto según pantalla. */
-@include r.mobile {
-    .contact {
-        min-height: 440px;
-        padding-block: tokens.$space-60 88px;
-        padding-inline: 7%;
-    }
-
-    .contact h2 {
-        font-size: 48px;
-    }
-}
-
-@include r.small-mobile {
-    .contact {
-        min-height: 420px;
-        padding-block: tokens.$space-48 80px;
-    }
-
-    .contact h2 {
-        font-size: 38px;
-    }
-
-    .contact > p:not(.section-label) {
-        font-size: 14px;
-    }
-}
-
+/* Contacto y footer */
 @include r.from-2k {
     .contact {
         min-height: 650px;

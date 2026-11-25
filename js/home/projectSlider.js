@@ -7,6 +7,7 @@ export function initializeProjectSlider(projects, view) {
     const next = document.getElementById("project-next");
     const previous = document.getElementById("project-previous");
     const preview = document.getElementById("project-preview");
+    const stage = document.getElementById("project-stage");
 
     if (!next || !previous || !preview) {
         throw new Error("Project navigation buttons were not found.");
@@ -14,6 +15,14 @@ export function initializeProjectSlider(projects, view) {
 
     let currentIndex = 0;
     let isAdvancing = false;
+
+    function updateMobileEdge(index) {
+        if (!stage) {
+            return;
+        }
+
+        stage.classList.toggle("is-at-end", index === projects.length - 1);
+    }
 
     async function goToProject(direction) {
         // Evita iniciar otra transición mientras la actual sigue en curso.
@@ -39,6 +48,7 @@ export function initializeProjectSlider(projects, view) {
             await view.animateTransition(projectImage);
             currentIndex = projectIndex;
             view.showProject(currentIndex);
+            updateMobileEdge(currentIndex);
             // Deja que el navegador pinte el nuevo contenido antes de limpiar la transición.
             await new Promise(function (resolve) {
                 window.requestAnimationFrame(function () {
@@ -64,5 +74,6 @@ export function initializeProjectSlider(projects, view) {
 
     // Muestra el primer proyecto y prepara la animación de su vista previa.
     view.showProject(currentIndex);
+    updateMobileEdge(currentIndex);
     view.playPreviewAnimation();
 }

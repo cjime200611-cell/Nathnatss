@@ -53,7 +53,7 @@
 /* Cuadrícula de tarjetas y sus estados. */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: tokens.$space-24;
     align-items: center;
     padding: tokens.$space-24;
@@ -89,10 +89,6 @@
 
 .service-card--illustration .service-content {
     background-color: tokens.$color-yellow-50;
-}
-
-.service-card--personalized .service-content {
-    background-color: tokens.$color-pink-60;
 }
 
 .service-card:hover .service-content {
@@ -136,10 +132,6 @@
     background-color: tokens.$color-yellow-30;
 }
 
-.service-card--personalized .service-topline {
-    background-color: tokens.$color-pink-30;
-}
-
 .service-number {
     color: tokens.$color-crema;
     font-size: 24px;
@@ -167,10 +159,6 @@
 .service-card--illustration .service-icon {
     background-color: tokens.$color-yellow-40-base;
     color: tokens.$color-negro;
-}
-
-.service-card--personalized .service-icon {
-    background-color: tokens.$color-pink-40-base;
 }
 
 .service-action:focus-visible {
