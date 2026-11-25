@@ -15,12 +15,49 @@
 </head>
 
 <body>
+
+        <!-- MENU  HAMBURGUESA | Sass: sass/components/_side-menu.scss -->
+    <nav class="side-menu" id="side-menu" aria-label="Main navigation" aria-hidden="true">
+        <div class="side-menu-content">
+            <div class="side-menu-header">
+                <h2>EXPLORE</h2>
+
+                <button class="close-menu" id="close-menu" type="button" aria-label="Close navegation">
+                    &times;
+                </button>
+            </div>
+
+            <ul class="side-menu-links">
+                <li><a href="index.html"><span>01</span>HOME</a></li>
+                <li><a href="portfolio.html?category=all"><span>02</span>PORTFOLIO</a></li>
+                <li><a href="#contact" data-contact-modal-open><span>03</span>CONTACT</a></li>
+            </ul>
+
+            <div class="side-menu-footer">
+                <div class="side-menu-socials">
+                    <a href="https://www.instagram.com/nathnatss/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+                    <a href="https://www.linkedin.com/in/nathaliedelg/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+                </div>
+
+                <a class="side-menu-cta" href="#contact" data-contact-modal-open>
+                LET'S TALK <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NUEVO CONTENEDOR LIMITAR  EL DEZPLAZAMIENTO -->
+    <div class="page-viewport">
+
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA | Sass: sass/pages/home/_main.scss -->
+    <div class="page-content" id="page-content">
+
     <header class="site-header" id="top">
         <a class="brand-name" href="index.html" aria-label="Nathnatss home">
             <img class="brand-mark" src="public/assets/shared/logo.png" alt="">
             <span>NATHNATSS</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+            <span></span>
             <span></span>
             <span></span>
         </button>
@@ -198,5 +235,6 @@
     </footer>
     <script type="module" src="js/projectDetails/projectDetail.js"></script>
     <script type="module" src="js/form/modal.js"></script>
+    <script type="module" src="js/home/mainV2.js"></script>
 </body>
 </html>
