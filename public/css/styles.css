@@ -556,6 +556,79 @@ a {
   transform: translateY(-4px) rotate(-45deg);
 }
 
+/*Menú movil*/
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+    position: relative;
+    width: 54px;
+    height: 54px;
+    flex: 0 0 56px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    border-radius: 14px;
+    background-color: #FFD85A;
+    box-shadow: 4px 4px 0 #000000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+  }
+  .nav-toggle:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000000;
+  }
+  .nav-toggle:active,
+  .nav-toggle.is-pressed {
+    box-shadow: 0 0 0 #000000;
+    transform: translate(4px, 4px);
+  }
+  .nav-toggle span {
+    position: absolute;
+    left: 50%;
+    display: block;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.25s ease, top 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-toggle span:first-child {
+    top: 17px;
+    width: 24px;
+  }
+  .nav-toggle span:nth-child(2) {
+    top: 25px;
+    width: 16px;
+  }
+  .nav-toggle span:last-child {
+    top: 33px;
+    width: 24px;
+  }
+  .nav-toggle[aria-expanded=true] span:first-child {
+    top: 25px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .nav-toggle[aria-expanded=true] span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px) scale(0);
+  }
+  .nav-toggle[aria-expanded=true] span:last-child {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+  .site-nav {
+    display: flex;
+  }
+}
 /* Cursor con el logo y una estela breve; se activa solo con mouse. */
 .logo-cursor {
   position: fixed;
