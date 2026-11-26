@@ -60,8 +60,12 @@ function validateUrl(value, label, allowRelative) {
 }
 
 export async function loadProjects() {
-    // La URL se calcula desde este módulo para que no dependa de la página actual.
-    const response = await fetch(projectsUrl);
+    // La URL se calcula desde este módulo para que no dependa de la página actual
+    // y se le añade un parámetro de versión para evitar respuestas cacheadas.
+    const cacheBustedUrl = new URL(projectsUrl.href);
+    cacheBustedUrl.searchParams.set("v", Date.now().toString());
+
+    const response = await fetch(cacheBustedUrl, { cache: "no-store" });
     if (!response.ok) {
         throw new Error(`Could not load projects.json: ${response.status} ${response.statusText}`);
     }

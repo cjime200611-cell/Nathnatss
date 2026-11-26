@@ -20,23 +20,13 @@
         "link": ""
     },
     {
-        "id": "studio-north",
-        "name": "Studio North",
-        "portfolioCategory": "PERSONALIZED ILLUSTRATIONS",
-        "year": "2025",
-        "description": "A flexible visual system and digital home for an independent creative studio.",
-        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-        "client": "Studio North",
-        "link": ""
-    },
-    {
         "id": "Project2",
         "name": "TEST",
         "portfolioCategory": "3D ILLUSTRATION",
         "year": "2026",
-        "description": "Chulin chulin racata racata, si se me pone voy a darle",
+        "description": "TEST TEST TEST",
         "image": "./public/assets/home/project4.jpg",
-        "client": "Los Pits",
+        "client": "TEST",
         "link": ""
     }
 ]
