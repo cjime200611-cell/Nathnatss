@@ -22,14 +22,14 @@ function playAnimation(element, className) {
 
 export function createProjectView(projects) {
     // Obtiene los elementos del carrusel definidos por ID en el HTML.
-    const stage = getRequiredElement("project-stage");
-    const visual = getRequiredElement("project-artwork");
+    const stage = getRequiredElement("proyecto-activo");
+    const visual = getRequiredElement("proyecto-portada");
     const content = getRequiredElement("project-details");
-    const name = getRequiredElement("project-title");
-    const description = getRequiredElement("project-description");
-    const projectYear = getRequiredElement("project-year");
-    const projectClient = getRequiredElement("project-client-name");
-    const portfolioCategoryLabel = getRequiredElement("project-category");
+    const name = getRequiredElement("proyecto-titulo");
+    const description = getRequiredElement("proyecto-descripcion-breve");
+    const projectYear = getRequiredElement("proyecto-anio");
+    const projectClient = getRequiredElement("proyecto-cliente");
+    const portfolioCategoryLabel = getRequiredElement("proyecto-categoria");
     const projectCount = getRequiredElement("project-count");
     const seeMore = getRequiredElement("project-link");
     const preview = getRequiredElement("project-preview");
@@ -71,7 +71,7 @@ export function createProjectView(projects) {
     }
 
     function animateTransition(image) {
-        if (window.matchMedia("(max-width: 1024px)").matches) {
+        if (window.matchMedia("(max-width: 1044px)").matches) {
             return Promise.resolve();
         }
 

@@ -27,7 +27,7 @@
     max-width: 900px;
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 0.95;
     text-transform: uppercase;
 }
@@ -38,7 +38,7 @@
     border-radius: 999px;
     background-color: tokens.$color-negro;
     color: tokens.$color-yellow-40-base;
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
@@ -46,7 +46,7 @@
 .contact > p:not(.section-label) {
     max-width: 650px;
     margin: tokens.$space-24 0 tokens.$space-32;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.55;
 }
 
@@ -64,7 +64,7 @@
     background-color: tokens.$color-pink-40-base;
     box-shadow: 4px 4px 0 tokens.$color-negro;
     color: tokens.$color-negro;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;

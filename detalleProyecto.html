@@ -68,13 +68,13 @@
         </nav>
     </header>
 
-    <main class="detalle-proyecto">
+    <main class="detalle-proyecto" id="detalle-proyecto" data-drupal-field="drupal_internal__nid">
         <div class="introduction-section">
             <div class="introduction-section-hero">
                 <a class="back-to-grid" href="portfolio.html" aria-label="Back to portfolio grid">←</a>
-                <img src="public/assets/projectDetail/wrw.png" alt="">
+                <img id="proyecto-portada" data-drupal-field="field_portada_principal" src="public/assets/projectDetail/wrw.png" alt="">
                 <div class="introduction-section-category">
-                    <h3>Category</h3>
+                    <h3 id="proyecto-categoria" data-drupal-field="field_categoria">Category</h3>
                 </div>
             </div>
 
@@ -82,8 +82,8 @@
             <div class="principal-info">
                 <div class="principal-info-description">
                     <div class="principal-info-description-text">
-                        <h1>Berifén</h1>
-                        <p>3D character development for the pharmaceutical product Berifen. My role in this project was
+                        <h1 id="proyecto-titulo" data-drupal-field="title">Berifén</h1>
+                        <p id="proyecto-descripcion-extensa" data-drupal-field="field_descripcion_extensa">3D character development for the pharmaceutical product Berifen. My role in this project was
                             to
                             do the 3D character process, as well as the facial restructuring, based on the reference of
                             "Dolorsito," a playful and mischievous little monster.</p>
@@ -96,7 +96,7 @@
                         <h4>Programs used in this project</h4>
                     </div>
 
-                    <div class="principal-info-description-programs">
+                    <div class="principal-info-description-programs" id="proyecto-programas" data-drupal-field="field_programas_usados">
                         <img src="public/assets/projectDetail/blenderLogo.png" alt="Blender">
                         <img src="public/assets/projectDetail/photoshopLogo.png" alt="Photoshop">
                         <img src="public/assets/projectDetail/mayaLogo.png" alt="Maya">
@@ -107,7 +107,7 @@
                     <div class="icon-title">
                         <div class="principal-info-card-client">
                             <h5>Client</h5>
-                            <p>Name</p>
+                            <p id="proyecto-cliente" data-drupal-field="field_cliente">Name</p>
                         </div>
                         <div class="icon-info">
                             <img src="public/assets/projectDetail/infoIcon.png" alt="">
@@ -116,12 +116,12 @@
 
                     <div class="principal-info-card-service">
                         <h5>Provided Service</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+                        <p id="proyecto-servicios" data-drupal-field="field_servicios_dados">Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     </div>
 
                     <div class="principal-info-card-year">
                         <h5>Year</h5>
-                        <p>xxxx</p>
+                        <p id="proyecto-anio" data-drupal-field="field_anio">xxxx</p>
                     </div>
                 </div>
             </div>
@@ -138,12 +138,12 @@
                 </div>
 
                 <div class="project-process-description">
-                    <p>The client already had a graphical reference of how he wanted the character to look. However, my
+                    <p id="proyecto-descripcion-referencia" data-drupal-field="field_desc_referencia">The client already had a graphical reference of how he wanted the character to look. However, my
                         role was to transform this 2D reference into a fun character that would resonate with people and
                         be functional for animation, mobilization, and 3D printing.</p> <!-- 42 palabras -->
                 </div>
 
-                <div class="project-process-reference-img">
+                <div class="project-process-reference-img" id="proyecto-imagenes-referencia" data-drupal-field="field_img_referencia">
                     <img src="public/assets/projectDetail/referenciaBerifen.png" alt="Reference">
                     <img src="public/assets/projectDetail/referenciaBerifen2.png" alt="Reference">
                     <img src="public/assets/projectDetail/referenciaBerifen3.png" alt="Reference">
@@ -160,12 +160,12 @@
                 </div>
 
                 <div class="project-process-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor nisi neque, non mattis
+                    <p id="proyecto-descripcion-bocetos" data-drupal-field="field_desc_bocetos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor nisi neque, non mattis
                         dolor maximus nec. Phasellus sit amet nulla erat. Mauris consectetur lacus leo, non aliquet elit
                         tincidunt nec. Fusce euismod lacus ut nisi placerat, et hendrerit mi.</p> <!-- 42 palabras -->
                 </div>
 
-                <div class="project-process-img">
+                <div class="project-process-img" id="proyecto-imagenes-bocetos" data-drupal-field="field_img_bocetos">
                     <img src="public/assets/projectDetail/storyboard01.png" alt="Sketch">
                     <img src="public/assets/projectDetail/storyboard02.png" alt="Sketch">
                 </div>
@@ -181,12 +181,12 @@
                 </div>
 
                 <div class="project-process-description">
-                    <p>Some creative decisions I made along the way included making her teeth slightly forward, giving
+                    <p id="proyecto-descripcion-procesos" data-drupal-field="field_desc_procesos">Some creative decisions I made along the way included making her teeth slightly forward, giving
                         the character a more tender and playful look. The hair was constructed strand by strand, with
                         curves.</p>
                 </div>
 
-                <div class="project-process-img">
+                <div class="project-process-img" id="proyecto-imagenes-procesos" data-drupal-field="field_img_procesos">
                     <img src="public/assets/projectDetail/views.png" alt="Process">
                     <img src="public/assets/projectDetail/processLayers2.png" alt="Process">
                 </div>
@@ -202,11 +202,11 @@
                 </div>
 
                 <div class="project-process-description">
-                    <p>The character was rendered in different lighting modes, adapting to the lighting of each
+                    <p id="proyecto-descripcion-resultado" data-drupal-field="field_desc_resultado_final">The character was rendered in different lighting modes, adapting to the lighting of each
                         advertisement. And with different channels to send it to compositing.</p>
                 </div>
 
-                <div class="project-process-img">
+                <div class="project-process-img" id="proyecto-imagen-resultado" data-drupal-field="field_img_resultado_final">
                     <img src="public/assets/projectDetail/wrw.png" alt="">
                 </div>
                 <a class="project-back-to-top" href="#top" aria-label="Back to top">

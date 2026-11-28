@@ -46,7 +46,7 @@
 
     color: tokens.$color-purple-30;
     font-family: tokens.$font-body;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 800;
 }
 
@@ -55,7 +55,7 @@
     margin-bottom: 15px;
     color: tokens.$color-negro;
     font-family: tokens.$font-title;
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -64,7 +64,7 @@
 .contact-modal .mensaje-exito p{
     color: tokens.$color-negro;
     font-family: tokens.$font-body;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.6;
 }
 // ANIMACION DE ENTRADA

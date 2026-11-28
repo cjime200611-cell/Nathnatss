@@ -1,7 +1,7 @@
 @use "../../base" as tokens;
 @use "../mixins" as r;
 
-@include r.portfolio-tablet {
+@include r.tablet-and-below {
     .button-group {
         gap: 20px;
         padding-inline: 20px;
@@ -17,7 +17,7 @@
     }
 }
 
-@include r.portfolio-mobile {
+@include r.tablet-and-below {
     .button-group {
         align-items: flex-start;
         padding: 16px;

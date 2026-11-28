@@ -52,33 +52,33 @@ h1 {
 
 h2 {
     margin: 0;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 h3 {
     margin: 0;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
 h4 {
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 32px;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
 h5 {
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-transform: uppercase;
 }
 
 h6 {
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 36px;
+    font-size: 2.25rem;
     text-transform: uppercase;
 
     span {

@@ -398,33 +398,33 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 h3 {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
 }
 
 h4 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 h5 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 
 h6 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   text-transform: uppercase;
 }
 h6 span {
@@ -467,7 +467,7 @@ a {
   align-items: center;
   gap: 8px;
   font-family: "Paytone One", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -494,7 +494,7 @@ a {
   background-color: #FFF9EE;
   box-shadow: 4px 4px #000000;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -671,7 +671,7 @@ a {
 .side-menu-header h2 {
   color: #FFF9EE;
   font-family: "Paytone One", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   letter-spacing: 2px;
   font-weight: 800;
 }
@@ -691,7 +691,7 @@ a {
   background-color: #FF475D;
   box-shadow: 4px 4px 0 #000000;
   color: #000000;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 700;
   line-height: 1;
   -webkit-tap-highlight-color: transparent;
@@ -732,7 +732,7 @@ a {
   border-radius: 10px;
   color: #FFF9EE;
   font-family: "Inter", sans-serif;
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 600;
   text-decoration: none;
   opacity: 0;
@@ -750,7 +750,7 @@ a {
   background-color: #FF475D;
   box-shadow: 2.5px 2.5px 0 #000000;
   color: #FFFFFF;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
   line-height: 1;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
@@ -812,7 +812,7 @@ a {
   background-color: #FFF9EE;
   box-shadow: 3px 3px 0 #000000;
   color: #000000;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -843,7 +843,7 @@ a {
   box-shadow: 4px 4px 0 #000000;
   color: #000000;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
@@ -1048,7 +1048,7 @@ a {
 
 .section-label {
   margin: 0 0 16px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.13em;
   line-height: 1.4;
@@ -1062,14 +1062,14 @@ a {
   border: 1.5px solid #000000;
   background-color: #FFD85A;
   color: #000000;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.08em;
 }
 
 .hero h1 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 0.88;
@@ -1088,7 +1088,7 @@ a {
   background-color: #7F92F9;
   box-shadow: 3px 3px 0 #000000;
   color: #000000;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -1110,7 +1110,7 @@ a {
   bottom: 32px;
   padding: 10px 14px;
   background-color: rgba(0, 0, 0, 0.72);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 /* Carrusel de proyectos, transiciones y vista previa responsive. */
@@ -1139,7 +1139,7 @@ a {
   background: #AC6FF0;
   color: #000000;
   box-shadow: 3px 3px 0 #000000;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.06em;
 }
@@ -1147,7 +1147,7 @@ a {
 .projects-heading h2 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 42px;
+  font-size: 2.625rem;
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -1165,7 +1165,7 @@ a {
   padding: 8px 12px;
   border: 1.5px solid #000000;
   background: #FFF9EE;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 800;
   white-space: nowrap;
   box-shadow: 3px 3px 0 #000000;
@@ -1180,7 +1180,7 @@ a {
   border-radius: 50%;
   background: #FFF9EE;
   color: #000000;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 3px 3px 0 #000000;
@@ -1238,7 +1238,7 @@ a {
   border-radius: 3px;
   background: #FFD85A;
   color: #000000;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   line-height: 1.25;
@@ -1277,7 +1277,7 @@ a {
   gap: 5px;
   margin: 0 0 14px;
   color: #FFF9EE;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1286,7 +1286,7 @@ a {
 .project-details .project-title {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 0.98;
@@ -1298,7 +1298,7 @@ a {
   max-width: 520px;
   margin: 14px 0 0;
   color: #FFF9EE;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.65;
 }
 
@@ -1312,7 +1312,7 @@ a {
   border-radius: 999px;
   background: #FF475D;
   color: #000000;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   text-decoration: none;
   transition: color 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
@@ -1348,7 +1348,7 @@ a {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 249, 238, 0.38);
   color: #FFF9EE;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .project-details.is-entering .project-client {
@@ -1419,7 +1419,7 @@ a {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.87));
   color: #FFF9EE;
   font-family: "Paytone One", sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 400;
   text-align: left;
   text-transform: uppercase;
@@ -1546,7 +1546,7 @@ a {
   align-items: center;
   gap: 8px;
   margin: 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
 }
 
@@ -1562,7 +1562,7 @@ a {
   max-width: 730px;
   margin: 16px 0 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 34px;
+  font-size: 2.125rem;
   line-height: 1.12;
   text-transform: uppercase;
 }
@@ -1578,14 +1578,14 @@ a {
   padding: 7px 11px;
   background-color: #000000;
   color: #FFD85A;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.08em;
 }
 
 .signature-note {
   margin: auto 0 0;
   color: rgba(0, 0, 0, 0.65);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1593,14 +1593,14 @@ a {
 
 .artist-signature {
   margin: 4px 0 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .artist-signature span {
   display: inline-block;
   margin-left: 4px;
   font-family: "Paytone One", sans-serif;
-  font-size: 48px;
+  font-size: 3rem;
   letter-spacing: -0.025em;
   text-decoration: underline;
   text-decoration-color: #294BF5;
@@ -1629,7 +1629,7 @@ a {
   background-color: #FF8998;
   box-shadow: 3px 3px 0 #000000;
   color: #000000;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
@@ -1638,7 +1638,7 @@ a {
   max-width: 760px;
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 0.9;
@@ -1742,7 +1742,7 @@ a {
 
 .service-number {
   color: #FFF9EE;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -1827,7 +1827,7 @@ a {
   border-radius: 999px;
   background-color: #FFF9EE;
   box-shadow: 2px 2px 0 #000000;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   align-self: flex-end;
   margin-top: 0;
@@ -1859,7 +1859,7 @@ a {
 .service-body h3 {
   margin: 0 0 16px;
   font-family: "Paytone One", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.05;
   text-transform: uppercase;
@@ -1886,16 +1886,18 @@ a {
 
 .service-body p {
   margin: 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.55;
 }
 
 .service-notes {
   display: grid;
-  grid-template-columns: minmax(180px, 0.25fr) 1fr;
-  gap: 24px;
+  width: fit-content;
+  max-width: 100%;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 16px;
   align-items: center;
-  margin-top: 24px;
+  margin: 24px auto 0;
   padding: 16px 24px;
   border: 1px solid #000000;
   border-radius: 12px;
@@ -1909,7 +1911,7 @@ a {
   gap: 8px;
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
 }
 
@@ -1923,14 +1925,15 @@ a {
   border-radius: 50%;
   background-color: #FFD85A;
   box-shadow: 2px 2px 0 #000000;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .service-notes > p {
+  max-width: 900px;
   margin: 0;
   padding-left: 16px;
   border-left: 1px solid rgba(0, 0, 0, 0.25);
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.55;
 }
 
@@ -1968,7 +1971,7 @@ a {
   max-width: 900px;
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 0.95;
   text-transform: uppercase;
 }
@@ -1979,7 +1982,7 @@ a {
   border-radius: 999px;
   background-color: #000000;
   color: #FFD85A;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
@@ -1987,7 +1990,7 @@ a {
 .contact > p:not(.section-label) {
   max-width: 650px;
   margin: 24px 0 32px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
@@ -2005,7 +2008,7 @@ a {
   background-color: #FF475D;
   box-shadow: 4px 4px 0 #000000;
   color: #000000;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
@@ -2049,7 +2052,7 @@ a {
   margin: 0;
   align-self: center;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -2065,7 +2068,7 @@ a {
   padding: 4px;
   border-radius: 4px;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -2527,7 +2530,7 @@ a {
 .category-tag h2 {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
@@ -2568,7 +2571,7 @@ a {
 .project-card .project-details p {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 30px;
   letter-spacing: -0.019em;
@@ -2576,7 +2579,7 @@ a {
 .project-card .project-details h3 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: -0.019em;
@@ -2593,7 +2596,7 @@ a {
 .project-card .project-year h4 {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: -0.019em;
@@ -2694,7 +2697,7 @@ a {
 }
 .talk-label h6 {
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 16px;
 }
 
@@ -2778,7 +2781,7 @@ a {
 
 .project-process-description {
   padding: 0 95px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
 }
@@ -2838,7 +2841,7 @@ a {
   background-color: #A9B7FB;
   box-shadow: 4px 4px #000000;
   color: inherit;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 1;
   text-decoration: none;
 }
@@ -2868,7 +2871,7 @@ a {
   box-shadow: 4px 4px 0 #000000;
   color: #000000;
   font-family: "Inter", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -2898,7 +2901,7 @@ a {
 .introduction-section-category h3 {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 800;
   line-height: 18px;
   text-transform: uppercase;
@@ -2926,7 +2929,7 @@ a {
   width: 100%;
   margin: 12px 0 0;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 
@@ -2985,7 +2988,7 @@ a {
 .principal-info-card p {
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.25;
 }
 
@@ -3105,12 +3108,38 @@ a {
 }
 
 /* Punto de entrada de los ajustes responsivos de estilos.scss. */
-/* Ajusta escala y movimiento global según pantalla y preferencias del sistema. */
-@media (min-width: 1441px) {
+/* Escala global de rem según los mismos breakpoints del diseño. */
+@media (max-width: 1044px) {
   :root {
-    font-size: clamp(16px, 0.82vw, 20px);
+    font-size: 1rem;
   }
 }
+@media (max-width: 449px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 383px) {
+  :root {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 1411px) {
+  :root {
+    font-size: 1.0625rem;
+  }
+}
+@media (min-width: 1882px) {
+  :root {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 2509px) {
+  :root {
+    font-size: 1.25rem;
+  }
+}
+/* Respeta la preferencia de movimiento reducido. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -3131,14 +3160,14 @@ a {
   }
 }
 /* Adapta marca y menú de navegación a móvil y pantallas 2K. */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .site-header {
     min-height: 64px;
     padding-inline: 5%;
   }
   .brand-name {
     gap: 4px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .brand-mark {
     width: 36px;
@@ -3167,13 +3196,13 @@ a {
     text-align: center;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: 2509px) {
   .site-header {
     min-height: 100px;
     padding-inline: max(5%, (100% - 2200px) / 2);
   }
   .brand-name {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   .brand-mark {
     width: 52px;
@@ -3181,7 +3210,7 @@ a {
   }
 }
 /* Ajusta footer fijo y enlaces sociales a móvil y pantallas 2K. */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .site-footer {
     padding-inline: 5%;
   }
@@ -3189,43 +3218,36 @@ a {
     gap: 8px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .site-footer {
     gap: 8px;
     padding-block: 10px;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: 2509px) {
   .site-footer {
     min-height: 76px;
     padding-inline: max(5%, (100% - 2200px) / 2);
   }
   .site-footer p,
   .social-name {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 /* ==============================================================================
-   TABLET Y MENORES | max-width: 1024px
+   TABLET Y MENORES | referencia 1024px, máximo 1044px
    ============================================================================= */
 /* Proyectos destacados */
-@media (max-width: 1024px) {
+@media (max-width: 1044px) {
   .project-transition {
     display: none;
   }
 }
-/* Servicios */
-@media (max-width: 1024px) {
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    box-shadow: none;
-  }
-}
 /* ==============================================================================
-   MÓVIL | max-width: 768px
+   MÓVIL Y TABLET | referencia 1024px, máximo 1044px
    ============================================================================= */
 /* Hero */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .hero,
   .hero-visual {
     min-height: 540px;
@@ -3237,7 +3259,7 @@ a {
     width: 100%;
   }
   .hero h1 {
-    font-size: 58px;
+    font-size: 3.625rem;
   }
   .hero-caption {
     right: 5%;
@@ -3249,8 +3271,13 @@ a {
   }
 }
 /* Proyectos destacados */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .featured-projects {
+    display: grid;
+    height: 100svh;
+    min-height: 560px;
+    grid-template-rows: auto minmax(0, 1fr);
+    padding-block: 24px;
     padding-inline: 5%;
     container-type: inline-size;
   }
@@ -3267,7 +3294,7 @@ a {
     display: block;
     max-width: 260px;
     margin: 0;
-    font-size: 38px;
+    font-size: 2.375rem;
   }
   .project-count {
     display: block;
@@ -3305,12 +3332,16 @@ a {
   }
   .project-stage {
     width: calc(90% - 9px);
+    height: 100%;
+    min-height: 0;
     margin-right: 0;
     overflow: visible;
+    transition: margin-left 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 1s ease;
     box-shadow: 3px 3px 0 #000000, 0 0 12px 3px rgba(255, 249, 238, 0.32);
   }
   .project-artwork {
-    min-height: 420px;
+    height: 100%;
+    min-height: 0;
     overflow: visible;
   }
   .project-artwork::before {
@@ -3327,15 +3358,26 @@ a {
   }
   .project-details .project-title {
     max-width: 240px;
-    font-size: 32px;
+    font-size: 2rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
   .project-details .project-description {
     max-width: 420px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.45;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
   .project-client {
     margin-top: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .project-details .project-link {
     box-shadow: 2px 2px 0 #000000;
@@ -3367,10 +3409,14 @@ a {
   .project-stage.is-at-end .project-preview {
     right: auto;
     left: calc(-10cqw - 9px);
+    margin-left: 0;
+  }
+  .project-stage.is-at-end {
+    margin-left: calc(10cqw + 9px);
   }
 }
 /* Sobre mí */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .about {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -3388,17 +3434,17 @@ a {
     border-left: 0;
   }
   .about-text h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .signature-note {
     margin-top: 32px;
   }
   .artist-signature span {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 /* Servicios */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .services {
     padding: 60px 5%;
   }
@@ -3407,10 +3453,10 @@ a {
   }
   .services-heading h2 {
     max-width: 600px;
-    font-size: 38px;
+    font-size: 2.375rem;
   }
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     align-items: stretch;
     padding: 16px;
@@ -3431,15 +3477,16 @@ a {
     padding: 16px;
   }
   .service-body h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .service-body p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .service-media img {
     aspect-ratio: 1.9;
   }
   .service-notes {
+    width: 100%;
     grid-template-columns: 1fr;
     gap: 8px;
     box-shadow: 3px 3px 0 #000000;
@@ -3454,14 +3501,14 @@ a {
   }
 }
 /* Contacto y footer */
-@media (max-width: 768px) {
+@media (max-width: 1044px) {
   .contact {
     min-height: 440px;
     padding-block: 60px 88px;
     padding-inline: 7%;
   }
   .contact h2 {
-    font-size: 48px;
+    font-size: 3rem;
   }
   .contact-action {
     min-height: 48px;
@@ -3474,24 +3521,24 @@ a {
   }
   .site-footer p,
   .social-name {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 /* ==============================================================================
-   MÓVIL PEQUEÑO | max-width: 480px
+   MÓVIL PEQUEÑO | referencia 440px, máximo 449px
    ============================================================================= */
 /* Hero */
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .hero,
   .hero-visual {
     min-height: 500px;
   }
   .hero h1 {
-    font-size: 48px;
+    font-size: 3rem;
   }
 }
 /* Proyectos destacados */
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .projects-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -3499,19 +3546,19 @@ a {
   }
   .projects-heading h2 {
     display: block;
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .projects-controls {
     align-self: stretch;
     justify-content: center;
   }
   .project-artwork {
-    min-height: 400px;
+    min-height: 0;
   }
   .project-category {
     top: 12px;
     left: 12px;
-    font-size: 9px;
+    font-size: 0.5625rem;
   }
   .project-details {
     bottom: 12px;
@@ -3520,25 +3567,25 @@ a {
     padding: 12px;
   }
   .project-details .project-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 /* Sobre mí */
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .about-text h2 {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .artist-signature span {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 /* Servicios */
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .services {
     padding-inline: 4%;
   }
   .services-heading h2 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
   .services-title-mobile {
     display: inline;
@@ -3547,45 +3594,58 @@ a {
     display: none;
   }
   .service-grid {
+    grid-template-columns: 1fr;
     padding: 8px;
   }
 }
 /* Contacto y footer */
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .contact {
     min-height: 420px;
     padding-block: 48px 80px;
   }
   .contact h2 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
   .contact > p:not(.section-label) {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 /* ==============================================================================
-   MÓVIL ESTRECHO | max-width: 320px
+   MÓVIL ESTRECHO | referencia 375px, máximo 383px
    ============================================================================= */
 /* Servicios */
-@media (max-width: 320px) {
+@media (max-width: 383px) {
+  .hero-visual {
+    padding-inline: 4%;
+  }
+  .hero h1 {
+    font-size: 2.625rem;
+  }
+  .project-details .project-title {
+    font-size: 1.75rem;
+  }
   .services-heading h2 {
-    font-size: 32px;
+    font-size: 2rem;
+  }
+  .contact h2 {
+    font-size: 2.125rem;
   }
 }
 /* ==============================================================================
-   ESCRITORIO | min-width: 1440px
+   ESCRITORIO | referencia 1440px, mínimo 1411px
    ============================================================================= */
 /* Hero */
-@media (min-width: 1440px) {
+@media (min-width: 1411px) {
   .hero,
   .hero-visual {
-    min-height: 680px;
+    min-height: calc(100svh - 170px);
   }
   .hero-visual {
     padding: 85px 7%;
   }
   .hero h1 {
-    font-size: 80px;
+    font-size: 5rem;
   }
   .hero-caption {
     right: 7%;
@@ -3593,10 +3653,15 @@ a {
   }
 }
 /* Proyectos destacados */
-@media (min-width: 1440px) {
+@media (min-width: 1411px) {
   .featured-projects {
+    display: grid;
+    height: 100svh;
+    min-height: 600px;
+    grid-template-rows: auto minmax(0, 1fr);
     max-width: 3200px;
     margin-inline: auto;
+    padding-block: 32px;
     padding-inline: 80px;
   }
   .projects-heading {
@@ -3604,26 +3669,28 @@ a {
     margin-bottom: 32px;
   }
   .projects-heading h2 {
-    font-size: 64px;
+    font-size: 4rem;
   }
   .projects-label {
     padding: 6px 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .projects-controls button {
     width: 52px;
     height: 52px;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
+  .project-stage,
   .project-artwork {
-    min-height: 760px;
+    height: 100%;
+    min-height: 0;
   }
   .project-category {
     top: 32px;
     left: 32px;
     max-width: min(45%, 420px);
     padding: 10px 14px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .project-details {
     left: 100px;
@@ -3632,25 +3699,36 @@ a {
   .project-meta {
     gap: 8px;
     margin-bottom: 24px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .project-details .project-title {
-    font-size: 88px;
+    font-size: clamp(4rem, 9svh, 5.5rem);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
   .project-details .project-description {
     margin-top: 24px;
-    font-size: 18px;
+    font-size: 1.125rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
   .project-details .project-link {
     gap: 32px;
     margin-top: 32px;
     padding: 14px 18px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .project-client {
     margin-top: 28px;
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .project-preview {
     right: 80px;
@@ -3664,38 +3742,100 @@ a {
   }
   .project-preview-name {
     padding: 32px 16px 16px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 /* ==============================================================================
-   2K Y SUPERIORES | min-width: 2560px
+   HD | referencia 1920px, mínimo 1882px
    ============================================================================= */
 /* Hero */
-@media (min-width: 2560px) {
+@media (min-width: 1882px) {
   .hero,
   .hero-visual {
-    min-height: 850px;
+    min-height: calc(100svh - 170px);
   }
   .hero h1 {
-    font-size: 120px;
+    font-size: 6rem;
+  }
+  .hero-text {
+    width: min(1000px, 80%);
+  }
+}
+/* Proyectos destacados */
+@media (min-width: 1882px) {
+  .featured-projects {
+    padding-inline: 6%;
+  }
+  .projects-heading h2 {
+    font-size: 4.5rem;
+  }
+  .project-details .project-title {
+    font-size: clamp(4.5rem, 9svh, 6rem);
+  }
+  .project-preview {
+    width: 300px;
+    height: 440px;
+  }
+  .project-transition {
+    width: var(--transition-width, 300px);
+    height: var(--transition-height, 440px);
+  }
+}
+/* Sobre mí */
+@media (min-width: 1882px) {
+  .about {
+    min-height: 360px;
+    margin-inline: 6%;
+  }
+  .about-text h2 {
+    font-size: 2.75rem;
+  }
+  .artist-signature span {
+    font-size: 3.75rem;
+  }
+}
+/* Servicios y contacto */
+@media (min-width: 1882px) {
+  .services {
+    padding-inline: 6%;
+  }
+  .services-heading h2 {
+    max-width: 1000px;
+    font-size: 4rem;
+  }
+  .service-body h3 {
+    font-size: 2rem;
+  }
+  .contact h2 {
+    font-size: 4.75rem;
+  }
+}
+/* ==============================================================================
+   2K Y SUPERIORES | referencia 2560px, mínimo 2509px
+   ============================================================================= */
+/* Hero */
+@media (min-width: 2509px) {
+  .hero,
+  .hero-visual {
+    min-height: calc(100svh - 192px);
+  }
+  .hero h1 {
+    font-size: 7.5rem;
   }
   .hero-text {
     width: min(1100px, 80%);
   }
 }
 /* Proyectos destacados */
-@media (min-width: 2560px) {
-  .project-artwork {
-    min-height: 980px;
-  }
+@media (min-width: 2509px) {
   .projects-heading h2 {
-    font-size: 88px;
+    font-size: 5.5rem;
   }
   .project-details {
     width: min(760px, 44%);
   }
   .project-details .project-title {
-    font-size: 112px;
+    font-size: clamp(5.25rem, 8svh, 7rem);
   }
   .project-preview {
     width: 360px;
@@ -3707,7 +3847,7 @@ a {
   }
 }
 /* Sobre mí */
-@media (min-width: 2560px) {
+@media (min-width: 2509px) {
   .about {
     min-height: 420px;
     margin-inline: 6%;
@@ -3718,14 +3858,14 @@ a {
   }
   .about-text h2 {
     max-width: 1000px;
-    font-size: 54px;
+    font-size: 3.375rem;
   }
   .artist-signature span {
-    font-size: 72px;
+    font-size: 4.5rem;
   }
 }
 /* Servicios */
-@media (min-width: 2560px) {
+@media (min-width: 2509px) {
   .service-media {
     --media-open-height: 700px;
   }
@@ -3740,7 +3880,7 @@ a {
   }
   .services-heading h2 {
     max-width: 1200px;
-    font-size: 76px;
+    font-size: 4.75rem;
   }
   .service-grid {
     gap: 32px;
@@ -3754,14 +3894,14 @@ a {
     padding: 32px;
   }
   .service-body h3 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .service-body p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 /* Contacto y footer */
-@media (min-width: 2560px) {
+@media (min-width: 2509px) {
   .contact {
     min-height: 650px;
     justify-content: center;
@@ -3770,19 +3910,19 @@ a {
     padding-bottom: 108px;
   }
   .contact h2 {
-    font-size: 88px;
+    font-size: 5.5rem;
   }
   .contact > p:not(.section-label) {
     max-width: 900px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .contact-action {
     min-width: 240px;
     min-height: 64px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1044px) {
   .button-group {
     gap: 20px;
     padding-inline: 20px;
@@ -3795,7 +3935,7 @@ a {
     flex: 1 1 140px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 1044px) {
   .button-group {
     align-items: flex-start;
     padding: 16px;

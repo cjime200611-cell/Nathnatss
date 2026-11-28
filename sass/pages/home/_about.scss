@@ -27,7 +27,7 @@
     align-items: center;
     gap: tokens.$space-8;
     margin: 0;
-    font-size: 11px;
+    font-size: 0.6875rem;
     letter-spacing: 0.1em;
 }
 
@@ -43,7 +43,7 @@
     max-width: 730px;
     margin: tokens.$space-16 0 0;
     font-family: tokens.$font-title;
-    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.12;
     text-transform: uppercase;
 }
@@ -59,14 +59,14 @@
     padding: 7px 11px;
     background-color: tokens.$color-negro;
     color: tokens.$color-yellow-40-base;
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 0.08em;
 }
 
 .signature-note {
     margin: auto 0 0;
     color: rgba(0, 0, 0, 0.65);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
@@ -74,14 +74,14 @@
 
 .artist-signature {
     margin: tokens.$space-4 0 0;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .artist-signature span {
     display: inline-block;
     margin-left: tokens.$space-4;
     font-family: tokens.$font-title;
-    font-size: 48px;
+    font-size: 3rem;
     letter-spacing: -0.025em;
     text-decoration: underline;
     text-decoration-color: tokens.$color-blue-40-base;

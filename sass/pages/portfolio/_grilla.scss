@@ -75,7 +75,7 @@
     h2 {
         margin: 0;
         font-family: tokens.$font-body;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-weight: 700;
         line-height: 16px;
         text-transform: uppercase;
@@ -117,7 +117,7 @@
     p {
         margin: 0;
         font-family: tokens.$font-body;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 400;
         line-height: 30px;
         letter-spacing: -0.019em;
@@ -126,7 +126,7 @@
     h3 {
         margin: 0;
         font-family: tokens.$font-title;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 400;
         line-height: 36px;
         letter-spacing: -0.019em;
@@ -144,7 +144,7 @@
     h4 {
         margin: 0;
         font-family: tokens.$font-body;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 500;
         line-height: 30px;
         letter-spacing: -0.019em;

@@ -25,7 +25,7 @@
     align-items: center;
     gap: tokens.$space-8;
     font-family: tokens.$font-title;
-    font-size: 30px;
+    font-size: 1.875rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     white-space: nowrap;
@@ -52,7 +52,7 @@
     background-color: tokens.$color-crema;
     box-shadow: 4px 4px tokens.$color-negro;
     font-family: tokens.$font-body;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }

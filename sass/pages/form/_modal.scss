@@ -51,7 +51,7 @@
     background: transparent;
     color: tokens.$color-pink-40-base;
     font-family: tokens.$font-body;
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 1;
     cursor: pointer;
     transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
@@ -103,7 +103,7 @@
     background-color: tokens.$color-purple-40-base;
     box-shadow: 3px 3px 0 tokens.$color-negro;
     color: tokens.$color-negro;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -112,14 +112,14 @@
     margin-top: 30px;
     color: tokens.$color-negro;
     font-family: tokens.$font-title;
-    font-size: clamp(36px, 3.2vw, 46px);
+    font-size: clamp(2.25rem, 3.2vw, 2.875rem);
     line-height: 1.1;
 }
 
 .contact-modal .contact-description {
     margin-top: 20px;
     color: tokens.$color-negro;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.6;
 }
 
@@ -131,7 +131,7 @@
 .contact-modal .social-section h2 {
     margin-bottom: 18px;
     color: tokens.$color-negro;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -148,7 +148,7 @@
     align-items: center;
     gap: 12px;
     color: tokens.$color-negro;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
     transform-origin: left center;

@@ -7,7 +7,7 @@ export function initializeProjectSlider(projects, view) {
     const next = document.getElementById("project-next");
     const previous = document.getElementById("project-previous");
     const preview = document.getElementById("project-preview");
-    const stage = document.getElementById("project-stage");
+    const stage = document.getElementById("proyecto-activo");
 
     if (!next || !previous || !preview) {
         throw new Error("Project navigation buttons were not found.");

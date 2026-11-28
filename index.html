@@ -112,14 +112,14 @@
             </header>
 
             <!-- JS: datos de projects.json. -->
-            <div class="project-stage" id="project-stage" aria-live="polite">
-                <div class="project-artwork" id="project-artwork">
-                    <span class="project-category" id="project-category"></span>
+            <div class="project-stage" id="proyecto-activo" data-drupal-field="drupal_internal__nid" aria-live="polite">
+                <div class="project-artwork" id="proyecto-portada" data-drupal-field="field_portada_principal">
+                    <span class="project-category" id="proyecto-categoria" data-drupal-field="field_categoria"></span>
                     <div class="project-details" id="project-details">
-                        <span class="project-meta"><span class="project-year" id="project-year"></span></span>
-                        <h3 class="project-title" id="project-title"></h3>
-                        <p class="project-description" id="project-description"></p>
-                        <span class="project-client">Client: <span class="project-client-name" id="project-client-name"></span></span>
+                        <span class="project-meta"><span class="project-year" id="proyecto-anio" data-drupal-field="field_anio"></span></span>
+                        <h3 class="project-title" id="proyecto-titulo" data-drupal-field="title"></h3>
+                        <p class="project-description" id="proyecto-descripcion-breve" data-drupal-field="field_descripcion_breve"></p>
+                        <span class="project-client">Client: <span class="project-client-name" id="proyecto-cliente" data-drupal-field="field_cliente"></span></span>
                         <a class="project-link" id="project-link" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
                     </div>
                     <button class="project-preview" id="project-preview" type="button" aria-label="Preview next project">

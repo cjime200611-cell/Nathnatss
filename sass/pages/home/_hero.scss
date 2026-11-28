@@ -51,7 +51,7 @@
 
 .section-label {
     margin: 0 0 tokens.$space-16;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.13em;
     line-height: 1.4;
@@ -65,14 +65,14 @@
     border: 1.5px solid tokens.$color-negro;
     background-color: tokens.$color-yellow-40-base;
     color: tokens.$color-negro;
-    font-size: 11px;
+    font-size: 0.6875rem;
     letter-spacing: 0.08em;
 }
 
 .hero h1 {
     margin: 0;
     font-family: tokens.$font-title;
-    font-size: 72px;
+    font-size: 4.5rem;
     font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 0.88;
@@ -91,7 +91,7 @@
     background-color: tokens.$color-blue-60;
     box-shadow: 3px 3px 0 tokens.$color-negro;
     color: tokens.$color-negro;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
     transition: transform 180ms ease, box-shadow 180ms ease;
@@ -113,5 +113,5 @@
     bottom: tokens.$space-32;
     padding: 10px 14px;
     background-color: rgba(0, 0, 0, 0.72);
-    font-size: 12px;
+    font-size: 0.75rem;
 }
