@@ -384,6 +384,13 @@ img {
   max-width: 100%;
 }
 
+img.arrow-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  object-fit: contain;
+}
+
 h1,
 h2,
 h3 {
@@ -1080,7 +1087,7 @@ a {
   display: inline-flex;
   min-height: 48px;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
   margin-top: 32px;
   padding: 12px 20px;
   border: 1.5px solid #000000;
@@ -1088,10 +1095,16 @@ a {
   background-color: #7F92F9;
   box-shadow: 3px 3px 0 #000000;
   color: #000000;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-link .arrow-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
 }
 
 .hero-link:hover {
@@ -1106,13 +1119,24 @@ a {
 
 .hero-caption {
   position: absolute;
-  right: 5%;
+  right: 0;
   bottom: 32px;
   padding: 10px 14px;
   background-color: rgba(0, 0, 0, 0.72);
   font-size: 0.75rem;
+  animation: caption-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) 300ms both;
 }
 
+@keyframes caption-enter {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* Carrusel de proyectos, transiciones y vista previa responsive. */
 .featured-projects {
   padding: 0 5%;
@@ -1173,8 +1197,8 @@ a {
 
 .projects-controls button {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   border: 1.5px solid #000000;
   border-radius: 50%;
@@ -1182,13 +1206,22 @@ a {
   color: #000000;
   font-size: 1.125rem;
   cursor: pointer;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 3px 3px 0 #000000;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
 .projects-controls .project-next {
   background: #294BF5;
   color: #FFF9EE;
+}
+
+.projects-controls .project-next .arrow-icon {
+  filter: brightness(0) invert(1);
+}
+
+.projects-controls button .arrow-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .projects-controls button:hover {
@@ -1224,6 +1257,40 @@ a {
   background-color: #000000;
   background-position: center;
   background-size: cover;
+}
+
+.project-dots {
+  position: absolute;
+  z-index: 15;
+  bottom: 14px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.project-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  padding: 0;
+  border: 1px solid #FFF9EE;
+  border-radius: 999px;
+  background: rgba(255, 249, 238, 0.55);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.project-dot.is-active {
+  width: 20px;
+  background: #FFF9EE;
+}
+
+.project-dot:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
 }
 
 /* Aquí ubico la categoría que JavaScript carga desde los datos del proyecto. */
@@ -1305,7 +1372,7 @@ a {
 .project-details .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 22px;
+  gap: 10px;
   margin-top: 16px;
   padding: 12px 16px;
   border: 1px solid #000000;
@@ -1317,6 +1384,12 @@ a {
   text-decoration: none;
   transition: color 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 3px 3px 0 #000000;
+}
+
+.project-details .project-link .arrow-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
 }
 
 .project-details .project-link[aria-disabled=true] {
@@ -1687,6 +1760,7 @@ a {
 }
 
 .service-content {
+  min-height: 250px;
   overflow: hidden;
   border: 1.5px solid #000000;
   border-radius: 24px;
@@ -1821,7 +1895,7 @@ a {
   min-height: 0;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
   padding: 0;
   border: 0 solid #000000;
   border-radius: 999px;
@@ -1837,6 +1911,12 @@ a {
   transform: translateY(8px);
   transition: max-height 600ms cubic-bezier(0.65, 0, 0.35, 1), margin-top 600ms cubic-bezier(0.65, 0, 0.35, 1), padding 600ms cubic-bezier(0.65, 0, 0.35, 1), border-width 600ms cubic-bezier(0.65, 0, 0.35, 1), opacity 520ms ease, transform 600ms cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 600ms, background-color 180ms ease;
   visibility: hidden;
+}
+
+.service-action .arrow-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
 }
 
 .service-card.is-expanded .service-action {
@@ -2001,18 +2081,24 @@ a {
   min-height: 52px;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 10px;
   padding: 14px 24px;
   border: 1.5px solid #000000;
   border-radius: 999px;
   background-color: #FF475D;
   box-shadow: 4px 4px 0 #000000;
   color: #000000;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-action .arrow-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
 }
 
 .contact-action:hover,
@@ -2065,6 +2151,7 @@ a {
 .social-name {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   padding: 4px;
   border-radius: 4px;
   font-family: "Inter", sans-serif;
@@ -2836,19 +2923,32 @@ a {
   align-items: center;
   align-self: flex-end;
   justify-content: center;
-  border: 2px solid #000000;
+  border: 1.5px solid #000000;
   border-radius: 50%;
-  background-color: #A9B7FB;
-  box-shadow: 4px 4px #000000;
+  background: #A9B7FB;
+  box-shadow: 3px 3px 0 #000000;
   color: inherit;
   font-size: 2rem;
   line-height: 1;
   text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-back-to-top:hover,
+.project-back-to-top:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
 }
 
 .project-back-to-top:focus-visible {
   outline: 2px solid #294BF5;
   outline-offset: 3px;
+}
+
+.project-back-to-top .arrow-icon {
+  width: 28px;
+  height: 28px;
+  filter: none;
 }
 
 .introduction-section {
@@ -2865,16 +2965,33 @@ a {
   height: 52px;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000000;
+  border: 1.5px solid #000000;
   border-radius: 50%;
-  background-color: #FFF9EE;
-  box-shadow: 4px 4px 0 #000000;
+  background: #FFF9EE;
+  box-shadow: 3px 3px 0 #000000;
   color: #000000;
   font-family: "Inter", sans-serif;
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.back-to-grid .arrow-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.back-to-grid:hover,
+.back-to-grid:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.back-to-grid:focus-visible {
+  outline: 2px solid #294BF5;
+  outline-offset: 3px;
 }
 
 .introduction-section-hero img {
@@ -3123,6 +3240,51 @@ a {
   :root {
     font-size: 0.9375rem;
   }
+  .site-footer {
+    min-height: 44px;
+    padding-inline: 4%;
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 0.6875rem;
+  }
+  .social-links {
+    gap: 4px;
+  }
+  .social-name {
+    gap: 4px;
+    padding-inline: 2px;
+  }
+  .social-name .arrow-icon {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+}
+@media (max-width: 449px) {
+  .site-footer {
+    min-height: 52px;
+    padding-block: 8px;
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 0.75rem;
+  }
+  .social-name .arrow-icon {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+}
+@media (max-width: 1044px) {
+  .site-footer {
+    min-height: 56px;
+    padding-block: 10px;
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 0.8125rem;
+  }
 }
 @media (min-width: 1411px) {
   :root {
@@ -3132,6 +3294,24 @@ a {
 @media (min-width: 1882px) {
   :root {
     font-size: 1.125rem;
+  }
+}
+@media (min-width: 1411px) {
+  .site-footer {
+    min-height: 64px;
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1882px) {
+  .site-footer {
+    min-height: 68px;
+  }
+  .site-footer p,
+  .social-name {
+    font-size: 1.0625rem;
   }
 }
 @media (min-width: 2509px) {
@@ -3231,7 +3411,12 @@ a {
   }
   .site-footer p,
   .social-name {
-    font-size: 0.9375rem;
+    font-size: 1.0625rem;
+  }
+  .social-name .arrow-icon {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
   }
 }
 /* ==============================================================================
@@ -3262,7 +3447,7 @@ a {
     font-size: 3.625rem;
   }
   .hero-caption {
-    right: 5%;
+    right: 0;
     bottom: 16px;
   }
   .hero-link {
@@ -3307,16 +3492,15 @@ a {
   .projects-controls {
     width: 100%;
     display: grid;
-    grid-template-columns: 38px 168px 38px;
+    grid-template-columns: 44px 168px 44px;
     grid-auto-flow: column;
     justify-content: center;
     gap: 10px;
   }
   .projects-controls button {
-    flex: 0 0 38px;
-    width: 38px;
-    height: 38px;
-    box-shadow: 2px 2px 0 #000000;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
   }
   .projects-controls .project-previous {
     grid-column: 1;
@@ -3381,6 +3565,7 @@ a {
   }
   .project-details .project-link {
     box-shadow: 2px 2px 0 #000000;
+    gap: 8px;
   }
   .project-preview {
     position: absolute;
@@ -3463,7 +3648,31 @@ a {
     border-radius: 14px;
     box-shadow: none;
   }
+}
+@media (max-width: 1044px) and (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card,
   .service-content {
+    width: 100%;
+  }
+  .service-content {
+    min-height: 230px;
+  }
+  .service-body h3 {
+    min-height: 2.1em;
+    font-size: 1.5rem;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
+  .service-body p {
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 1044px) {
+  .service-content {
+    min-height: 240px;
     border-radius: 18px;
     box-shadow: 3px 3px 0 #000000;
   }
@@ -3529,6 +3738,9 @@ a {
    ============================================================================= */
 /* Hero */
 @media (max-width: 449px) {
+  .project-dots {
+    display: none;
+  }
   .hero,
   .hero-visual {
     min-height: 500px;
@@ -3597,6 +3809,9 @@ a {
     grid-template-columns: 1fr;
     padding: 8px;
   }
+  .service-content {
+    min-height: 230px;
+  }
 }
 /* Contacto y footer */
 @media (max-width: 449px) {
@@ -3648,7 +3863,7 @@ a {
     font-size: 5rem;
   }
   .hero-caption {
-    right: 7%;
+    right: 0;
     bottom: 48px;
   }
 }
@@ -3679,6 +3894,10 @@ a {
     width: 52px;
     height: 52px;
     font-size: 1.5rem;
+  }
+  .projects-controls button .arrow-icon {
+    width: 28px;
+    height: 28px;
   }
   .project-stage,
   .project-artwork {
@@ -3717,7 +3936,7 @@ a {
     -webkit-line-clamp: 4;
   }
   .project-details .project-link {
-    gap: 32px;
+    gap: 10px;
     margin-top: 32px;
     padding: 14px 18px;
     font-size: 0.875rem;

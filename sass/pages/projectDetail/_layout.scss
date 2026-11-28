@@ -86,17 +86,30 @@
     align-items: center;
     align-self: flex-end;
     justify-content: center;
-    border: 2px solid tokens.$color-negro;
+    border: 1.5px solid tokens.$color-negro;
     border-radius: 50%;
-    background-color: tokens.$color-blue-70;
-    box-shadow: 4px 4px tokens.$color-negro;
+    background: tokens.$color-blue-70;
+    box-shadow: 3px 3px 0 tokens.$color-negro;
     color: inherit;
     font-size: 2rem;
     line-height: 1;
     text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-back-to-top:hover,
+.project-back-to-top:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 tokens.$color-negro;
 }
 
 .project-back-to-top:focus-visible {
     outline: 2px solid tokens.$color-blue-40-base;
     outline-offset: 3px;
+}
+
+.project-back-to-top .arrow-icon {
+    width: 28px;
+    height: 28px;
+    filter: none;
 }

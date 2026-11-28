@@ -38,6 +38,13 @@ img {
     max-width: 100%;
 }
 
+img.arrow-icon {
+    width: 1em;
+    height: 1em;
+    flex: 0 0 1em;
+    object-fit: contain;
+}
+
 h1,
 h2,
 h3 {

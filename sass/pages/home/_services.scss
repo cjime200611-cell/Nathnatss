@@ -78,6 +78,7 @@
 }
 
 .service-content {
+    min-height: 250px;
     overflow: hidden;
     border: 1.5px solid tokens.$color-negro;
     border-radius: 24px;
@@ -216,7 +217,7 @@
     min-height: 0;
     align-items: center;
     justify-content: center;
-    gap: tokens.$space-16;
+    gap: 10px;
     padding: 0;
     border: 0 solid tokens.$color-negro;
     border-radius: 999px;
@@ -239,6 +240,12 @@
         visibility 0s linear 600ms,
         background-color 180ms ease;
     visibility: hidden;
+}
+
+.service-action .arrow-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
 }
 
 .service-card.is-expanded .service-action {

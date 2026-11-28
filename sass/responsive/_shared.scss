@@ -18,6 +18,61 @@
     :root {
         font-size: 0.9375rem;
     }
+
+    .site-footer {
+        min-height: 44px;
+        padding-inline: 4%;
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 0.6875rem;
+    }
+
+    .social-links {
+        gap: 4px;
+    }
+
+    .social-name {
+        gap: 4px;
+        padding-inline: 2px;
+    }
+
+    .social-name .arrow-icon {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+}
+
+@include r.small-mobile {
+    .site-footer {
+        min-height: 52px;
+        padding-block: tokens.$space-8;
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 0.75rem;
+    }
+
+    .social-name .arrow-icon {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+}
+
+@include r.tablet-and-below {
+    .site-footer {
+        min-height: 56px;
+        padding-block: tokens.$space-10;
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 0.8125rem;
+    }
 }
 
 @include r.from-desktop {
@@ -29,6 +84,28 @@
 @include r.from-hd {
     :root {
         font-size: 1.125rem;
+    }
+}
+
+@include r.from-desktop {
+    .site-footer {
+        min-height: 64px;
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 1rem;
+    }
+}
+
+@include r.from-hd {
+    .site-footer {
+        min-height: 68px;
+    }
+
+    .site-footer p,
+    .social-name {
+        font-size: 1.0625rem;
     }
 }
 
@@ -147,6 +224,12 @@
 
     .site-footer p,
     .social-name {
-        font-size: 0.9375rem;
+        font-size: 1.0625rem;
+    }
+
+    .social-name .arrow-icon {
+        width: 18px;
+        height: 18px;
+        flex-basis: 18px;
     }
 }

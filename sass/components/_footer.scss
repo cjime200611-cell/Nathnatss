@@ -39,6 +39,7 @@
 .social-name {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     padding: tokens.$space-4;
     border-radius: 4px;
     font-family: tokens.$font-body;

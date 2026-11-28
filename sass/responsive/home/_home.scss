@@ -36,7 +36,7 @@
     }
 
     .hero-caption {
-        right: 5%;
+        right: 0;
         bottom: tokens.$space-16;
     }
 
@@ -88,17 +88,16 @@
     .projects-controls {
         width: 100%;
         display: grid;
-        grid-template-columns: 38px 168px 38px;
+        grid-template-columns: 44px 168px 44px;
         grid-auto-flow: column;
         justify-content: center;
         gap: 10px;
     }
 
     .projects-controls button {
-        flex: 0 0 38px;
-        width: 38px;
-        height: 38px;
-        box-shadow: 2px 2px 0 tokens.$color-negro;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
     }
 
     .projects-controls .project-previous {
@@ -180,6 +179,7 @@
 
     .project-details .project-link {
         box-shadow: 2px 2px 0 tokens.$color-negro;
+        gap: 8px;
     }
 
     .project-preview {
@@ -278,7 +278,34 @@
         box-shadow: none;
     }
 
+    @media (max-width: 600px) {
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card,
+        .service-content {
+            width: 100%;
+        }
+
+        .service-content {
+            min-height: 230px;
+        }
+
+        .service-body h3 {
+            min-height: 2.1em;
+            font-size: 1.5rem;
+            line-height: 1.05;
+            overflow-wrap: anywhere;
+        }
+
+        .service-body p {
+            overflow-wrap: anywhere;
+        }
+    }
+
     .service-content {
+        min-height: 240px;
         border-radius: 18px;
         box-shadow: 3px 3px 0 tokens.$color-negro;
     }
@@ -360,6 +387,10 @@
 
 /* Hero */
 @include r.small-mobile {
+    .project-dots {
+        display: none;
+    }
+
     .hero,
     .hero-visual {
         min-height: 500px;
@@ -443,6 +474,10 @@
         grid-template-columns: 1fr;
         padding: tokens.$space-8;
     }
+
+    .service-content {
+        min-height: 230px;
+    }
 }
 
 /* Contacto y footer */
@@ -508,7 +543,7 @@
     }
 
     .hero-caption {
-        right: 7%;
+        right: 0;
         bottom: tokens.$space-48;
     }
 }
@@ -544,6 +579,11 @@
         width: 52px;
         height: 52px;
         font-size: 1.5rem;
+    }
+
+    .projects-controls button .arrow-icon {
+        width: 28px;
+        height: 28px;
     }
 
     .project-stage,
@@ -589,7 +629,7 @@
     }
 
     .project-details .project-link {
-        gap: 32px;
+        gap: 10px;
         margin-top: 32px;
         padding: 14px 18px;
         font-size: 0.875rem;

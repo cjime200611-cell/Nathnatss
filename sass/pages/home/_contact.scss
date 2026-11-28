@@ -57,18 +57,24 @@
     min-height: 52px;
     align-items: center;
     justify-content: center;
-    gap: tokens.$space-24;
+    gap: 10px;
     padding: 14px 24px;
     border: 1.5px solid tokens.$color-negro;
     border-radius: 999px;
     background-color: tokens.$color-pink-40-base;
     box-shadow: 4px 4px 0 tokens.$color-negro;
     color: tokens.$color-negro;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
     transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-action .arrow-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
 }
 
 .contact-action:hover,

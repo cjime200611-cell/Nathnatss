@@ -14,16 +14,33 @@
     height: 52px;
     align-items: center;
     justify-content: center;
-    border: 2px solid tokens.$color-negro;
+    border: 1.5px solid tokens.$color-negro;
     border-radius: 50%;
-    background-color: tokens.$color-crema;
-    box-shadow: 4px 4px 0 tokens.$color-negro;
+    background: tokens.$color-crema;
+    box-shadow: 3px 3px 0 tokens.$color-negro;
     color: tokens.$color-negro;
     font-family: tokens.$font-body;
     font-size: 1.75rem;
     font-weight: 800;
     line-height: 1;
     text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.back-to-grid .arrow-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.back-to-grid:hover,
+.back-to-grid:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 tokens.$color-negro;
+}
+
+.back-to-grid:focus-visible {
+    outline: 2px solid tokens.$color-blue-40-base;
+    outline-offset: 3px;
 }
 
 .introduction-section-hero img {

@@ -8,6 +8,7 @@ export function initializeProjectSlider(projects, view) {
     const previous = document.getElementById("project-previous");
     const preview = document.getElementById("project-preview");
     const stage = document.getElementById("proyecto-activo");
+    const dotsContainer = document.getElementById("project-dots");
 
     if (!next || !previous || !preview) {
         throw new Error("Project navigation buttons were not found.");
@@ -15,6 +16,33 @@ export function initializeProjectSlider(projects, view) {
 
     let currentIndex = 0;
     let isAdvancing = false;
+
+    function updateDots(index) {
+        if (!dotsContainer) {
+            return;
+        }
+
+        Array.from(dotsContainer.querySelectorAll(".project-dot")).forEach(function (dot, dotIndex) {
+            const isActive = dotIndex === index;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-current", isActive ? "true" : "false");
+        });
+    }
+
+    if (dotsContainer) {
+        projects.forEach(function (project, index) {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className = "project-dot";
+            dot.setAttribute("aria-label", `Go to project ${index + 1}: ${project.name}`);
+            dot.addEventListener("click", function () {
+                if (index !== currentIndex) {
+                    goToProject(index - currentIndex);
+                }
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
 
     function updateMobileEdge(index) {
         if (!stage) {
@@ -49,6 +77,7 @@ export function initializeProjectSlider(projects, view) {
             currentIndex = projectIndex;
             view.showProject(currentIndex);
             updateMobileEdge(currentIndex);
+            updateDots(currentIndex);
             // Deja que el navegador pinte el nuevo contenido antes de limpiar la transición.
             await new Promise(function (resolve) {
                 window.requestAnimationFrame(function () {
@@ -75,5 +104,6 @@ export function initializeProjectSlider(projects, view) {
     // Muestra el primer proyecto y prepara la animación de su vista previa.
     view.showProject(currentIndex);
     updateMobileEdge(currentIndex);
+    updateDots(currentIndex);
     view.playPreviewAnimation();
 }
